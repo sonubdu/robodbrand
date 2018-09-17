@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-
 class VariantSelector extends Component {
   render() {
    /* return (
@@ -18,12 +17,20 @@ class VariantSelector extends Component {
       </select>
     );
 */
+ 
     return (
      
       <div>
         {this.props.option.values.map((value) => {
+          let bgv="/texture/"+value.toString().replace(" ","-").toLowerCase()+".png";
+          let style={
+            backgroundImage: 'url('+bgv+')',
+          
+           }
+      
+          
           return (
-            <button className="Product__option" onClick={this.props.handleOptionChange} name={this.props.option.name} value={value} key={`${this.props.option.name}-${value}`}>{`${value}`}</button>
+            <button title={value} style={style} className="Product__option" onClick={this.props.handleOptionChange} name={this.props.option.name} value={value} key={`${this.props.option.name}-${value}`}></button>
           )
         })}
        </div>  

@@ -35,7 +35,7 @@ class Collection extends Component {
         checkout: res,
       });
     });
-
+      this.setProducts(this.state.cid);
        if(this.props.shopid!=="undefined"){
         this.props.client.collection.fetchAllWithProducts().then((collections) => {
           // Do something with the collections
@@ -52,6 +52,7 @@ class Collection extends Component {
             }
         });
        }
+     
    
 /*
     this.props.client.product.fetchAll().then((res) => {

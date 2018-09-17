@@ -114,6 +114,11 @@ class Products extends Component {
       
     });
   
+
+    let style={
+        backgroundImage: 'url(https://dbrand.com//sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/space-gray/full.jpg)',
+        minHeight:"700px"
+      }
    
     return (
       <div className="Product-wrapper">
@@ -123,7 +128,7 @@ class Products extends Component {
       <div className="pcontainer"> 
         {products}
         </div>
-       <div className="pimages">
+       <div className="pimages" style={style}>
        {productsimages}
        </div>
        <div className="dummyCart">
