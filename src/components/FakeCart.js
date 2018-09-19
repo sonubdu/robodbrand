@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
-import FakeCartItem from './FakeCartItem';
+import React, { Component } from "react";
+import FakeCartItem from "./FakeCartItem";
 class FakeCart extends Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
-      dataaftereffect:''
-    }
+      dataaftereffect: ""
+    };
     this.decrementQuantity = this.decrementQuantity.bind(this);
     this.incrementQuantity = this.incrementQuantity.bind(this);
     this.removeFakeCartItem = this.removeFakeCartItem.bind(this);
@@ -14,89 +14,90 @@ class FakeCart extends Component {
   }
 
   decrementQuantity(lineItemId) {
-    const updatedQuantity = this.props.line_item.quantity - 1
+    const updatedQuantity = this.props.line_item.quantity - 1;
     this.props.updateQuantityInCart(lineItemId, updatedQuantity);
   }
 
   incrementQuantity(lineItemId) {
-    const updatedQuantity = this.props.line_item.quantity + 1
+    const updatedQuantity = this.props.line_item.quantity + 1;
     this.props.updateQuantityInCart(lineItemId, updatedQuantity);
   }
-  
-addToCart(){
-let fakerdata=this.props.FakeCartdata;
-let data=[];
-let mdata="";
 
-for(let key in fakerdata) {
-  mdata= fakerdata[key]; 
-   data.push({variantId: mdata.id, quantity: 1});
-}
-this.props.addMultipleVariantToCart(data)
-localStorage.clear()
-this.props.onDelete(false);
-}
+  addToCart() {
+    let fakerdata = this.props.FakeCartdata;
+    let data = [];
+    let mdata = "";
 
-removeFakeCartItem(key){
-  let fakeCartData=localStorage.getItem('fakecart');
-  fakeCartData=JSON.parse(fakeCartData);
-  delete fakeCartData[key];
-  localStorage.setItem('fakecart',JSON.stringify(fakeCartData));
-  this.getFakeCartItem();
-  this.props.onDelete(true);
-}
+    for (let key in fakerdata) {
+      mdata = fakerdata[key];
+      data.push({ variantId: mdata.id, quantity: 1 });
+    }
+    this.props.addMultipleVariantToCart(data);
+    localStorage.clear();
+    this.props.onDelete(false);
+  }
 
-getFakeCartItem(){
-  let fakeCartData=localStorage.getItem('fakecart');
-  fakeCartData=JSON.parse(fakeCartData);
-  this.setState({
-    dataaftereffect:fakeCartData
-  });
-}
+  removeFakeCartItem(key) {
+    let fakeCartData = localStorage.getItem("fakecart");
+    fakeCartData = JSON.parse(fakeCartData);
+    delete fakeCartData[key];
+    localStorage.setItem("fakecart", JSON.stringify(fakeCartData));
+    this.getFakeCartItem();
+    this.props.onDelete(true);
+  }
 
+  getFakeCartItem() {
+    let fakeCartData = localStorage.getItem("fakecart");
+    fakeCartData = JSON.parse(fakeCartData);
+    this.setState({
+      dataaftereffect: fakeCartData
+    });
+  }
 
-render() {
-  
-  console.log(this.props.status);
-   let fakerdata = this.props.status ?  this.state.dataaftereffect : this.props.FakeCartdata;
-    console.log(fakerdata)
-    let fakecartlineItem=[];
-    let data="";
-    let Total=0;
-    for(var key in fakerdata) {
-       data= fakerdata[key];
-       Total= Number(Total) + Number(data.price);
-       fakecartlineItem.push( 
-          <FakeCartItem 
-            key={data.id}
-            itemdata={data}
-            removeFakeCartItem={this.removeFakeCartItem}
-           />
-           
-         );
-     }
-   
-   if(Total===0){
-     return null;
-   }
+  render() {
+    console.log(this.props.status);
+    let fakerdata = this.props.status
+      ? this.state.dataaftereffect
+      : this.props.FakeCartdata;
+    console.log(fakerdata);
+    let fakecartlineItem = [];
+    let data = "";
+    let Total = 0;
+    for (var key in fakerdata) {
+      data = fakerdata[key];
+      Total = Number(Total) + Number(data.price);
+      fakecartlineItem.push(
+        <FakeCartItem
+          key={data.id}
+          itemdata={data}
+          removeFakeCartItem={this.removeFakeCartItem}
+        />
+      );
+    }
+
+    if (Total === 0) {
+      return null;
+    }
     return (
-      <div className="fakeCart">
-      <div className="addtocart">
-       <center>
-        <button  className="Product__buy button" onClick={() => this.addToCart()}>{"add to cart"}</button>
-        </center>
-      </div>
-      <div className="Items">
-      {fakecartlineItem}
-      </div>
-      <div className="total">
-       <span>Total</span> : { Total }
-      </div>
-      <div className="addtocart">
-       <center>
-       <button  className="Product__buy button" onClick={() => this.addToCart()}>{"add to cart"}</button>
-        </center>
-      </div>
+      <div className="fakeCart col-lg-12">
+        <div className="Items">{fakecartlineItem}</div>
+        <div className="total">
+          <span className="pull-left">Total-</span> {Total}
+        </div>
+
+        <button
+          className="Product__buy button pull-left"
+          onClick={() => this.addToCart()}
+        >
+          {"BUY NOW"}
+        </button>
+
+        <button
+          className="Product__addtocart button pull-right"
+          onClick={() => this.addToCart()}
+        >
+          {"ADD TO CART"}
+        </button>
       </div>
     );
   }

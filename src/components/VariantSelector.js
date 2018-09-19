@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 class VariantSelector extends Component {
   render() {
-   /* return (
+    /* return (
      
       <select
         className="Product__option"
@@ -17,23 +17,34 @@ class VariantSelector extends Component {
       </select>
     );
 */
- 
+
     return (
-     
-      <div>
-        {this.props.option.values.map((value) => {
-          let bgv="/texture/"+value.toString().replace(" ","-").toLowerCase()+".png";
-          let style={
-            backgroundImage: 'url('+bgv+')',
-          
-           }
-      
-          
+      <div className="diffCol">
+        {this.props.option.values.map(value => {
+          let bgv =
+            "/texture/" +
+            value
+              .toString()
+              .replace(" ", "-")
+              .toLowerCase() +
+            ".png";
+          let style = {
+            backgroundImage: "url(" + bgv + ")"
+          };
+
           return (
-            <button title={value} style={style} className="Product__option" onClick={this.props.handleOptionChange} name={this.props.option.name} value={value} key={`${this.props.option.name}-${value}`}></button>
-          )
+            <button
+              title={value}
+              style={style}
+              className="Product__option"
+              onClick={this.props.handleOptionChange}
+              name={this.props.option.name}
+              value={value}
+              key={`${this.props.option.name}-${value}`}
+            />
+          );
         })}
-       </div>  
+      </div>
     );
   }
 }

@@ -1,26 +1,28 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 
 class ProductTitle extends Component {
   constructor(props) {
     super(props);
     this.state = {
       spid: ""
-    }
-   
-   
+    };
   }
   handleClick() {
-   
-  this.props.onToggle(this.props.product.id);
-  this.setState({spid: this.props.product.id});
+    this.props.onToggle(this.props.product.id);
+    this.setState({ spid: this.props.product.id });
   }
 
- render() {
-   
+  render() {
     return (
-
-         <button className={this.props.product.id} onClick={this.handleClick.bind(this, this.props.product.id)}> <h5 className="Product_title">{this.props.product.title}</h5></button>
-
+      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 productFeature">
+        <button
+          className={this.props.product.id}
+          onClick={this.handleClick.bind(this, this.props.product.id)}
+        >
+          {" "}
+          <span className="ProductCom">{this.props.product.title}</span>
+        </button>
+      </div>
     );
   }
 }
