@@ -22,15 +22,17 @@ class FakeCartItem extends Component {
 
     return (
       <ul className="drow">
-        <li className="drow_left col-lg-4">
+        <li className="drow_left">
           <ul>
-            <li>{data.parent}</li>
+            <li>
+              <strong>{data.parent}</strong>
+            </li>
             <li>{data.title}</li>
           </ul>
         </li>
-        <li className="drow_left">
+        <li className="drow_right">
           <ul>
-            <li>{data.price}</li>
+            <li>Rs. {data.price}</li>
             <li>
               <input
                 size="1"
@@ -46,8 +48,8 @@ class FakeCartItem extends Component {
                 onClick={() => this.props.removeFakeCartItem(data.parentid)}
               />
             </li>
-            <li>
-              <h2> {data.price}</h2>
+            <li className="text-right">
+              <strong>Rs. {data.price}</strong>
             </li>
           </ul>
         </li>

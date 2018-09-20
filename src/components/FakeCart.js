@@ -80,9 +80,15 @@ class FakeCart extends Component {
     }
     return (
       <div className="fakeCart col-lg-12">
+        <label className="cartTittle">Your Selection</label>
         <div className="Items">{fakecartlineItem}</div>
-        <div className="total">
-          <span className="pull-left">Total-</span> {Total}
+        <div className="total kitTotal">
+          <strong className="pull-left">Kit Total-</strong>
+          Rs. {Total}
+        </div>
+        <div className="total totalAmount">
+          <strong className="pull-left">Total-</strong>
+          Rs. {Total}
         </div>
 
         <button

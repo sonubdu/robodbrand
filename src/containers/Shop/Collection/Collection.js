@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import Cart from "../../../components/Cart";
 import Products from "../../../components/Products";
+import Productdiscription from "../../../components/Productdisciption";
+import Usb from "../../../components/Usb";
+import Newletter from "../../../components/NewLetter";
+import Footer from "../../../components/Footer";
 class Collection extends Component {
   constructor() {
     super();
@@ -132,23 +136,47 @@ class Collection extends Component {
   render() {
     return (
       <div className="App">
-        <div className="container">
+        <div className="container-fluid">
           <div className="row">
-            <header className="App__header col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <header className="App__header">
               {!this.state.isCartOpen && (
                 <div className="App__view-cart-wrapper">
-                  <button
-                    className="App__view-cart"
-                    onClick={() => this.setState({ isCartOpen: true })}
-                  >
-                    Cart
-                  </button>
+                  <div className="homeStrip" />
+                  <nav className="navbar navbar-default">
+                    <div className="navbar-header">
+                      <a className="logo" href="#">
+                        <img src="//cdn.shopify.com/s/files/1/2334/2135/files/logo_bb010025-b998-4ff6-9366-207a05728f9b_300x300.png?v=1509625436" />
+                      </a>
+                    </div>
+                    <ul className="nav navbar-nav">
+                      <li className="active">
+                        <a href="#">SHOP</a>
+                      </li>
+                      <li>
+                        <a href="#">HOW TO INSTALL</a>
+                      </li>
+                    </ul>
+                    <ul className="nav navbar-nav pull-right">
+                      <li>
+                        <a href="">admin</a>
+                      </li>
+                      <li>
+                        <a
+                          className="App__view-cart"
+                          onClick={() => this.setState({ isCartOpen: true })}
+                        >
+                          Cart
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
+                  <div className="homeStripBottom" />
+
+                  <h2 className="brandTittle text-center col-lg-12">
+                    Galaxy Note 9 Skins & Wraps
+                  </h2>
                 </div>
               )}
-              <div className="App__title">
-                <h1>{this.state.shop.name}: React Example</h1>
-                <h2>{this.state.shop.description}</h2>
-              </div>
             </header>
           </div>
         </div>
@@ -165,6 +193,11 @@ class Collection extends Component {
           updateQuantityInCart={this.updateQuantityInCart}
           removeLineItemInCart={this.removeLineItemInCart}
         />
+        <Productdiscription />
+        <Newletter />
+        <Usb />
+
+        <Footer />
       </div>
     );
   }

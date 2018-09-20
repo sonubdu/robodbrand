@@ -117,21 +117,23 @@ class Products extends Component {
     };
 
     return (
-      <div className="container">
-        <div className="row">{producttitle}</div>
-        <div className="row">
-          <div className="col-lg-12">{products}</div>
-        </div>
-        <div className="row">
-          <div
-            className="pimages col-lg-6 col-md-6 col-sm-6 col-xs-6"
-            style={style}
-          >
-            {productsimages}
+      <div>
+        <div className="container">
+          <div className="row">{producttitle}</div>
+          <div className="row">
+            <div className="col-lg-12">{products}</div>
           </div>
-
-          <div className="dummyCart col-lg-6 col-md-6 col-sm-6 col-xs-6">
-            {fakecart}
+        </div>
+        <div className="container-fluid OverFlow">
+          <div className="row">
+            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 bgImgColor">
+              <div className="pimages " style={style}>
+                {productsimages}
+              </div>
+            </div>
+            <div className="dummyCart col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              {fakecart}
+            </div>
           </div>
         </div>
       </div>
