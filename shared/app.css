@@ -991,3 +991,8 @@ button.Cart__checkout.button {
   right: 0;
   display: inline-block;
 }
+.carousel .slide{
+  background: none;
+  
+  }
+  

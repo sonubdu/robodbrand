@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 class VariantSelector extends Component {
-  getdata(value) {}
   render() {
     let carbon = [];
     let camo = [];
@@ -258,7 +259,31 @@ class VariantSelector extends Component {
         />
       );
     });
-
+    let robodata = carbon.map(value => {
+      let bgv =
+        "/texture/" +
+        value
+          .toString()
+          .replace(" ", "-")
+          .toLowerCase() +
+        ".png";
+      let style = {
+        backgroundImage: "url(" + bgv + ")"
+      };
+      return (
+        <div>
+        <button
+          title={value}
+          style={style}
+          className="Product__option"
+          onClick={this.props.handleOptionChange}
+          name={this.props.option.name}
+          value={value}
+          key={`${this.props.option.name}-${value}`}
+        />
+        </div>
+      );
+    });
     return (
       <div className="diffCol">
         <div className="camodata">{camodata}</div>
@@ -273,6 +298,18 @@ class VariantSelector extends Component {
         <div className="camodata">{camodata}</div>
         <div className="camodata">{camodata}</div>
         <div className="camodata">{camodata}</div>
+        <div className="robodesign">
+       <Carousel showStatus={false} showIndicators={false} showThumbs={false} centerMode centerSlidePercentage={5}>
+       {robodata}
+       {robodata}
+       {robodata}
+       {robodata}
+       {robodata}
+       {robodata}
+       {robodata}
+       {robodata}
+       </Carousel>
+        </div>
       </div>
     );
   }

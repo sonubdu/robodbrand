@@ -39,8 +39,11 @@ class Products extends Component {
       fakecartstatus: val
     });
   };
+  
   render() {
+    let pcount = 0;
     let producttitle = this.props.products.map(product => {
+      pcount++;
       return (
         <ProductTitle
           addVariantToCart={this.props.addVariantToCart}
@@ -49,6 +52,7 @@ class Products extends Component {
           product={product}
           onUpdate={this.onUpdate}
           onToggle={this.onToggle}
+          pclass={pcount}
         />
       );
     });
