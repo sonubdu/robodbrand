@@ -158,14 +158,19 @@ class Collection extends Component {
                     </ul>
                     <ul className="nav navbar-nav pull-right">
                       <li>
-                        <a href="">admin</a>
+                        <a href="">
+                          <i className="fa fa-user" aria-hidden="true" />
+                        </a>
                       </li>
                       <li>
                         <a
                           className="App__view-cart"
                           onClick={() => this.setState({ isCartOpen: true })}
                         >
-                          Cart
+                          <i
+                            className="fa fa-shopping-cart"
+                            aria-hidden="true"
+                          />
                         </a>
                       </li>
                     </ul>

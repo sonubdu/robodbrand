@@ -16,7 +16,7 @@ class ProductTitle extends Component {
     return (
       <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 productFeature">
         <button
-          className={this.props.product.id}
+          className=""
           onClick={this.handleClick.bind(this, this.props.product.id)}
         >
           {" "}

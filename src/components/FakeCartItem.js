@@ -35,18 +35,22 @@ class FakeCartItem extends Component {
             <li>Rs. {data.price}</li>
             <li>
               <input
+                className="inputCartInput"
                 size="1"
                 min="1"
                 type="text"
                 defaultValue={1}
                 onChange={this.handleQuantityChange}
               />
-              <input
+              <button
+                className="deleteBtn"
                 type="button"
                 size="2"
                 value="X"
                 onClick={() => this.props.removeFakeCartItem(data.parentid)}
-              />
+              >
+                <i className="fa fa-trash-o" aria-hidden="true" />
+              </button>
             </li>
             <li className="text-right">
               <strong>Rs. {data.price}</strong>

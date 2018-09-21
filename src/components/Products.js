@@ -118,10 +118,14 @@ class Products extends Component {
 
     return (
       <div>
-        <div className="container">
-          <div className="row">{producttitle}</div>
-          <div className="row">
-            <div className="col-lg-12">{products}</div>
+        <div className="bgWrapper">
+          <div className="container">
+            <div className="row">
+              <div className="productCon">{producttitle}</div>
+            </div>
+            <div className="row">
+              <div className="col-lg-12 paddingZero">{products}</div>
+            </div>
           </div>
         </div>
         <div className="container-fluid OverFlow">

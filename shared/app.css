@@ -1,6 +1,7 @@
 /* INITIALIZERS + DEFAULTS
  * ============================== */
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
 *,
 *:before,
@@ -8,27 +9,96 @@
   box-sizing: border-box;
 }
 /*=====================================Durgesh Start====================================*/
-
+.fa-shopping-cart,
+.fa-user {
+  font-size: 20px;
+}
+.fa-shopping-cart:hover,
+.fa-user:hover,
+.fa-pencil-square-o:hover {
+  color: #ff0000;
+}
+.fa-pencil-square-o {
+  color: #777;
+}
+.inputCartInput {
+  border: 0;
+  text-align: center;
+  background: #ff0000;
+  border-radius: 4px;
+  color: #fff;
+  height: 30px;
+  width: 26px;
+}
+.deleteBtn {
+  height: 30px;
+  width: 30px;
+  border: 0;
+  background: #ccc;
+  border-radius: 4px;
+  margin-left: 5px;
+}
 .container-fluid {
   padding: 0 !important;
 }
-
+.nav.navbar-nav.pull-right {
+  height: 76px;
+}
 .productFeature button {
   height: 40px;
-  width: 100%;
+  width: 98%;
   background: #e6e6e6 !important;
   border: 0;
   color: #000;
   font-size: 14px;
   font-weight: 600;
   padding: 0;
+  border-radius: 4px;
 }
 .productFeature button.active {
   background: #ff0000 !important;
   color: #fff;
 }
 .productFeature {
-  margin: 30px 0;
+  margin: 0;
+  padding: 0 !important;
+}
+.productCon {
+  overflow: hidden;
+  background: #111;
+  padding: 5px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+.paddingZero {
+  padding: 0;
+}
+.diffCol {
+  float: left;
+  width: 100%;
+}
+.product.active {
+  float: left;
+  width: 100%;
+}
+.camodata,
+.carbondata,
+.dragondata,
+.camodata {
+  float: left;
+  width: 86px;
+  background: #161616;
+  margin-right: 0.4%;
+  border-radius: 4px;
+  padding: 5px;
+  padding-bottom: 0;
+}
+.col-lg-12.paddingZero {
+  padding: 0;
+}
+.bgWrapper {
+  background: #222;
+  padding-top: 30px;
 }
 /*=====================================Durgesh end====================================*/
 
@@ -396,7 +466,7 @@ h2 {
   height: 35px;
   border: 0;
   float: left;
-  margin: 0 2px 15px;
+  margin: 0 2px 5px;
 }
 
 .Product__quantity {
