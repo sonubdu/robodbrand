@@ -1,7 +1,24 @@
 import React, { Component } from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+import "react-alice-carousel/lib/alice-carousel.css";
+import AliceCarousel from 'react-alice-carousel';
 class VariantSelector extends Component {
+  responsive = {
+    0: { items: 1 },
+    600: { items: 5},
+    1024: { items: 15 },
+  };
+  
+  onSlideChange(e) {
+    console.log('Item`s position during a change: ', e.item);
+    console.log('Slide`s position during a change: ', e.slide);
+  };
+
+  onSlideChanged(e) {
+    console.log('Item`s position after changes: ', e.item);
+    console.log('Slide`s position after changes: ', e.slide);
+  };
+  
+ 
   render() {
     let carbon = [];
     let camo = [];
@@ -13,8 +30,7 @@ class VariantSelector extends Component {
     let truecolor = [];
     let wood = [];
     let none = [];
-  
-
+    let robo = [];
     this.props.option.values.map(value => {
       if (value.toString().search("Camo") === 0) {
         camo.push(value);
@@ -42,6 +58,9 @@ class VariantSelector extends Component {
       }
       if (value.toString().search("Wood") === 0) {
         wood.push(value);
+      }
+      if (value.toString().search("Robo") === 0) {
+        robo.push(value);
       }
     });
     let camodata = camo.map(value => {
@@ -140,7 +159,7 @@ class VariantSelector extends Component {
       );
     });
 
-    let mattedata = matte.map(value => {
+    let mattedata = camo.map(value => {
       let bgv =
         "/texture/" +
         value
@@ -164,7 +183,7 @@ class VariantSelector extends Component {
       );
     });
 
-    let metaldata = metal.map(value => {
+    let metaldata = camo.map(value => {
       let bgv =
         "/texture/" +
         value
@@ -188,7 +207,7 @@ class VariantSelector extends Component {
       );
     });
 
-    let leatherdata = leather.map(value => {
+    let leatherdata = camo.map(value => {
       let bgv =
         "/texture/" +
         value
@@ -212,7 +231,7 @@ class VariantSelector extends Component {
       );
     });
 
-    let truecolordata = truecolor.map(value => {
+    let truecolordata = camo.map(value => {
       let bgv =
         "/texture/" +
         value
@@ -236,7 +255,7 @@ class VariantSelector extends Component {
       );
     });
 
-    let wooddata = wood.map(value => {
+    let wooddata = camo.map(value => {
       let bgv =
         "/texture/" +
         value
@@ -259,7 +278,7 @@ class VariantSelector extends Component {
         />
       );
     });
-    let robodata = carbon.map(value => {
+    let robodata = robo.map(value => {
       let bgv =
         "/texture/" +
         value
@@ -284,6 +303,8 @@ class VariantSelector extends Component {
         </div>
       );
     });
+    const items = robodata;
+
     return (
       <div className="diffCol">
          <div className="camodata">
@@ -329,16 +350,22 @@ class VariantSelector extends Component {
         </div>
       
         <div className="robodesign">
-       <Carousel showStatus={false} showIndicators={false} showThumbs={false} centerMode centerSlidePercentage={5}>
-       {robodata}
-       {robodata}
-       {robodata}
-       {robodata}
-       {robodata}
-       {robodata}
-       {robodata}
-       {robodata}
-       </Carousel>
+        <AliceCarousel
+        items={items}
+        duration={400}
+        autoPlay={false}
+        startIndex = {1}
+        fadeOutAnimation={false}
+        mouseDragEnabled={false}
+        playButtonEnabled={false}
+        autoPlayInterval={2000}
+        autoPlayDirection="rtl"
+        responsive={this.responsive}
+        autoPlayActionDisabled={true}
+        onSlideChange={this.onSlideChange}
+        onSlideChanged={this.onSlideChanged}
+        dotsDisabled={true}
+      />
         </div>
       </div>
     );
