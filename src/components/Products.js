@@ -10,6 +10,9 @@ class Products extends Component {
 
     localStorage.clear();
     this.state = {
+      selectedTabId: 1
+    };
+    this.state = {
       spid: ""
     };
     localStorage.setItem("fakecart", "");
@@ -20,7 +23,13 @@ class Products extends Component {
       fakecartstatus: false
     };
   }
-
+  isActive = id => {
+    return this.state.selectedTabId === id;
+  };
+  
+  setActiveTab = selectedTabId => {
+    this.setState({ selectedTabId });
+  };
   onToggle = val => {
     this.setState({
       spid: val
@@ -53,6 +62,8 @@ class Products extends Component {
           onUpdate={this.onUpdate}
           onToggle={this.onToggle}
           pclass={pcount}
+          isActive={ this.isActive(pcount) } 
+          setActiveTab={ this.setActiveTab.bind(pcount) }
         />
       );
     });

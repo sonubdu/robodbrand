@@ -10,13 +10,14 @@ class ProductTitle extends Component {
   handleClick() {
     this.props.onToggle(this.props.product.id);
     this.setState({ spid: this.props.product.id });
+    this.props.setActiveTab(this.props.pclass);
   }
 
   render() {
     return (
       <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 productFeature">
         <button
-          className=""
+          className={ this.props.isActive ? 'active': this.props.pclass }
           onClick={this.handleClick.bind(this, this.props.product.id)}
         >
           {" "}
