@@ -13,7 +13,7 @@ class VariantSelector extends Component {
     let truecolor = [];
     let wood = [];
     let none = [];
-    let alldata = [];
+  
 
     this.props.option.values.map(value => {
       if (value.toString().search("Camo") === 0) {
@@ -140,7 +140,7 @@ class VariantSelector extends Component {
       );
     });
 
-    let mattedata = camo.map(value => {
+    let mattedata = matte.map(value => {
       let bgv =
         "/texture/" +
         value
@@ -164,7 +164,7 @@ class VariantSelector extends Component {
       );
     });
 
-    let metaldata = camo.map(value => {
+    let metaldata = metal.map(value => {
       let bgv =
         "/texture/" +
         value
@@ -188,7 +188,7 @@ class VariantSelector extends Component {
       );
     });
 
-    let leatherdata = camo.map(value => {
+    let leatherdata = leather.map(value => {
       let bgv =
         "/texture/" +
         value
@@ -212,7 +212,7 @@ class VariantSelector extends Component {
       );
     });
 
-    let truecolordata = camo.map(value => {
+    let truecolordata = truecolor.map(value => {
       let bgv =
         "/texture/" +
         value
@@ -236,7 +236,7 @@ class VariantSelector extends Component {
       );
     });
 
-    let wooddata = camo.map(value => {
+    let wooddata = wood.map(value => {
       let bgv =
         "/texture/" +
         value
@@ -286,18 +286,48 @@ class VariantSelector extends Component {
     });
     return (
       <div className="diffCol">
-        <div className="camodata">{camodata}</div>
-        <div className="carbondata">{carbondata}</div>
-        <div className="dragondata">{dragondata}</div>
-        <div className="camodata">{camodata}</div>
-        <div className="camodata">{camodata}</div>
-        <div className="camodata">{camodata}</div>
-        <div className="camodata">{camodata}</div>
-        <div className="camodata">{camodata}</div>
-        <div className="camodata">{camodata}</div>
-        <div className="camodata">{camodata}</div>
-        <div className="camodata">{camodata}</div>
-        <div className="camodata">{camodata}</div>
+         <div className="camodata">
+         <h6 className="title">camo</h6>
+          {camodata}
+         </div>
+        <div className="carbondata">
+        <h6 className="title">carbon fiber</h6>
+              {carbondata}
+        </div>
+        <div className="dragondata">
+        <h6 className="title">dragon</h6>
+        {dragondata}
+        </div>
+
+        <div className="camodata">
+        <h6 className="title">stone</h6>
+        {stonedata}
+        </div>
+        <div className="camodata">
+        <h6 className="title">matte</h6>
+        {mattedata}
+        </div>
+        <div className="camodata">
+        <h6 className="title">metal</h6>
+        {metaldata}
+        </div>
+        <div className="camodata">
+        <h6 className="title">leather</h6>
+        {leatherdata}
+        </div>
+        <div className="camodata">
+        <h6 className="title">true color</h6>
+        {truecolordata}
+        </div>
+        <div className="camodata">
+        <h6 className="title">wood</h6>
+        {wooddata}
+        </div>
+        <div className="camodata">
+        <h6 className="title">none</h6>
+        {none}
+        </div>
+      
         <div className="robodesign">
        <Carousel showStatus={false} showIndicators={false} showThumbs={false} centerMode centerSlidePercentage={5}>
        {robodata}

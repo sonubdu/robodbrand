@@ -128,7 +128,8 @@ class Products extends Component {
     let style = {
       backgroundImage:
         "url(https://dbrand.com//sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/space-gray/full.jpg)",
-      minHeight: "700px"
+      minHeight: "700px",
+      backgroundSize: "contain"
     };
 
     return (
