@@ -145,7 +145,7 @@ class Collection extends Component {
                   <nav className="navbar navbar-default">
                     <div className="navbar-header">
                       <a className="logo" href="#">
-                        <img src="//cdn.shopify.com/s/files/1/2334/2135/files/logo_bb010025-b998-4ff6-9366-207a05728f9b_300x300.png?v=1509625436" />
+                        <img alt="logo" src="//cdn.shopify.com/s/files/1/2334/2135/files/logo_bb010025-b998-4ff6-9366-207a05728f9b_300x300.png?v=1509625436" />
                       </a>
                     </div>
                     <ul className="nav navbar-nav">

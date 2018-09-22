@@ -18,7 +18,7 @@ class ProductImages extends Component {
    }
   }
  
-console.log(this.props.product.title);
+
    
     return (
       <div className="Productimage">

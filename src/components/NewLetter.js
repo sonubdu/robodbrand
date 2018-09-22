@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 class Newletter extends Component {
   state = {};
   render() {

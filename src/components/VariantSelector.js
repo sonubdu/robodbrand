@@ -62,6 +62,7 @@ class VariantSelector extends Component {
       if (value.toString().search("Robo") === 0) {
         robo.push(value);
       }
+      return true;
     });
     let camodata = camo.map(value => {
       let bgv =
@@ -354,7 +355,7 @@ class VariantSelector extends Component {
         items={items}
         duration={400}
         autoPlay={false}
-        startIndex = {1}
+        startIndex={1}
         fadeOutAnimation={false}
         mouseDragEnabled={false}
         playButtonEnabled={false}
