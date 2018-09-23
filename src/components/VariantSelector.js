@@ -301,7 +301,12 @@ class VariantSelector extends Component {
       );
     });
     const items = robodata;
-
+    let robdesi={display:"none"}
+    if(items.length > 0){
+      robdesi={
+        display:"block"
+      };
+    }
     return (
       <div className="diffCol">
          <div className="camodata">
@@ -346,10 +351,10 @@ class VariantSelector extends Component {
         {none}
         </div>
       
-        <div className="robodesign">
+        <div className="robodesign" style={robdesi}>
         <a className="right carousel-control" onClick={() => this.Carousel._slidePrev()}  role="button" data-slide="next"> <span className="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span className="sr-only">Next</span> </a>
         <a className="left carousel-control"   onClick={() => this.Carousel._slideNext()} role="button" data-slide="prev"> <span className="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span className="sr-only">Previous</span> </a>
-       
+      
         <AliceCarousel
         items={items}
         dotsDisabled={true}
