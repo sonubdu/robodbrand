@@ -44,7 +44,8 @@
 .nav.navbar-nav.pull-right {
   height: 76px;
 }
-.productFeature button {
+
+.productFeature button.class1 {
   height: 40px;
   width: 98%;
   background: #e6e6e6 !important;
@@ -55,20 +56,35 @@
   padding: 0;
   border-radius: 4px;
 }
-.productFeature button.active {
+.productFeature button {
+  height: 40px;
+  width: 98%;
+  background: #000 !important;
+  border: 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0;
+  border-radius: 4px;
+  transition: all linear 0.5s;
+}
+.productFeature button.active,
+.bgWrapper .productFeature:hover button {
   background: #ff0000 !important;
   color: #fff;
 }
 .productFeature {
   margin: 0;
   padding: 0 !important;
+  width: 290px !important;
 }
 .productCon {
   overflow: hidden;
   background: #111;
-  padding: 5px;
+  padding: 5px 0 5px 5px;
   margin-bottom: 15px;
   border-radius: 4px;
+  display: inline-block;
 }
 .paddingZero {
   padding: 0;
@@ -86,7 +102,7 @@
 .dragondata,
 .camodata {
   float: left;
-  width: 86px;
+  width: auto;
   background: #161616;
   margin-right: 0.4%;
   border-radius: 4px;
@@ -991,8 +1007,11 @@ button.Cart__checkout.button {
   right: 0;
   display: inline-block;
 }
-.carousel .slide{
+.carousel .slide {
   background: none;
-  
-  }
-  
+}
+.robodesign {
+  clear: both;
+  overflow: hidden;
+  padding-top: 15px;
+}
