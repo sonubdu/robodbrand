@@ -4,7 +4,7 @@ import AliceCarousel from 'react-alice-carousel';
 class VariantSelector extends Component {
   responsive = {
     0: { items: 1 },
-    600: { items: 5},
+    600: { items: 8},
     1024: { items: 15 },
   };
   
@@ -281,12 +281,7 @@ class VariantSelector extends Component {
     });
     let robodata = robo.map(value => {
       let bgv =
-        "/texture/" +
-        value
-          .toString()
-          .replace(" ", "-")
-          .toLowerCase() +
-        ".png";
+        "/texture/phone_img.png";
       let style = {
         backgroundImage: "url(" + bgv + ")"
       };
@@ -294,13 +289,14 @@ class VariantSelector extends Component {
         <div>
         <button
           title={value}
-          style={style}
-          className="Product__option"
+          className="Product__option1"
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
           key={`${this.props.option.name}-${value}`}
-        />
+        >
+        <img src={bgv}  alt={value} />
+        </button>
         </div>
       );
     });
@@ -351,21 +347,23 @@ class VariantSelector extends Component {
         </div>
       
         <div className="robodesign">
+        <a className="right carousel-control" onClick={() => this.Carousel._slidePrev()}  role="button" data-slide="next"> <span className="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span className="sr-only">Next</span> </a>
+        <a className="left carousel-control"   onClick={() => this.Carousel._slideNext()} role="button" data-slide="prev"> <span className="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span className="sr-only">Previous</span> </a>
+       
         <AliceCarousel
         items={items}
-        duration={400}
+        dotsDisabled={true}
+        buttonsDisabled={true}
+        ref={ el => this.Carousel = el }
         autoPlay={false}
-        startIndex={1}
         fadeOutAnimation={false}
         mouseDragEnabled={false}
         playButtonEnabled={false}
-        autoPlayInterval={2000}
-        autoPlayDirection="rtl"
         responsive={this.responsive}
         autoPlayActionDisabled={true}
         onSlideChange={this.onSlideChange}
         onSlideChanged={this.onSlideChanged}
-        dotsDisabled={true}
+        
       />
         </div>
       </div>
