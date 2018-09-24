@@ -3,12 +3,25 @@ import Product from "./Product";
 import ProductImages from "./ProductImages";
 import ProductTitle from "./ProductTitle";
 import FakeCart from "./FakeCart";
+import { css } from 'react-emotion';
+// First way to import
+import { ClipLoader } from 'react-spinners';
+// Another way to import
 
+ 
+const override = css`
+    display: block;
+    margin: 0 auto;
+    border-color: red;
+`;
 class Products extends Component {
   constructor() {
     super();
 
     localStorage.clear();
+    this.state = {
+      loading: true
+    }
     this.state = {
       selectedTabId: 1
     };
@@ -23,6 +36,19 @@ class Products extends Component {
       fakecartstatus: false
     };
   }
+
+componentDidMount(){
+
+  this.setState({loading:true});
+  setTimeout(
+    function() {
+        this.setState({loading:false});
+      }
+    .bind(this),
+    3000
+);
+}
+
   isActive = id => {
     return this.state.selectedTabId === id;
   };
@@ -112,7 +138,7 @@ class Products extends Component {
       if (this.state.fieldVal) {
         pkey = this.state.fieldVal[product.id.toString()];
       }
-
+      
       return (
         <ProductImages
           addVariantToCart={this.props.addVariantToCart}
@@ -129,8 +155,11 @@ class Products extends Component {
       backgroundImage:
         "url(https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/space-gray/full.jpg)",
       minHeight: "500px",
-      backgroundSize: "contain"
-    };
+      backgroundSize: "contain",
+    }
+    let style1 = "show pimages";
+    let style2 = "hide pimages";
+   
 
     return (
       <div>
@@ -147,7 +176,15 @@ class Products extends Component {
         <div className="container-fluid OverFlow">
           <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 bgImgColor">
-              <div className="pimages " style={style}>
+            <ClipLoader
+          className={override}
+          sizeUnit={"px"}
+          size={150}
+          color={'#123abc'}
+          loading={this.state.loading}
+        />
+        {console.log(this.state.loading)}
+              <div className={this.state.loading?style2:style1} style={style}>
                 {productsimages}
               </div>
             </div>
