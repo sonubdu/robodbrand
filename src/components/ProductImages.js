@@ -6,20 +6,10 @@ class ProductImages extends Component {
    let variantImage = localStorage.getItem(this.props.product.id);
    let style={
     backgroundImage: 'url('+variantImage+')',
-    minHeight:"700px",
+    minHeight:"500px",
     width:'100%',
     backgroundSize: "contain"
 }
-   if(this.props.product.title==='CAMERA'){
-    style={
-      backgroundImage: 'url('+variantImage+')',
-      minHeight:"700px",
-      width:'100%',
-   }
-  }
- 
-
-   
     return (
       <div className="Productimage">
           <div style={style} className={this.props.product.title}></div>

@@ -81,7 +81,7 @@ class FakeCart extends Component {
     return (
       <div className="fakeCart col-lg-12">
         <label className="cartTittle">Your Selection</label>
-        <a herf="" className="pull-right">
+        <a  className="pull-right">
           <i className="fa fa-pencil-square-o" aria-hidden="true" />
         </a>
         <div className="Items">{fakecartlineItem}</div>

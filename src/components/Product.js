@@ -95,7 +95,7 @@ class Product extends Component {
     return (
       <div className={pclass} id={this.props.product.id}>
         {variantSelectors}
-        <label className="Product__option">
+        <label className="Product__option2">
           <input
             min="1"
             type="hidden"

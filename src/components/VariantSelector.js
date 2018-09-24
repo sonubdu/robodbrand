@@ -4,7 +4,8 @@ import AliceCarousel from 'react-alice-carousel';
 class VariantSelector extends Component {
   responsive = {
     0: { items: 1 },
-    600: { items: 8},
+    600: { items:12},
+    800: { items:15},
     1024: { items: 15 },
   };
   
@@ -29,8 +30,10 @@ class VariantSelector extends Component {
     let leather = [];
     let truecolor = [];
     let wood = [];
-    let none = [];
+    let none = ["none"];
     let robo = [];
+
+   
     this.props.option.values.map(value => {
       if (value.toString().search("Camo") === 0) {
         camo.push(value);
@@ -41,7 +44,7 @@ class VariantSelector extends Component {
       if (value.toString().search("Dragon") === 0) {
         dragon.push(value);
       }
-      if (value.toString().search("Stone") === 0) {
+      if (value.toString().search("Marble") === 0) {
         stone.push(value);
       }
       if (value.toString().search("Matte") === 0) {
@@ -53,7 +56,7 @@ class VariantSelector extends Component {
       if (value.toString().search("Leather") === 0) {
         leather.push(value);
       }
-      if (value.toString().search("Truecolor") === 0) {
+      if (value.toString().search("Tc") === 0) {
         truecolor.push(value);
       }
       if (value.toString().search("Wood") === 0) {
@@ -136,7 +139,7 @@ class VariantSelector extends Component {
       );
     });
 
-    let stonedata = camo.map(value => {
+    let stonedata = stone.map(value => {
       let bgv =
         "/texture/" +
         value
@@ -160,7 +163,7 @@ class VariantSelector extends Component {
       );
     });
 
-    let mattedata = camo.map(value => {
+    let mattedata = matte.map(value => {
       let bgv =
         "/texture/" +
         value
@@ -184,7 +187,7 @@ class VariantSelector extends Component {
       );
     });
 
-    let metaldata = camo.map(value => {
+    let metaldata = metal.map(value => {
       let bgv =
         "/texture/" +
         value
@@ -208,7 +211,7 @@ class VariantSelector extends Component {
       );
     });
 
-    let leatherdata = camo.map(value => {
+    let leatherdata = leather.map(value => {
       let bgv =
         "/texture/" +
         value
@@ -232,7 +235,7 @@ class VariantSelector extends Component {
       );
     });
 
-    let truecolordata = camo.map(value => {
+    let truecolordata = truecolor.map(value => {
       let bgv =
         "/texture/" +
         value
@@ -256,7 +259,7 @@ class VariantSelector extends Component {
       );
     });
 
-    let wooddata = camo.map(value => {
+    let wooddata = wood.map(value => {
       let bgv =
         "/texture/" +
         value
@@ -282,9 +285,7 @@ class VariantSelector extends Component {
     let robodata = robo.map(value => {
       let bgv =
         "/texture/phone_img.png";
-      let style = {
-        backgroundImage: "url(" + bgv + ")"
-      };
+   
       return (
         <div>
         <button
@@ -298,6 +299,22 @@ class VariantSelector extends Component {
         <img src={bgv}  alt={value} />
         </button>
         </div>
+      );
+    });
+
+    let nonedata = none.map(value => {
+        return (
+     
+        <button
+          title={value}
+          className="Product__option"
+          name={this.props.option.name}
+          value={value}
+          key={this.props.option.name+"key"}
+        >
+        
+        </button>
+     
       );
     });
     const items = robodata;
@@ -348,7 +365,7 @@ class VariantSelector extends Component {
         </div>
         <div className="camodata">
         <h6 className="title">none</h6>
-        {none}
+        {nonedata}
         </div>
       
         <div className="robodesign" style={robdesi}>
