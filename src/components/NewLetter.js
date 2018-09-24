@@ -11,14 +11,14 @@ class Newletter extends Component {
             Make sure that you’re always the first who receive our latest news
             and hottest promotions
           </p>
-          <form>
+          <form className="maxi">
             <div className="form-group newLetterCon">
               <input
                 type="email"
-                className="form-control"
+                className="form-control formInput"
                 id="email"
                 placeholder="Enter Your Email Address"
-                className="formInput"
+             
               />
               <button type="submit" className="newLetterBtn">
                 Submit
