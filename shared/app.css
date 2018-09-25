@@ -595,7 +595,7 @@ h2 {
 .pimages {
   width: 100%;
   background-repeat: no-repeat;
-  min-height: "400px";
+  height: 500px;
   border-radius: 35px 35px 35px 35px;
   border: "1px solid black";
 }

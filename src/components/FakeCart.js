@@ -41,6 +41,7 @@ class FakeCart extends Component {
     let fakeCartData = localStorage.getItem("fakecart");
     fakeCartData = JSON.parse(fakeCartData);
     delete fakeCartData[key];
+    localStorage.removeItem(key);
     localStorage.setItem("fakecart", JSON.stringify(fakeCartData));
     this.getFakeCartItem();
     this.props.onDelete(true);
@@ -55,11 +56,11 @@ class FakeCart extends Component {
   }
 
   render() {
-    console.log(this.props.status);
+  
     let fakerdata = this.props.status
       ? this.state.dataaftereffect
       : this.props.FakeCartdata;
-    console.log(fakerdata);
+ 
     let fakecartlineItem = [];
     let data = "";
     let Total = 0;

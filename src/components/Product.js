@@ -14,6 +14,8 @@ class Product extends Component {
     this.handleOptionChange = this.handleOptionChange.bind(this);
     this.handleQuantityChange = this.handleQuantityChange.bind(this);
     this.findImage = this.findImage.bind(this);
+    this.removeFakeCartItem = this.removeFakeCartItem.bind(this);
+    this.getFakeCartItem = this.getFakeCartItem.bind(this);
   }
 
   findImage(images, variantId) {
@@ -27,6 +29,7 @@ class Product extends Component {
   }
 
   handleOptionChange(event) {
+   
     const target = event.target;
     var key = this.props.product.id;
     let selectedOptions = this.state.selectedOptions;
@@ -62,7 +65,23 @@ class Product extends Component {
       selectedVariantQuantity: event.target.value
     });
   }
+  removeFakeCartItem(key) {
+    let fakeCartData = localStorage.getItem("fakecart");
+    fakeCartData = JSON.parse(fakeCartData);
+    delete fakeCartData[key];
+    localStorage.removeItem(key);
+    localStorage.setItem("fakecart", JSON.stringify(fakeCartData));
+    this.getFakeCartItem();
+    this.props.onDelete(true);
+  }
 
+  getFakeCartItem() {
+    let fakeCartData = localStorage.getItem("fakecart");
+    fakeCartData = JSON.parse(fakeCartData);
+    this.setState({
+      dataaftereffect: fakeCartData
+    });
+  }
   render() {
     let pcount = this.props.pcount;
     let selectedid = this.props.onToggle || 20;
@@ -86,6 +105,8 @@ class Product extends Component {
           handleOptionChange={this.handleOptionChange}
           key={option.id.toString()}
           option={option}
+          removeFakeCartItem={this.removeFakeCartItem}
+          parentid={this.props.product.id}
         />
       );
     });

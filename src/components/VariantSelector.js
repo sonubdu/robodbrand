@@ -3,7 +3,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import AliceCarousel from 'react-alice-carousel';
 class VariantSelector extends Component {
   responsive = {
-    0: { items: 1 },
+    0: { items: 8 },
     600: { items:12},
     800: { items:15},
     1024: { items: 15 },
@@ -309,8 +309,9 @@ class VariantSelector extends Component {
           title={value}
           className="Product__option"
           name={this.props.option.name}
+          key={`${this.props.option.name}-${value}`}
           value={value}
-          key={this.props.option.name+"key"}
+          onClick={() => this.props.removeFakeCartItem(this.props.parentid)}
         >
         
         </button>

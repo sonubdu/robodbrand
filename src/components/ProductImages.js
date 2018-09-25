@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 class ProductImages extends Component {
 
   render() {
-  
    let variantImage = localStorage.getItem(this.props.product.id);
    let style={
     backgroundImage: 'url('+variantImage+')',

@@ -5,14 +5,21 @@ import ProductTitle from "./ProductTitle";
 import FakeCart from "./FakeCart";
 import { css } from 'react-emotion';
 // First way to import
-import { ClipLoader } from 'react-spinners';
+import { HashLoader } from 'react-spinners';
 // Another way to import
 
  
 const override = css`
     display: block;
     margin: 0 auto;
-    border-color: red;
+    border-color: #ff0000;
+    background-position:center;
+    height:508px !important;
+    opacity:1;
+    width:65px !important;
+    background-image:url('/texture/hourglass.svg');
+    transform: rotate(0deg) !important;
+    background-size:contain;
 `;
 class Products extends Component {
   constructor() {
@@ -45,7 +52,7 @@ componentDidMount(){
         this.setState({loading:false});
       }
     .bind(this),
-    3000
+    2000
 );
 }
 
@@ -57,11 +64,20 @@ componentDidMount(){
     this.setState({ selectedTabId });
   };
   onToggle = val => {
+   
     this.setState({
       spid: val
     });
   };
   onUpdate = val => {
+    this.setState({loading:true});
+    setTimeout(
+      function() {
+          this.setState({loading:false});
+        }
+      .bind(this),
+      2500
+  );
     this.setState({
       fieldVal: val
     });
@@ -105,6 +121,7 @@ componentDidMount(){
           onUpdate={this.onUpdate}
           pcount={count}
           onToggle={this.state.spid}
+          onDelete={this.onDelete}
         />
       );
     });
@@ -154,11 +171,10 @@ componentDidMount(){
     let style = {
       backgroundImage:
         "url(https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/space-gray/full.jpg)",
-      minHeight: "500px",
       backgroundSize: "contain",
     }
-    let style1 = "show pimages";
-    let style2 = "hide pimages";
+    let style1 = "show ";
+    let style2 = "hide ";
    
 
     return (
@@ -176,16 +192,18 @@ componentDidMount(){
         <div className="container-fluid OverFlow">
           <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 bgImgColor">
-            <ClipLoader
+               <div className="pimages" style={style}>
+              <HashLoader
           className={override}
           sizeUnit={"px"}
-          size={150}
-          color={'#123abc'}
+          size={0}
+          color={'#fff;'}
           loading={this.state.loading}
-        />
-        {console.log(this.state.loading)}
-              <div className={this.state.loading?style2:style1} style={style}>
+           />
+
+           <span className={this.state.loading?style2:style1}>
                 {productsimages}
+           </span>
               </div>
             </div>
             <div className="dummyCart col-lg-6 col-md-6 col-sm-6 col-xs-6">
