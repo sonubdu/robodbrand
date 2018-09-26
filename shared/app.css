@@ -1115,3 +1115,28 @@ button.Cart__checkout.button {
   height: 18px;
   background-repeat: space;
 }
+.carousel-control.right {
+  right: 17px !important;
+  left: auto;
+  top: 19% !important;
+}
+.carousel-control.left {
+  top: 17% !important;
+  left: 17px !important;
+}
+.glyphicon-chevron-right:before {
+  margin-left: 10px;
+}
+.glyphicon-chevron-left:before {
+  margin-right: 10px;
+}
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+  width: 40px;
+}
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .glyphicon-chevron-left {
+  background: #000;
+}
