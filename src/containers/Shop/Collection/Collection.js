@@ -12,6 +12,7 @@ class Collection extends Component {
     this.state = {
       isCartOpen: false,
       checkout: { lineItems: [] },
+      buynow: { lineItems: [] },
       products: [],
       shop: {},
       cid: "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzYyNjAzNzg4MzU3"
@@ -22,6 +23,8 @@ class Collection extends Component {
     this.addMultipleVariantToCart = this.addMultipleVariantToCart.bind(this);
     this.updateQuantityInCart = this.updateQuantityInCart.bind(this);
     this.removeLineItemInCart = this.removeLineItemInCart.bind(this);
+    this.addMultipleVariantToBuy = this.addMultipleVariantToBuy.bind(this);
+    
   }
 
   setProducts(id) {
@@ -98,6 +101,16 @@ class Collection extends Component {
           checkout: res
         });
       });
+  }
+
+  addMultipleVariantToBuy(carddata) {
+    const lineItemsToAdd = carddata;
+    const checkoutId = this.state.checkout.id;
+   this.props.client.checkout
+    .addLineItems(checkoutId, lineItemsToAdd)
+    .then(res => {
+      window.location.href=res.webUrl;
+    });
   }
 
   updateQuantityInCart(lineItemId, quantity) {
@@ -187,9 +200,11 @@ class Collection extends Component {
         </div>
         <Products
           products={this.state.products}
+          buynow={this.state.buynow}
           client={this.props.client}
           addVariantToCart={this.addVariantToCart}
           addMultipleVariantToCart={this.addMultipleVariantToCart}
+          addMultipleVariantToBuy={this.addMultipleVariantToBuy}
         />
         <Cart
           checkout={this.state.checkout}

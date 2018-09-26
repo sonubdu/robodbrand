@@ -6,8 +6,19 @@ class ProductTitle extends Component {
     this.state = {
       spid: 1
     };
+    
   }
+
+  componentDidMount(){
+
+    if(this.props.pclass===1){
+      this.handleClick(this,this.props.product.id);
+
+    }
+  }
+
   handleClick() {
+    
     this.props.onToggle(this.props.product.id);
     this.setState({ spid: this.props.product.id });
     this.props.setActiveTab(this.props.pclass);

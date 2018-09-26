@@ -140,8 +140,10 @@ componentDidMount(){
               product={product}
               addVariantToCart={this.props.addVariantToCart}
               addMultipleVariantToCart={this.props.addMultipleVariantToCart}
+              addMultipleVariantToBuy={this.props.addMultipleVariantToBuy}
               status={this.state.fakecartstatus}
               onDelete={this.onDelete}
+              buynow={this.props.buynow}
             />
           );
         }

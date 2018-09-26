@@ -7,6 +7,9 @@ class FakeCart extends Component {
     this.state = {
       dataaftereffect: ""
     };
+    this.state = {
+      buynowtext: "BUY NOW"
+    };
     this.decrementQuantity = this.decrementQuantity.bind(this);
     this.incrementQuantity = this.incrementQuantity.bind(this);
     this.removeFakeCartItem = this.removeFakeCartItem.bind(this);
@@ -36,6 +39,20 @@ class FakeCart extends Component {
     localStorage.clear();
     this.props.onDelete(false);
   }
+
+  buyNow() {
+    this.setState({buynowtext:""});
+    let fakerdata = this.props.FakeCartdata;
+    let data = [];
+    let mdata = "";
+
+    for (let key in fakerdata) {
+      mdata = fakerdata[key];
+      data.push({ variantId: mdata.id, quantity: 1 });
+    }
+    this.props.addMultipleVariantToBuy(data);
+    
+    }
 
   removeFakeCartItem(key) {
     let fakeCartData = localStorage.getItem("fakecart");
@@ -97,9 +114,11 @@ class FakeCart extends Component {
 
         <button
           className="Product__buy button pull-left"
-          onClick={() => this.addToCart()}
+          onClick={() => this.buyNow()}
         >
-          {"BUY NOW"}
+          <div className={this.state.buynowtext+"loadershow"}>
+          {this.state.buynowtext}
+          </div>
         </button>
 
         <button

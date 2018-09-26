@@ -595,9 +595,10 @@ h2 {
 .pimages {
   width: 100%;
   background-repeat: no-repeat;
-  height: 500px;
+  height: 450px;
   border-radius: 35px 35px 35px 35px;
   border: "1px solid black";
+
 }
 .Productimage {
   width: 100%;
@@ -1115,4 +1116,15 @@ padding:5px;
 }
 .hide{
   display: none;
+}
+
+.loadershow{
+
+background-image: url("/texture/hourglass.svg");
+background-size:contain;
+width: 51px;
+height: 18px;
+background-repeat: space;
+
+
 }
