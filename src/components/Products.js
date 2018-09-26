@@ -3,23 +3,22 @@ import Product from "./Product";
 import ProductImages from "./ProductImages";
 import ProductTitle from "./ProductTitle";
 import FakeCart from "./FakeCart";
-import { css } from 'react-emotion';
+import { css } from "react-emotion";
 // First way to import
-import { HashLoader } from 'react-spinners';
+import { HashLoader } from "react-spinners";
 // Another way to import
 
- 
 const override = css`
-    display: block;
-    margin: 0 auto;
-    border-color: #ff0000;
-    background-position:center;
-    height:508px !important;
-    opacity:1;
-    width:65px !important;
-    background-image:url('/texture/hourglass.svg');
-    transform: rotate(0deg) !important;
-    background-size:contain;
+  display: block;
+  margin: 0 auto;
+  border-color: #ff0000;
+  background-position: center;
+  height: 508px !important;
+  opacity: 1;
+  width: 65px !important;
+  background-image: url("/texture/hourglass.svg");
+  transform: rotate(0deg) !important;
+  background-size: contain;
 `;
 class Products extends Component {
   constructor() {
@@ -28,7 +27,7 @@ class Products extends Component {
     localStorage.clear();
     this.state = {
       loading: true
-    }
+    };
     this.state = {
       selectedTabId: 1
     };
@@ -44,40 +43,36 @@ class Products extends Component {
     };
   }
 
-componentDidMount(){
-
-  this.setState({loading:true});
-  setTimeout(
-    function() {
-        this.setState({loading:false});
-      }
-    .bind(this),
-    2000
-);
-}
+  componentDidMount() {
+    this.setState({ loading: true });
+    setTimeout(
+      function() {
+        this.setState({ loading: false });
+      }.bind(this),
+      2000
+    );
+  }
 
   isActive = id => {
     return this.state.selectedTabId === id;
   };
-  
+
   setActiveTab = selectedTabId => {
     this.setState({ selectedTabId });
   };
   onToggle = val => {
-   
     this.setState({
       spid: val
     });
   };
   onUpdate = val => {
-    this.setState({loading:true});
+    this.setState({ loading: true });
     setTimeout(
       function() {
-          this.setState({loading:false});
-        }
-      .bind(this),
+        this.setState({ loading: false });
+      }.bind(this),
       2500
-  );
+    );
     this.setState({
       fieldVal: val
     });
@@ -90,7 +85,7 @@ componentDidMount(){
       fakecartstatus: val
     });
   };
-  
+
   render() {
     let pcount = 0;
     let producttitle = this.props.products.map(product => {
@@ -104,8 +99,8 @@ componentDidMount(){
           onUpdate={this.onUpdate}
           onToggle={this.onToggle}
           pclass={pcount}
-          isActive={ this.isActive(pcount) } 
-          setActiveTab={ this.setActiveTab.bind(pcount) }
+          isActive={this.isActive(pcount)}
+          setActiveTab={this.setActiveTab.bind(pcount)}
         />
       );
     });
@@ -157,7 +152,7 @@ componentDidMount(){
       if (this.state.fieldVal) {
         pkey = this.state.fieldVal[product.id.toString()];
       }
-      
+
       return (
         <ProductImages
           addVariantToCart={this.props.addVariantToCart}
@@ -173,11 +168,10 @@ componentDidMount(){
     let style = {
       backgroundImage:
         "url(https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/space-gray/full.jpg)",
-      backgroundSize: "contain",
-    }
+      backgroundSize: "contain"
+    };
     let style1 = "show ";
     let style2 = "hide ";
-   
 
     return (
       <div>
@@ -191,25 +185,27 @@ componentDidMount(){
             </div>
           </div>
         </div>
-        <div className="container-fluid OverFlow">
-          <div className="row">
-            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 bgImgColor">
-               <div className="pimages" style={style}>
-              <HashLoader
-          className={override}
-          sizeUnit={"px"}
-          size={0}
-          color={'#fff;'}
-          loading={this.state.loading}
-           />
+        <div className="bgConFeature">
+          <div className="container OverFlow">
+            <div className="row">
+              <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 bgImgColor">
+                <div className="pimages" style={style}>
+                  <HashLoader
+                    className={override}
+                    sizeUnit={"px"}
+                    size={0}
+                    color={"#fff;"}
+                    loading={this.state.loading}
+                  />
 
-           <span className={this.state.loading?style2:style1}>
-                {productsimages}
-           </span>
+                  <span className={this.state.loading ? style2 : style1}>
+                    {productsimages}
+                  </span>
+                </div>
               </div>
-            </div>
-            <div className="dummyCart col-lg-6 col-md-6 col-sm-6 col-xs-6">
-              {fakecart}
+              <div className="dummyCart col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                {fakecart}
+              </div>
             </div>
           </div>
         </div>
