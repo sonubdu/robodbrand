@@ -142,7 +142,29 @@ class Products extends Component {
             />
           );
         }
-        return "";
+        return (
+<div className="col-lg-12">
+<div className="emptyCart">
+
+</div>
+<div className="emptyCartText">
+<div className="innertext">
+Your cart is empty! Let’s flip up something fun together !
+</div>
+<button
+          className="Product__addtocart button"
+          onClick={() => this.addToCart()}
+        >
+          {"Continue Shoping"}
+ </button>
+  </div>
+ 
+   
+</div>
+
+
+
+        );
       }
       return "";
     });
@@ -186,7 +208,7 @@ class Products extends Component {
           </div>
         </div>
         <div className="bgConFeature">
-          <div className="container OverFlow">
+          <div className="container-fluid OverFlow">
             <div className="row">
               <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 bgImgColor">
                 <div className="pimages" style={style}>

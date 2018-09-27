@@ -94,8 +94,30 @@ class FakeCart extends Component {
     }
 
     if (Total === 0) {
-      return null;
-    }
+      return (
+
+<div className="col-lg-12">
+<div className="emptyCart">
+
+</div>
+<div className="emptyCartText">
+<div className="innertext">
+Your cart is empty! Let’s flip up something fun together !
+</div>
+<button
+          className="Product__addtocart button"
+          onClick={() => this.addToCart()}
+        >
+         {"Continue Shoping"} 
+ </button>
+  </div>
+ 
+   
+</div>
+
+
+      );
+}
     return (
       <div className="fakeCart col-lg-12">
         <label className="cartTittle">Your Selection</label>
