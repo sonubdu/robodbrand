@@ -157,8 +157,8 @@ class Collection extends Component {
                   <div className="homeStrip" />
                   <nav className="navbar navbar-default">
                     <div className="navbar-header">
-                      <a className="logo" href="#">
-                        <img alt="logo" src="//cdn.shopify.com/s/files/1/2334/2135/files/logo_bb010025-b998-4ff6-9366-207a05728f9b_300x300.png?v=1509625436" />
+                      <a className="logo">
+                        <img alt="logo" src="/texture/logo.png"/>
                       </a>
                     </div>
                     <ul className="nav navbar-nav">

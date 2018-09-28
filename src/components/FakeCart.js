@@ -97,10 +97,10 @@ class FakeCart extends Component {
       return (
 
 <div className="col-lg-12">
-<div className="pui-kits-wrapper noKits form-wrapper" id="pui-kits">
-<h2 className="kits-header">Your <span itemprop="name"><span itemprop="model">Selection</span> </span></h2>
+<div className="pui-kits-wrapper noKits form-wrapper" >
+<h2 className="kits-header">Your <span><span>Selection</span> </span></h2>
 <div className="no-kits-wrapper"><div className="inner">Start building a skin combo above.
-<a  className=" btn-highlighted btn--toform active" title="Back to top" id="pui-kits-input--toform">Up</a></div></div>
+<a  className=" btn-highlighted btn--toform active" >Up</a></div></div>
 </div> 
 </div>
  
