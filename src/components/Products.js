@@ -3,11 +3,11 @@ import Product from "./Product";
 import ProductImages from "./ProductImages";
 import ProductTitle from "./ProductTitle";
 import FakeCart from "./FakeCart";
-import { css } from "react-emotion";
+//import { css } from "react-emotion";
 // First way to import
-import { HashLoader } from "react-spinners";
+//import { HashLoader } from "react-spinners";
 // Another way to import
-
+/*
 const override = css`
   display: block;
   margin: 0 auto;
@@ -20,14 +20,13 @@ const override = css`
   transform: rotate(0deg) !important;
   background-size: contain;
 `;
+*/
 class Products extends Component {
   constructor() {
     super();
 
     localStorage.clear();
-    this.state = {
-      loading: true
-    };
+  
     this.state = {
       selectedTabId: 1
     };
@@ -43,16 +42,6 @@ class Products extends Component {
     };
   }
 
-  componentDidMount() {
-    this.setState({ loading: true });
-    setTimeout(
-      function() {
-        this.setState({ loading: false });
-      }.bind(this),
-      2000
-    );
-  }
-
   isActive = id => {
     return this.state.selectedTabId === id;
   };
@@ -65,15 +54,8 @@ class Products extends Component {
       spid: val
     });
   };
-  onUpdate = val => {
-    this.setState({ loading: true });
-    setTimeout(
-      function() {
-        this.setState({ loading: false });
-      }.bind(this),
-      2500
-    );
-    this.setState({
+   onUpdate = val => {
+        this.setState({
       fieldVal: val
     });
     this.setState({
@@ -208,17 +190,11 @@ Your cart is empty! Let’s flip up something fun together !
           </div>
         </div>
         <div className="bgConFeature">
-          <div className="container-fluid OverFlow">
+          <div className="container OverFlow">
             <div className="row">
               <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 bgImgColor">
                 <div className="pimages" style={style}>
-                  <HashLoader
-                    className={override}
-                    sizeUnit={"px"}
-                    size={0}
-                    color={"#fff;"}
-                    loading={this.state.loading}
-                  />
+                 
 
                   <span className={this.state.loading ? style2 : style1}>
                     {productsimages}
