@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import Client from "shopify-buy";
 import "../shared/app.css";
+import "../shared/custom.css";
 import "bootstrap/dist/css/bootstrap.css";
 
 const client = Client.buildClient({
