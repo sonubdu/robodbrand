@@ -65,7 +65,10 @@ class VariantSelector extends Component {
       }
       return true;
     });
+   
+    let camoCount=-1;
     let camodata = camo.map(value => {
+      camoCount++;
       let bgv =
         "/texture/" +
         value
@@ -76,11 +79,15 @@ class VariantSelector extends Component {
       let style = {
         backgroundImage: "url(" + bgv + ")"
       };
+      let camoClassName="Product__option";
+      if(camoCount===Math.ceil(camo.length/2)){
+        camoClassName="Product__option breakrow";
+      }
       return (
         <button
           title={value}
           style={style}
-          className="Product__option"
+          className={camoClassName}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
@@ -88,8 +95,10 @@ class VariantSelector extends Component {
         />
       );
     });
-
+    
+    let carbonCount=-1;
     let carbondata = carbon.map(value => {
+      carbonCount++;
       let bgv =
         "/texture/" +
         value
@@ -100,11 +109,15 @@ class VariantSelector extends Component {
       let style = {
         backgroundImage: "url(" + bgv + ")"
       };
+      let carbonClassName="Product__option";
+      if(carbonCount===Math.ceil(carbon.length/2)){
+        carbonClassName="Product__option breakrow";
+      }
       return (
         <button
           title={value}
           style={style}
-          className="Product__option"
+          className={carbonClassName}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
@@ -112,8 +125,9 @@ class VariantSelector extends Component {
         />
       );
     });
-
+    let dragonCount=-1;
     let dragondata = dragon.map(value => {
+      dragonCount++;
       let bgv =
         "/texture/" +
         value
@@ -124,11 +138,15 @@ class VariantSelector extends Component {
       let style = {
         backgroundImage: "url(" + bgv + ")"
       };
+      let dragonClassName="Product__option";
+      if(dragonCount===Math.ceil(dragon.length/2)){
+        dragonClassName="Product__option breakrow";
+      }
       return (
         <button
           title={value}
           style={style}
-          className="Product__option"
+          className={dragonClassName}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
@@ -136,8 +154,9 @@ class VariantSelector extends Component {
         />
       );
     });
-
+    let stonecount=-1;
     let stonedata = stone.map(value => {
+      stonecount++;
       let bgv =
         "/texture/" +
         value
@@ -148,11 +167,15 @@ class VariantSelector extends Component {
       let style = {
         backgroundImage: "url(" + bgv + ")"
       };
+      let stoneClassName="Product__option";
+      if(stonecount===Math.ceil(stone.length/2)){
+        stoneClassName="Product__option breakrow";
+      }
       return (
         <button
           title={value}
           style={style}
-          className="Product__option"
+          className={stoneClassName}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
@@ -160,8 +183,10 @@ class VariantSelector extends Component {
         />
       );
     });
-
+    
+    let mattecount=-1;
     let mattedata = matte.map(value => {
+      mattecount++;
       let bgv =
         "/texture/" +
         value
@@ -172,11 +197,15 @@ class VariantSelector extends Component {
       let style = {
         backgroundImage: "url(" + bgv + ")"
       };
+      let matteClassName="Product__option";
+      if(mattecount===Math.ceil(matte.length/2)){
+        matteClassName="Product__option breakrow";
+      }
       return (
         <button
           title={value}
           style={style}
-          className="Product__option"
+          className={matteClassName}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
@@ -184,8 +213,9 @@ class VariantSelector extends Component {
         />
       );
     });
-
+    let metalcount=-1;
     let metaldata = metal.map(value => {
+      metalcount++;
       let bgv =
         "/texture/" +
         value
@@ -196,11 +226,15 @@ class VariantSelector extends Component {
       let style = {
         backgroundImage: "url(" + bgv + ")"
       };
+      let metalClassName="Product__option";
+      if(metalcount===Math.ceil(metal.length/2)){
+        metalClassName="Product__option breakrow";
+      }
       return (
         <button
           title={value}
           style={style}
-          className="Product__option"
+          className={metalClassName}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
@@ -208,8 +242,9 @@ class VariantSelector extends Component {
         />
       );
     });
-
+     let leathercount=-1;
     let leatherdata = leather.map(value => {
+      leathercount++;
       let bgv =
         "/texture/" +
         value
@@ -220,11 +255,15 @@ class VariantSelector extends Component {
       let style = {
         backgroundImage: "url(" + bgv + ")"
       };
+      let leatherClassName="Product__option";
+      if(leathercount===Math.ceil(leather.length/2)){
+        leatherClassName="Product__option breakrow";
+      }
       return (
         <button
           title={value}
           style={style}
-          className="Product__option"
+          className={leatherClassName}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
@@ -232,8 +271,9 @@ class VariantSelector extends Component {
         />
       );
     });
-
+    let truecolorcount=-1;
     let truecolordata = truecolor.map(value => {
+      truecolorcount++;
       let bgv =
         "/texture/" +
         value
@@ -244,11 +284,15 @@ class VariantSelector extends Component {
       let style = {
         backgroundImage: "url(" + bgv + ")"
       };
+      let truecolorClassName="Product__option";
+      if(truecolorcount===Math.ceil(truecolor.length/2)){
+        truecolorClassName="Product__option breakrow";
+      }
       return (
         <button
           title={value}
           style={style}
-          className="Product__option"
+          className={truecolorClassName}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
@@ -256,8 +300,9 @@ class VariantSelector extends Component {
         />
       );
     });
-
+     let woodcount=-1;
     let wooddata = wood.map(value => {
+      woodcount++;
       let bgv =
         "/texture/" +
         value
@@ -268,11 +313,15 @@ class VariantSelector extends Component {
       let style = {
         backgroundImage: "url(" + bgv + ")"
       };
+      let woodClassName="Product__option";
+      if(woodcount===Math.ceil(wood.length/2)){
+        woodClassName="Product__option breakrow";
+      }
       return (
         <button
           title={value}
           style={style}
-          className="Product__option"
+          className={woodClassName}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}

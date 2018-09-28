@@ -97,23 +97,14 @@ class FakeCart extends Component {
       return (
 
 <div className="col-lg-12">
-<div className="emptyCart">
-
+<div className="pui-kits-wrapper noKits form-wrapper" id="pui-kits">
+<h2 className="kits-header">Your <span itemprop="name"><span itemprop="model">Selection</span> </span></h2>
+<div className="no-kits-wrapper"><div className="inner">Start building a skin combo above.
+<a  className=" btn-highlighted btn--toform active" title="Back to top" id="pui-kits-input--toform">Up</a></div></div>
+</div> 
 </div>
-<div className="emptyCartText">
-<div className="innertext">
-Your cart is empty! Let’s flip up something fun together !
-</div>
-<button
-          className="Product__addtocart button"
-          onClick={() => this.addToCart()}
-        >
-         {"Continue Shoping"} 
- </button>
-  </div>
  
-   
-</div>
+
 
 
       );
