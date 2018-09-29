@@ -594,14 +594,7 @@
    text-align: center;
  }
  
- .pimages {
-   width: 100%;
-   background-repeat: no-repeat;
-   height: 450px;
-   border-radius: 35px 35px 35px 35px;
-   border: "1px solid black";
- 
- }
+
  .Productimage {
    width: 100%;
    min-height: "400px";
@@ -735,18 +728,7 @@
  .Items {
    overflow: hidden;
  }
- .CAMERA {
-   position: absolute;
-  }
- .BACK {
-   position: absolute;
- }
- .TOP{
-  position: absolute;
- }
-.FRONT{
-  position: absolute;
-}
+
  .homeStrip {
    height: 5px;
    background: #ff0000;

@@ -3,24 +3,7 @@ import Product from "./Product";
 import ProductImages from "./ProductImages";
 import ProductTitle from "./ProductTitle";
 import FakeCart from "./FakeCart";
-//import { css } from "react-emotion";
-// First way to import
-//import { HashLoader } from "react-spinners";
-// Another way to import
-/*
-const override = css`
-  display: block;
-  margin: 0 auto;
-  border-color: #ff0000;
-  background-position: center;
-  height: 508px !important;
-  opacity: 1;
-  width: 65px !important;
-  background-image: url("/texture/hourglass.svg");
-  transform: rotate(0deg) !important;
-  background-size: contain;
-`;
-*/
+import DeviceColor from "./DeviceColor";
 class Products extends Component {
   constructor() {
     super();
@@ -31,8 +14,16 @@ class Products extends Component {
       selectedTabId: 1
     };
     this.state = {
+      deviceselectedTabId: 1
+    };
+    this.state = {
       spid: ""
     };
+
+    this.state = {
+      dccolor: ""
+    };
+
     localStorage.setItem("fakecart", "");
     this.state = {
       fakedata: ""
@@ -42,12 +33,24 @@ class Products extends Component {
     };
   }
 
+  componentWillMount(){
+
+    this.setState({ dccolor:"Gray" });
+
+  }
+
   isActive = id => {
     return this.state.selectedTabId === id;
+  };
+  deviceisActive = id => {
+    return this.state.selecteddeviceTabId === id;
   };
 
   setActiveTab = selectedTabId => {
     this.setState({ selectedTabId });
+  };
+  devicesetActiveTab = selecteddeviceTabId => {
+    this.setState({ selecteddeviceTabId });
   };
   onToggle = val => {
     this.setState({
@@ -67,9 +70,31 @@ class Products extends Component {
       fakecartstatus: val
     });
   };
-
-  render() {
+  devicecahnge=val=>{
+    this.setState({ dccolor:val});
+  };
+ //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/space-gray/full.jpg
+ //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/silver/full.jpg
+ //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/gold/full.jpg
+ 
+   render() {
+    let devicecolors=[];
+    devicecolors=["Gray","Silver","Gold"];
     let pcount = 0;
+    let kcount = 0;
+    let deviceColor = devicecolors.map(dc => {
+      kcount++;
+      return (
+        <DeviceColor
+         product={dc}
+         pclass={kcount}
+         deviceisActive={this.deviceisActive(kcount)}
+         devicesetActiveTab={this.devicesetActiveTab.bind(kcount)}
+         devicecahnge={this.devicecahnge}
+        />
+      );
+    });
+
     let producttitle = this.props.products.map(product => {
       pcount++;
       return (
@@ -157,8 +182,8 @@ class Products extends Component {
 
     let style = {
       backgroundImage:
-        "url(https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/space-gray/full.jpg)",
-      backgroundSize: "contain"
+        "url(/products/"+this.state.dccolor+".jpg)",
+      
     };
     let style1 = "show ";
     let style2 = "hide ";
@@ -180,11 +205,15 @@ class Products extends Component {
             <div className="row">
               <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 bgImgColor">
                 <div className="pimages" style={style}>
-                 
-
-                  <span className={this.state.loading ? style2 : style1}>
+                 <span className={this.state.loading ? style2 : style1}>
                     {productsimages}
                   </span>
+                </div>
+                <div className="devicecolor">
+                <label><span className="label__inner">Device Color</span></label>
+                <div className="devicedata">
+                {deviceColor}
+                </div>
                 </div>
               </div>
               <div className="dummyCart col-lg-6 col-md-6 col-sm-6 col-xs-12">

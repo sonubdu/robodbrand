@@ -5,12 +5,8 @@ class ProductImages extends Component {
    let variantImage = localStorage.getItem(this.props.product.id);
    let style={
     backgroundImage: 'url('+variantImage+')',
-    height:"450px",
-    width:'100%',
-    backgroundSize: "contain",
+    }
     
-    
-}
     return ( 
     
       <div className="Productimage">
