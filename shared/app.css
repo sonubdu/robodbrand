@@ -81,7 +81,7 @@
   display: inline-block;
   content: "";
   position: absolute;
-  background: #000;
+  background: #0c0c0c;
   width: 50%;
   height: 100%;
   top: 0;
@@ -301,7 +301,31 @@ h2 {
 .Cart--open {
   transform: translateX(0);
 }
+.devicedata > div:last-child {
+  margin: 0;
+}
 
+.devicedata > div {
+  width: 32.33%;
+  padding: 0;
+  margin-right: 1.5%;
+}
+.devicecolor.marginZero {
+  margin: 0 !important;
+}
+.paddingZero {
+  padding: 0 !important;
+}
+.fakeCart.col-lg-12 {
+  padding-right: 30px;
+}
+.Product__buy,
+.Product__addtocart {
+  width: 48% !important;
+}
+.devicedata > div button {
+  width: 100%;
+}
 .Cart__close {
   position: absolute;
   right: 9px;
@@ -682,20 +706,28 @@ h2 {
   list-style: none;
   width: 100%;
   float: left;
-  padding: 10px;
+  /* padding: 10px; */
   margin-bottom: 15px;
-  border-radius: 3px;
+  /* border-radius: 3px;
   -moz-border-radius: 3px;
   -o-border-radius: 3px;
-  -webkit-border-radius: 3px;
+  -webkit-border-radius: 3px; */
 }
 .drow_left {
   float: left;
   width: 33.33%;
+  background: #d8d8da;
+  padding: 10px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 .drow_right {
   float: left;
   width: 66.66%;
+  padding: 15px 10px;
+  background: #e0e0e2;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 .drow_right li {
   float: left;
@@ -977,7 +1009,7 @@ input {
   border-left: 5px solid #3d55a3;
 }
 .total.kitTotal {
-  background: #e3e3e3;
+  background: #ccccce;
   color: #212121;
 }
 .Product__addtocart {

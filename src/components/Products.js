@@ -9,7 +9,7 @@ class Products extends Component {
     super();
 
     localStorage.clear();
-  
+
     this.state = {
       selectedTabId: 1
     };
@@ -33,10 +33,8 @@ class Products extends Component {
     };
   }
 
-  componentWillMount(){
-
-    this.setState({ dccolor:"Gray" });
-
+  componentWillMount() {
+    this.setState({ dccolor: "Gray" });
   }
 
   isActive = id => {
@@ -57,8 +55,8 @@ class Products extends Component {
       spid: val
     });
   };
-   onUpdate = val => {
-        this.setState({
+  onUpdate = val => {
+    this.setState({
       fieldVal: val
     });
     this.setState({
@@ -70,27 +68,27 @@ class Products extends Component {
       fakecartstatus: val
     });
   };
-  devicecahnge=val=>{
-    this.setState({ dccolor:val});
+  devicecahnge = val => {
+    this.setState({ dccolor: val });
   };
- //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/space-gray/full.jpg
- //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/silver/full.jpg
- //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/gold/full.jpg
- 
-   render() {
-    let devicecolors=[];
-    devicecolors=["Gray","Silver","Gold"];
+  //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/space-gray/full.jpg
+  //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/silver/full.jpg
+  //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/gold/full.jpg
+
+  render() {
+    let devicecolors = [];
+    devicecolors = ["Gray", "Silver", "Gold"];
     let pcount = 0;
     let kcount = 0;
     let deviceColor = devicecolors.map(dc => {
       kcount++;
       return (
         <DeviceColor
-         product={dc}
-         pclass={kcount}
-         deviceisActive={this.deviceisActive(kcount)}
-         devicesetActiveTab={this.devicesetActiveTab.bind(kcount)}
-         devicecahnge={this.devicecahnge}
+          product={dc}
+          pclass={kcount}
+          deviceisActive={this.deviceisActive(kcount)}
+          devicesetActiveTab={this.devicesetActiveTab.bind(kcount)}
+          devicecahnge={this.devicecahnge}
         />
       );
     });
@@ -150,14 +148,23 @@ class Products extends Component {
           );
         }
         return (
-<div className="col-lg-12">
-<div className="pui-kits-wrapper noKits form-wrapper" >
-<h2 className="kits-header">Your <span className="a1"><span className="a2">Selection</span></span></h2>
-<div className="no-kits-wrapper"><div className="inner">Start building a skin combo above.
-<a className=" btn-highlighted btn--toform active">Up</a></div></div>
-</div> 
-</div>
-  );
+          <div className="col-lg-12">
+            <div className="pui-kits-wrapper noKits form-wrapper">
+              <h2 className="kits-header">
+                Your{" "}
+                <span className="a1">
+                  <span className="a2">Selection</span>
+                </span>
+              </h2>
+              <div className="no-kits-wrapper">
+                <div className="inner">
+                  Start building a skin combo above.
+                  <a className=" btn-highlighted btn--toform active">Up</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
       }
       return "";
     });
@@ -181,9 +188,7 @@ class Products extends Component {
     });
 
     let style = {
-      backgroundImage:
-        "url(/products/"+this.state.dccolor+".jpg)",
-      
+      backgroundImage: "url(/products/" + this.state.dccolor + ".jpg)"
     };
     let style1 = "show ";
     let style2 = "hide ";
@@ -193,9 +198,28 @@ class Products extends Component {
         <div className="bgWrapper">
           <div className="container">
             <div className="row">
+              <div className="col-lg-6 paddingZero">
+                <div className="devicecolor marginZero">
+                  <label>
+                    <span class="label__inner">Apple Cutout</span>
+                  </label>
+                </div>
+              </div>
+              <div className="col-lg-6 paddingZero">
+                <div className="devicecolor marginZero">
+                  <label>
+                    <span class="label__inner">Coverage</span>
+                  </label>
+                </div>
+              </div>
               <div className="productCon">{producttitle}</div>
             </div>
             <div className="row">
+              <div className="devicecolor marginZero">
+                <label>
+                  <span class="label__inner">Texture</span>
+                </label>
+              </div>
               <div className="col-lg-12 paddingZero">{products}</div>
             </div>
           </div>
@@ -205,15 +229,15 @@ class Products extends Component {
             <div className="row">
               <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 bgImgColor">
                 <div className="pimages" style={style}>
-                 <span className={this.state.loading ? style2 : style1}>
+                  <span className={this.state.loading ? style2 : style1}>
                     {productsimages}
                   </span>
                 </div>
                 <div className="devicecolor">
-                <label><span className="label__inner">Device Color</span></label>
-                <div className="devicedata">
-                {deviceColor}
-                </div>
+                  <label>
+                    <span className="label__inner">Device Color</span>
+                  </label>
+                  <div className="devicedata">{deviceColor}</div>
                 </div>
               </div>
               <div className="dummyCart col-lg-6 col-md-6 col-sm-6 col-xs-12">

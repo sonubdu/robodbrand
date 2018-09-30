@@ -41,7 +41,7 @@ class FakeCart extends Component {
   }
 
   buyNow() {
-    this.setState({buynowtext:""});
+    this.setState({ buynowtext: "" });
     let fakerdata = this.props.FakeCartdata;
     let data = [];
     let mdata = "";
@@ -51,8 +51,7 @@ class FakeCart extends Component {
       data.push({ variantId: mdata.id, quantity: 1 });
     }
     this.props.addMultipleVariantToBuy(data);
-    
-    }
+  }
 
   removeFakeCartItem(key) {
     let fakeCartData = localStorage.getItem("fakecart");
@@ -73,11 +72,10 @@ class FakeCart extends Component {
   }
 
   render() {
-  
     let fakerdata = this.props.status
       ? this.state.dataaftereffect
       : this.props.FakeCartdata;
- 
+
     let fakecartlineItem = [];
     let data = "";
     let Total = 0;
@@ -95,24 +93,28 @@ class FakeCart extends Component {
 
     if (Total === 0) {
       return (
-
-<div className="col-lg-12">
-<div className="pui-kits-wrapper noKits form-wrapper" >
-<h2 className="kits-header">Your <span><span>Selection</span> </span></h2>
-<div className="no-kits-wrapper"><div className="inner">Start building a skin combo above.
-<a  className=" btn-highlighted btn--toform active" >Up</a></div></div>
-</div> 
-</div>
- 
-
-
-
+        <div className="col-lg-12">
+          <div className="pui-kits-wrapper noKits form-wrapper">
+            <h2 className="kits-header">
+              Your{" "}
+              <span>
+                <span>Selection</span>{" "}
+              </span>
+            </h2>
+            <div className="no-kits-wrapper">
+              <div className="inner">
+                Start building a skin combo above.
+                <a className=" btn-highlighted btn--toform active">Up</a>
+              </div>
+            </div>
+          </div>
+        </div>
       );
-}
+    }
     return (
       <div className="fakeCart col-lg-12">
         <label className="cartTittle">Your Selection</label>
-        <a  className="pull-right">
+        <a className="pull-right">
           <i className="fa fa-pencil-square-o" aria-hidden="true" />
         </a>
         <div className="Items">{fakecartlineItem}</div>
@@ -126,16 +128,16 @@ class FakeCart extends Component {
         </div>
 
         <button
-          className="Product__buy button pull-left"
+          className="Product__buy button pull-left col-lg-6"
           onClick={() => this.buyNow()}
         >
-          <div className={this.state.buynowtext+"loadershow"}>
-          {this.state.buynowtext}
+          <div className={this.state.buynowtext + "loadershow"}>
+            {this.state.buynowtext}
           </div>
         </button>
 
         <button
-          className="Product__addtocart button pull-right"
+          className="Product__addtocart button pull-right col-lg-6"
           onClick={() => this.addToCart()}
         >
           {"ADD TO CART"}

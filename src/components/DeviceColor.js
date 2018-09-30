@@ -6,13 +6,11 @@ class DeviceColor extends Component {
     this.state = {
       spid: 1
     };
-    
   }
 
-  componentDidMount(){
-   if(this.props.pclass===1){
-      this.devicecahnge(this,this.props.product);
-
+  componentDidMount() {
+    if (this.props.pclass === 1) {
+      this.devicecahnge(this, this.props.product);
     }
   }
 
@@ -23,12 +21,16 @@ class DeviceColor extends Component {
 
   render() {
     return (
-      <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+      <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4">
         <button
           className={
-            this.props.deviceisActive ? "active" :(this.props.pclass===1)? "class"+this.state.spid: "class" + this.props.pclass
+            this.props.deviceisActive
+              ? "active"
+              : this.props.pclass === 1
+                ? "class" + this.state.spid
+                : "class" + this.props.pclass
           }
-          onClick={this.devicecahnge.bind(this,this.props.product)}
+          onClick={this.devicecahnge.bind(this, this.props.product)}
         >
           {" "}
           <span className="ProductCom">{this.props.product}</span>
