@@ -1,3 +1,5 @@
+/* INITIALIZERS + DEFAULTS
+ * ============================== */
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
 @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
@@ -63,35 +65,8 @@
   font-size: 14px;
   font-weight: 600;
   padding: 0;
-  border-radius: 0px;
+  border-radius: 4px;
   transition: all linear 0.5s;
-}
-.navbar-header {
-  float: left;
-  position: relative;
-  width: 255px;
-  height: 70px;
-}
-#email {
-  width: 75%;
-  border: 0;
-  height: 40px;
-}
-.bgConFeature:after {
-  display: inline-block;
-  content: "";
-  position: absolute;
-  background: #000;
-  width: 50%;
-  height: 100%;
-  top: 0;
-  z-index: -1;
-}
-.logo {
-  position: absolute;
-  width: 232px;
-  left: 0;
-  top: 0px;
 }
 .productFeature button.active {
   background: #e6e6e6 !important;
@@ -102,9 +77,9 @@
   color: #fff;
 }
 .productFeature {
-  margin: 3px;
+  margin: 0;
   padding: 0 !important;
-  width: 285px !important;
+  width: 290px !important;
 }
 .productCon {
   overflow: hidden;
@@ -132,11 +107,10 @@
   float: left;
   width: auto;
   background: #161616;
-  margin-right: 1%;
-  border-radius: 1px;
+  margin-right: 0.4%;
+  border-radius: 4px;
   padding: 5px;
   padding-bottom: 0;
-  min-height: 116px;
 }
 .col-lg-12.paddingZero {
   padding: 0;
@@ -177,7 +151,7 @@ h2 {
 }
 
 /* BASE APP
-  * ============================== */
+ * ============================== */
 .App__header {
   background-color: #222;
   background-image: url("https://unsplash.it/1000/300?image=823");
@@ -282,7 +256,7 @@ h2 {
 }
 
 /* CART
-  * ============================== */
+ * ============================== */
 .Cart {
   position: fixed;
   top: 0;
@@ -363,7 +337,7 @@ h2 {
 }
 
 /* LINE ITEMS
-  * ============================== */
+ * ============================== */
 .Line-item {
   margin-bottom: 20px;
   overflow: hidden;
@@ -481,7 +455,7 @@ h2 {
 }
 
 /* PRODUCTS
-  * ============================== */
+ * ============================== */
 .Product {
   flex: 0 1 31%;
   margin-left: 1%;
@@ -507,16 +481,13 @@ h2 {
 }
 .Product__option {
   display: block;
-  width: 30px;
-  height: 38px;
+  width: 28px;
+  height: 45px;
   border: 0;
   float: left;
-  margin: 1px 3px 6px;
+  margin: 0px 3px 5px;
   border-radius: 0.25rem;
   box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, 0.1), 0 0 0 2px #000;
-}
-.breakrow {
-  clear: both;
 }
 .Product__option2 {
   display: block;
@@ -533,7 +504,7 @@ h2 {
 }
 
 /* CUSTOMER AUTH
-  * ============================== */
+ * ============================== */
 .CustomerAuth {
   background: #2a2c2e;
   display: none;
@@ -620,6 +591,13 @@ h2 {
   text-align: center;
 }
 
+.pimages {
+  width: 100%;
+  background-repeat: no-repeat;
+  height: 450px;
+  border-radius: 35px 35px 35px 35px;
+  border: "1px solid black";
+}
 .Productimage {
   width: 100%;
   min-height: "400px";
@@ -664,7 +642,7 @@ h2 {
 }
 .dummyCart {
   width: 100%;
-  padding-right: 0 !important;
+  padding-right: 0px !important;
   padding-top: 35px;
 }
 
@@ -753,7 +731,15 @@ h2 {
 .Items {
   overflow: hidden;
 }
-
+.CAMERA {
+  top: 31px;
+  left: 0;
+}
+.BACK {
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
 .homeStrip {
   height: 5px;
   background: #ff0000;
@@ -1015,11 +1001,7 @@ input {
 button.Cart__checkout.button {
   background: #ff0000 !important;
 }
-.bgImgColor {
-  background: #000;
-  padding-top: 30px;
-  padding-bottom: 50px;
-}
+
 .container-fluid.OverFlow {
   overflow: hidden;
 }
@@ -1037,17 +1019,16 @@ button.Cart__checkout.button {
 .robodesign {
   clear: both;
   overflow: hidden;
-  padding-top: 8px;
+  padding-top: 15px;
 }
 
 .title {
-  margin: 0em 0.3em 0.6em 0.1em;
-  font-size: 0.8em;
+  margin: 0 0 0.4em;
+  font-size: 1em;
   font-weight: 400;
   text-align: center;
   cursor: default;
   color: #eeeef0;
-  text-transform: capitalize;
 }
 
 .Product__option1 {
@@ -1066,7 +1047,6 @@ button.Cart__checkout.button {
   left: 0;
   width: 0% !important;
   opacity: 1 !important;
-  display: none;
 }
 .carousel-control .glyphicon-chevron-left {
   width: 30px;
@@ -1135,32 +1115,51 @@ button.Cart__checkout.button {
   height: 18px;
   background-repeat: space;
 }
-
-.emptyCart {
-  background-image: url("/texture/Cart-empty.gif");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 230px;
-  margin: 10px;
+.carousel-control.right {
+  right: 17px !important;
+  left: auto;
+  top: 19% !important;
 }
-.emptyCartText {
-  text-align: center;
-  font-size: 15px !important;
-  color: #272727;
+.carousel-control.left {
+  top: 17% !important;
+  left: 17px !important;
 }
-.emptyCartText .innertext {
-  margin: 10px;
+.glyphicon-chevron-right:before {
+  margin-left: 10px;
 }
-
-.btn-highlighted {
-  color: #000;
-  background: #fb0;
+.glyphicon-chevron-left:before {
+  margin-right: 10px;
 }
-
-.btn-highlighted:hover {
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+  width: 40px;
+}
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .glyphicon-chevron-left {
   background: #000;
-  color: #fb0;
+}
+.container.OverFlow:after {
+  content: "";
+  display: inline-block;
+  background: #000;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.bgConFeature {
+  position: relative;
+}
+.bgImgColor {
+  background: #000;
+  padding-left: 0 !important;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  position: relative;
+  z-index: 99;
 }
 
 @media (max-width: 860px) {
@@ -1168,13 +1167,7 @@ button.Cart__checkout.button {
     display: block;
   }
   .productFeature {
-    width: 100% !important;
-  }
-  .bgConFeature:after {
-    display: none;
-  }
-  .productFeature button {
-    width: 97%;
+    width: 50% !important;
   }
   .container.OverFlow:after {
     display: none;
@@ -1282,19 +1275,4 @@ button.Cart__checkout.button {
     margin-right: 2%;
     margin-bottom: 2%;
   }
-  .navbar-header {
-    float: none;
-    position: relative;
-    width: auto;
-    height: auto;
-  }
-  .logo {
-    position: relative;
-    width: auto;
-    left: auto;
-    top: auto;
-  }
-}
-.bgConFeature {
-  position: relative;
 }

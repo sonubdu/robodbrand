@@ -8,19 +8,19 @@ class Footer extends Component {
           <div className="container text-center">
             <ul className="robobullFooterUl">
               <li className="robobullFooterItem">
-                <a href="">about us</a>
+                <a href="">About Us</a>
               </li>
 
               <li className="robobullFooterItem">
-                <a href="">exclusive outlets</a>
+                <a href="">Exclusive Outlets</a>
               </li>
 
               <li className="robobullFooterItem">
-                <a href="">warranty program</a>
+                <a href="">Warranty Program</a>
               </li>
 
               <li className="robobullFooterItem">
-                <a href="">videos</a>
+                <a href="">Videos</a>
               </li>
 
               <li className="robobullFooterItem">
@@ -32,7 +32,7 @@ class Footer extends Component {
               </li>
 
               <li className="robobullFooterItem">
-                <a href="">contact us</a>
+                <a href="">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -55,23 +55,23 @@ class Footer extends Component {
             <div className="container text-center">
               <ul className="robobullFooterUl">
                 <li className="robobullFooterItem">
-                  <a href="">payment, shipping &amp; returns</a>
+                  <a href="">Payment, Shipping &amp; Returns</a>
                 </li>
 
                 <li className="robobullFooterItem">
-                  <a href="">terms of use</a>
+                  <a href="">Terms Of Use</a>
                 </li>
 
                 <li className="robobullFooterItem">
-                  <a href="">privacy &amp; policy</a>
+                  <a href="">Privacy &amp; Policy</a>
                 </li>
 
                 <li className="robobullFooterItem">
-                  <a href="">careers</a>
+                  <a href="">Careers</a>
                 </li>
 
                 <li className="robobullFooterItem">
-                  <a href="">blog</a>
+                  <a href="">Blog</a>
                 </li>
               </ul>
             </div>
