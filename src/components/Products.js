@@ -198,14 +198,8 @@ class Products extends Component {
         <div className="bgWrapper">
           <div className="container">
             <div className="row">
-              <div className="col-lg-6 paddingZero">
-                <div className="devicecolor marginZero">
-                  <label>
-                    <span class="label__inner">Apple Cutout</span>
-                  </label>
-                </div>
-              </div>
-              <div className="col-lg-6 paddingZero">
+            
+              <div className="col-lg-12 paddingZero">
                 <div className="devicecolor marginZero">
                   <label>
                     <span class="label__inner">Coverage</span>
