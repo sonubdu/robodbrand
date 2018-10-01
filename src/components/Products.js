@@ -89,6 +89,7 @@ class Products extends Component {
           deviceisActive={this.deviceisActive(kcount)}
           devicesetActiveTab={this.devicesetActiveTab.bind(kcount)}
           devicecahnge={this.devicecahnge}
+          key={"dcolor"+kcount}
         />
       );
     });
@@ -148,7 +149,7 @@ class Products extends Component {
           );
         }
         return (
-          <div className="col-lg-12">
+          <div className="col-lg-12" key="empty">
             <div className="pui-kits-wrapper noKits form-wrapper">
               <h2 className="kits-header">
                 Your{" "}
@@ -201,8 +202,8 @@ class Products extends Component {
             
               <div className="col-lg-12 paddingZero">
                 <div className="devicecolor marginZero">
-                  <label>
-                    <span class="label__inner">Coverage</span>
+                  <label key="1">
+                    <span className="label__inner">Coverage</span>
                   </label>
                 </div>
               </div>
@@ -210,8 +211,8 @@ class Products extends Component {
             </div>
             <div className="row">
               <div className="devicecolor marginZero">
-                <label>
-                  <span class="label__inner">Texture</span>
+                <label key="2">
+                  <span className="label__inner">Texture</span>
                 </label>
               </div>
               <div className="col-lg-12 paddingZero">{products}</div>
@@ -228,7 +229,7 @@ class Products extends Component {
                   </span>
                 </div>
                 <div className="devicecolor">
-                  <label>
+                  <label key="3">
                     <span className="label__inner">Device Color</span>
                   </label>
                   <div className="devicedata">{deviceColor}</div>

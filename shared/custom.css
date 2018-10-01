@@ -116,7 +116,11 @@
     background-size: contain;
     background-position: center;
     height:450px;
-    transition: background-image 1s ease-in-out;
+    transition: all 500ms ease-in-out;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
 }
 
 .BACK{
@@ -124,7 +128,12 @@
     width: 95%;
     background-size: contain;
     background-position: center;
-    transition: background-image 1s ease-in-out;
+    height:450px;
+    transition: all 500ms ease-in-out;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
 }
 
 .FRONT{
@@ -133,7 +142,11 @@
     background-size: contain;
     background-position: center;
     height:450px;
-    transition: background-image 1s ease-in-out;
+    transition: all 500ms ease-in-out;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
 }
 .pimages {
     width: 100%;
@@ -176,5 +189,16 @@
     }
     
   }  
+  .navbar-default{
 
-  
+    background:#fff !important;
+  }
+  .navbar-default .navbar-nav > li > a {
+    color: #000 !important;
+    font-size: 16px;
+    font-weight: 800;
+}
+.productFeature button.active:hover {
+    background: #e6e6e6 !important;
+    color: #000;
+}

@@ -162,7 +162,7 @@ class Collection extends Component {
                       </a>
                     </div>
                     <ul className="nav navbar-nav">
-                      <li className="active">
+                      <li className="">
                         <a href="#">SHOP</a>
                       </li>
                       <li>
