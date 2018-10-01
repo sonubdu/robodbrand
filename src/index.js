@@ -5,6 +5,7 @@ import Client from "shopify-buy";
 import "../shared/app.css";
 import "../shared/custom.css";
 import "bootstrap/dist/css/bootstrap.css";
+import "../shared/hm.css";
 
 const client = Client.buildClient({
   storefrontAccessToken: "5b599bfacd46adb8818f5aa98ce09697",

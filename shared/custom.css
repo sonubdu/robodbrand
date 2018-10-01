@@ -202,3 +202,40 @@
     background: #e6e6e6 !important;
     color: #000;
 }
+
+label{
+display: inline-block;
+max-width: 100%;
+margin-bottom: 5px;
+font-weight: bold;
+color: #000000;
+font-size: 16px;
+}
+
+.hamburgermenu{
+float: right;
+
+right: 0;
+top: 17px;
+position: absolute;
+display:none;
+}
+.hmactive{
+    display:none;  
+ }
+@media (max-width:786px){
+
+    .nav{
+        display:none;
+    
+     }
+
+     .hamburgermenu{
+        display:block;
+     }
+    
+     .hmactive{
+        display:block;  
+      
+    }
+  }  

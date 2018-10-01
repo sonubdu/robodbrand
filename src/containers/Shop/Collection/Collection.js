@@ -15,10 +15,13 @@ class Collection extends Component {
       buynow: { lineItems: [] },
       products: [],
       shop: {},
-      cid: "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzYyNjAzNzg4MzU3"
+      cid: "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzYyNjAzNzg4MzU3",
+      hmactive:"",
+      hcv:""
     };
 
     this.handleCartClose = this.handleCartClose.bind(this);
+    this.changemenu = this.changemenu.bind(this);
     this.addVariantToCart = this.addVariantToCart.bind(this);
     this.addMultipleVariantToCart = this.addMultipleVariantToCart.bind(this);
     this.updateQuantityInCart = this.updateQuantityInCart.bind(this);
@@ -145,6 +148,26 @@ class Collection extends Component {
       isCartOpen: false
     });
   }
+  changemenu() {
+    if(this.state.hmactive===""){
+      this.setState({
+        hmactive: "hmactive"
+      });
+      this.setState({
+        hcv: "hamburger--collapse is-active"
+      });
+      
+    }else{
+      this.setState({
+        hmactive: ""
+      });
+      this.setState({
+        hcv: ""
+      });
+
+    }
+    
+  }
 
   render() {
     return (
@@ -160,8 +183,15 @@ class Collection extends Component {
                       <a className="logo">
                         <img alt="logo" src="/texture/logo.png"/>
                       </a>
+                      <div className="hamburgermenu">
+                       <button  onClick={this.changemenu} className={this.state.hcv+" hamburger"} type="button">
+                            <span className="hamburger-box">
+                             <span className="hamburger-inner"></span>
+                             </span>
+                          </button>
+                      </div>
                     </div>
-                    <ul className="nav navbar-nav">
+                    <ul className={this.state.hmactive+" nav navbar-nav"}>
                       <li className="">
                         <a href="#">SHOP</a>
                       </li>
@@ -169,7 +199,7 @@ class Collection extends Component {
                         <a href="#">HOW TO INSTALL</a>
                       </li>
                     </ul>
-                    <ul className="nav navbar-nav pull-right">
+                    <ul className={this.state.hmactive+" nav navbar-nav pull-right"}>
                       <li>
                         <a href="">
                           <i className="fa fa-user" aria-hidden="true" />
