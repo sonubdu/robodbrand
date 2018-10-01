@@ -239,3 +239,9 @@ display:none;
       
     }
   }  
+
+  .datatooltip{
+
+    width:7%;
+    font-family:  'Arial Narrow Bold';
+  }

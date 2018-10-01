@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "react-alice-carousel/lib/alice-carousel.css";
 import AliceCarousel from "react-alice-carousel";
+import ReactTooltip from 'react-tooltip'
 class VariantSelector extends Component {
   responsive = {
     0: { items: 8 },
@@ -85,14 +86,17 @@ class VariantSelector extends Component {
       }
       return (
         <button
-          title={value}
+          data-tip={value}
           style={style}
           className={camoClassName}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
           key={`${this.props.option.name}-${value}`}
-        />
+        >
+         <ReactTooltip className="datatooltip" place="bottom" type="light" effect="solid" />
+        </button>
+      
       );
     });
     
@@ -115,14 +119,16 @@ class VariantSelector extends Component {
       }
       return (
         <button
-          title={value}
+          data-tip={value}
           style={style}
           className={carbonClassName}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
-          key={`${this.props.option.name}-${value}`}
-        />
+          key={`${this.props.option.name}-${value}`}>
+          <ReactTooltip className="datatooltip" place="bottom" type="light" effect="solid" />
+          </button>
+        
       );
     });
     let dragonCount=-1;
@@ -144,14 +150,16 @@ class VariantSelector extends Component {
       }
       return (
         <button
-          title={value}
+          data-tip={value}
           style={style}
           className={dragonClassName}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
-          key={`${this.props.option.name}-${value}`}
-        />
+          key={`${this.props.option.name}-${value}`}>
+          <ReactTooltip className="datatooltip" place="bottom" type="light" effect="solid" />
+        </button>
+      
       );
     });
     let stonecount=-1;
@@ -173,14 +181,16 @@ class VariantSelector extends Component {
       }
       return (
         <button
-          title={value}
+          data-tip={value}
           style={style}
           className={stoneClassName}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
-          key={`${this.props.option.name}-${value}`}
-        />
+          key={`${this.props.option.name}-${value}`}>
+          <ReactTooltip className="datatooltip" place="bottom" type="light" effect="solid" />
+        </button>
+      
       );
     });
     
@@ -203,7 +213,7 @@ class VariantSelector extends Component {
       }
       return (
         <button
-          title={value}
+          data-tip={value}
           style={style}
           className={matteClassName}
           onClick={this.props.handleOptionChange}
@@ -232,14 +242,16 @@ class VariantSelector extends Component {
       }
       return (
         <button
-          title={value}
+          data-tip={value}
           style={style}
           className={metalClassName}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
-          key={`${this.props.option.name}-${value}`}
-        />
+          key={`${this.props.option.name}-${value}`}>
+          <ReactTooltip className="datatooltip" place="bottom" type="light" effect="solid" />
+          </button>
+        
       );
     });
      let leathercount=-1;
@@ -261,14 +273,16 @@ class VariantSelector extends Component {
       }
       return (
         <button
-          title={value}
+          data-tip={value}
           style={style}
           className={leatherClassName}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
-          key={`${this.props.option.name}-${value}`}
-        />
+          key={`${this.props.option.name}-${value}`}>
+          <ReactTooltip className="datatooltip" place="bottom" type="light" effect="solid" />
+          </button>
+        
       );
     });
     let truecolorcount=-1;
@@ -290,14 +304,16 @@ class VariantSelector extends Component {
       }
       return (
         <button
-          title={value}
+          data-tip={value}
           style={style}
           className={truecolorClassName}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
-          key={`${this.props.option.name}-${value}`}
-        />
+          key={`${this.props.option.name}-${value}`}>
+          <ReactTooltip className="datatooltip" place="bottom" type="light" effect="solid" />
+        </button>
+      
       );
     });
      let woodcount=-1;
@@ -319,14 +335,16 @@ class VariantSelector extends Component {
       }
       return (
         <button
-          title={value}
+          data-tip={value}
           style={style}
           className={woodClassName}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
-          key={`${this.props.option.name}-${value}`}
-        />
+          key={`${this.props.option.name}-${value}`}>
+          <ReactTooltip className="datatooltip" place="bottom" type="light" effect="solid" />
+          </button>
+        
       );
     });
     let robodata = robo.map(value => {
@@ -351,13 +369,15 @@ class VariantSelector extends Component {
     let nonedata = none.map(value => {
       return (
         <button
-          title={value}
+          data-tip={value}
           className="Product__option"
           name={this.props.option.name}
           key={`${this.props.option.name}-${value}`}
           value={value}
           onClick={() => this.props.removeFakeCartItem(this.props.parentid)}
-        />
+          >
+          <ReactTooltip className="datatooltip" place="bottom" type="light" effect="solid" />
+         </button>
       );
     });
     const items = robodata;
