@@ -96,10 +96,12 @@
 .productFeature button.active {
   background: #e6e6e6 !important;
   color: #000;
+  border-bottom: 1px solid red;
 }
 .bgWrapper .productFeature:hover button {
   background: #ff0000 !important;
   color: #fff;
+  border-bottom: 1px solid #eee;
 }
 .productFeature {
   margin: 3px;
@@ -108,7 +110,7 @@
 }
 .productCon {
   overflow: hidden;
-  background: #111;
+  background: #000;
   padding: 5px 0 5px 5px;
   margin-bottom: 15px;
   border-radius: 4px;
@@ -1330,4 +1332,10 @@ button.Cart__checkout.button {
 }
 .bgConFeature {
   position: relative;
+}
+@media (max-width: 860px)
+{
+.productFeature {
+    width: 48% !important;
+}
 }
