@@ -95,7 +95,7 @@ class VariantSelector extends Component {
           value={value}
           key={`${this.props.option.name}-${value}`}
         >
-       { window.addEventListener('load', this.props.handleOptionChange) }
+      
        
          <ReactTooltip className="datatooltip" place="bottom" type="light" effect="solid" />
         </button>
