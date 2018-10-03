@@ -29,7 +29,7 @@ class Product extends Component {
   }
 
   handleOptionChange(event) {
-   
+
     const target = event.target;
     var key = this.props.product.id;
     let selectedOptions = this.state.selectedOptions;
@@ -98,6 +98,16 @@ class Product extends Component {
 
     // let variantImage = this.state.selectedVariantImage || this.props.product.images[0]
     //let variant = this.state.selectedVariant || this.props.product.variants[0]
+    let allimages=this.props.product.images.map(image => {
+      const stylem = {
+        backgroundImage: "url(" + image.src + ")"
+      };
+  return(
+      <div style={stylem} className="subImages">
+
+      </div>
+  );
+    });
     let variantQuantity = this.state.selectedVariantQuantity || 1;
     let variantSelectors = this.props.product.options.map(option => {
       return (
@@ -141,6 +151,9 @@ class Product extends Component {
             onChange={this.handleQuantityChange}
           />
         </label>
+        <div>
+       {allimages}
+        </div>
       </div>
     );
   }
