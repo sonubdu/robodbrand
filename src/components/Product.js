@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import VariantSelector from "./VariantSelector";
-
+import VariantSelectormob from "./VariantSelectormob";
 class Product extends Component {
   constructor(props) {
     super(props);
@@ -110,12 +110,29 @@ class Product extends Component {
         />
       );
     });
+    let variantSelectorsmob = this.props.product.options.map(option => {
+      return (
+        <VariantSelectormob
+          handleOptionChange={this.handleOptionChange}
+          key={option.id.toString()}
+          option={option}
+          removeFakeCartItem={this.removeFakeCartItem}
+          parentid={this.props.product.id}
+        />
+      );
+    });
     /*
     
    */
     return (
       <div className={pclass} id={this.props.product.id}>
+      <div className="variantSelectors">
         {variantSelectors}
+        </div>
+        <div className="variantSelectorsmob">
+        {variantSelectorsmob}
+        </div>
+       
         <label className="Product__option2">
           <input
             min="1"
