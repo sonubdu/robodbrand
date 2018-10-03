@@ -98,12 +98,14 @@ class Product extends Component {
 
     // let variantImage = this.state.selectedVariantImage || this.props.product.images[0]
     //let variant = this.state.selectedVariant || this.props.product.variants[0]
+   let imgcount=0;
     let allimages=this.props.product.images.map(image => {
+      imgcount++;
       const stylem = {
         backgroundImage: "url(" + image.src + ")"
       };
   return(
-      <div style={stylem} className="subImages">
+      <div style={stylem} key={"subImages"+imgcount}>
 
       </div>
   );
