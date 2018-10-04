@@ -261,3 +261,45 @@ display:none;
     font-family:  'Arial Narrow Bold';
     border-radius:5px;
   }
+
+  .paddingZeronew{
+
+    margin-left: 4%;
+  }
+  .seaprate{
+
+    width: 39%;
+    margin-left: 5%;
+    padding: 2px;
+  }
+  .applecut{
+
+    width: 100%;
+    padding: 0px 0px 20px 14px;
+    height: 54px;
+
+}
+.applecut > button{
+
+   background:none;
+   border:0px;
+}
+.productFeature .applecut:hover > button{
+
+    background:none !important;
+    border:0px;
+ }
+   
+  .applecut button > .applecutbtn{
+      width:25px;
+      height:25px;
+      border:5px solid white;
+      background:green !important;
+      float:left;
+  }
+  .applecut button > span{
+  
+    float: right;
+    font-size: 20px;
+    color: white;
+}

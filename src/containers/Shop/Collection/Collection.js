@@ -15,9 +15,10 @@ class Collection extends Component {
       buynow: { lineItems: [] },
       products: [],
       shop: {},
-      cid: "Z2lkOi8vc2hvcGlmeS9Db2xsZWN0aW9uLzYyNjAzNzg4MzU3",
+      cid: "",
       hmactive:"",
-      hcv:""
+      hcv:"",
+      withcut:false
     };
 
     this.handleCartClose = this.handleCartClose.bind(this);
@@ -32,6 +33,11 @@ class Collection extends Component {
 
   setProducts(id) {
     this.props.client.collection.fetchWithProducts(id).then(collection => {
+    if(collection.description==="withcut"){
+      this.setState({
+        withcut: true
+      });
+    }
       this.setState({
         products: collection.products
       });
@@ -235,6 +241,7 @@ class Collection extends Component {
           addVariantToCart={this.addVariantToCart}
           addMultipleVariantToCart={this.addMultipleVariantToCart}
           addMultipleVariantToBuy={this.addMultipleVariantToBuy}
+          withcut={this.state.withcut}
         />
         <Cart
           checkout={this.state.checkout}

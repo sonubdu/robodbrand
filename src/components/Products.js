@@ -74,7 +74,9 @@ class Products extends Component {
   //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/space-gray/full.jpg
   //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/silver/full.jpg
   //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/gold/full.jpg
-
+  withcutchange = val => {
+    this.setState({ withcut: val });
+  };
   render() {
     let devicecolors = [];
     devicecolors = ["Gray", "Silver", "Gold"];
@@ -194,22 +196,48 @@ class Products extends Component {
     };
     let style1 = "show ";
     let style2 = "hide ";
-
+/*
+   
+*/
+if(this.props.withcut){
     return (
       <div>
         <div className="bgWrapper">
           <div className="container">
             <div className="row">
             
-              <div className="col-lg-12 paddingZero">
+              <div className="col-lg-6 paddingZero">
                 <div className="devicecolor marginZero">
                   <label key="1">
                     <span className="label__inner">Coverage</span>
                   </label>
                 </div>
               </div>
-              <div className="productCon">{producttitle}</div>
+              <div className="col-lg-5 paddingZero paddingZeronew">
+                <div className="devicecolor marginZero">
+                  <label key="1">
+                    <span className="label__inner">apple cutout</span>
+                  </label>
+                </div>
+              </div>
+              <div className="productCon">
+              {producttitle}
+            
+              </div>
+              <div className="productCon seaprate">
+            
+              <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 productFeature">
+              <div className="applecut">
+               <button onClick={this.withcutchange}>
+                <div className="applecutbtn"> </div>
+                 <span>{"With Apple Cut"}</span>
+               </button>
+               
+               </div>
+               </div>
+              </div>
             </div>
+            
             <div className="row">
               <div className="devicecolor marginZero">
                 <label key="2">
@@ -244,6 +272,61 @@ class Products extends Component {
         </div>
       </div>
     );
+}else{
+
+  return (
+    <div>
+      <div className="bgWrapper">
+        <div className="container">
+          <div className="row">
+          
+            <div className="col-lg-12 paddingZero">
+              <div className="devicecolor marginZero">
+                <label key="1">
+                  <span className="label__inner">Coverage</span>
+                </label>
+              </div>
+            </div>
+            <div className="productCon">{producttitle}</div>
+          </div>
+          <div className="row">
+            <div className="devicecolor marginZero">
+              <label key="2">
+                <span className="label__inner">Texture</span>
+              </label>
+            </div>
+            <div className="col-lg-12 paddingZero">{products}</div>
+          </div>
+        </div>
+      </div>
+      <div className="bgConFeature">
+        <div className="container OverFlow">
+          <div className="row">
+            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12 bgImgColor">
+              <div className="pimages" style={style}>
+                <span className={this.state.loading ? style2 : style1}>
+                  {productsimages}
+                </span>
+              </div>
+              <div className="devicecolor">
+                <label key="3">
+                  <span className="label__inner">Device Color</span>
+                </label>
+                <div className="devicedata">{deviceColor}</div>
+              </div>
+            </div>
+            <div className="dummyCart col-lg-6 col-md-6 col-sm-6 col-xs-12">
+              {fakecart}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+
+
+}
   }
 }
 

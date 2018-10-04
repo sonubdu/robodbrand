@@ -67,7 +67,7 @@ class VariantSelector extends Component {
       }
       return true;
     });
-   
+
     let camoCount=-1;
     let camodata = camo.map(value => {
       camoCount++;
@@ -129,6 +129,7 @@ class VariantSelector extends Component {
           name={this.props.option.name}
           value={value}
           key={`${this.props.option.name}-${value}`}>
+          
           <ReactTooltip className="datatooltip" place="bottom" type="light" effect="solid" />
           </button>
         
@@ -392,7 +393,7 @@ class VariantSelector extends Component {
       };
     }
     return (
-      <div>
+      <div className={this.props.option.name}>
         <div className="diffCol">
           <div className="camodata">
             <h6 className="title">camo</h6>
