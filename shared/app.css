@@ -324,7 +324,7 @@ h2 {
 }
 .Product__buy,
 .Product__addtocart {
-  width: 48% !important;
+  width: 46% !important;
 }
 .devicedata > div button {
   width: 100%;
@@ -780,10 +780,10 @@ h2 {
   color: #fff;
   margin-bottom: 15px;
   clear: both;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -o-border-radius: 3px;
-  -webkit-border-radius: 3px;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -o-border-radius: 0px;
+  -webkit-border-radius: 0px;
 }
 .Items {
   overflow: hidden;
@@ -1168,7 +1168,8 @@ button.Cart__checkout.button {
   background-size: contain;
   width: 51px;
   height: 18px;
-  background-repeat: space;
+  background-repeat: no-repeat;
+  text-align: center;
 }
 
 .emptyCart {

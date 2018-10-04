@@ -41,7 +41,7 @@ class FakeCart extends Component {
   }
 
   buyNow() {
-    this.setState({ buynowtext: "" });
+    this.setState({ buynowtext: "wait.." });
     let fakerdata = this.props.FakeCartdata;
     let data = [];
     let mdata = "";
@@ -72,10 +72,11 @@ class FakeCart extends Component {
   }
 
   render() {
+ 
     let fakerdata = this.props.status
       ? this.state.dataaftereffect
       : this.props.FakeCartdata;
-
+      console.log(fakerdata);
     let fakecartlineItem = [];
     let data = "";
     let Total = 0;
@@ -131,8 +132,8 @@ class FakeCart extends Component {
           className="Product__buy button pull-left col-lg-6"
           onClick={() => this.buyNow()}
         >
-          <div className={this.state.buynowtext + "loadershow"}>
-            {this.state.buynowtext}
+          <div className={this.state.buynowtext + "loadershow1"}>
+          <span className="glyphicon glyphicon glyphicon-flash"></span>  &nbsp;  {this.state.buynowtext}
           </div>
         </button>
 
@@ -140,7 +141,7 @@ class FakeCart extends Component {
           className="Product__addtocart button pull-right col-lg-6"
           onClick={() => this.addToCart()}
         >
-          {"ADD TO CART"}
+         <span className="glyphicon glyphicon-shopping-cart"></span> &nbsp; {"ADD TO CART"}
         </button>
       </div>
     );

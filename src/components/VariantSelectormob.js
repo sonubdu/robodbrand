@@ -3,7 +3,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import AliceCarousel from "react-alice-carousel";
 class VariantSelectormob extends Component {
   responsive = {
-    0: { items: 8 },
+    0: { items: 5 },
     600: { items: 12 },
     800: { items: 15 },
     1024: { items: 15 }
@@ -375,7 +375,7 @@ class VariantSelectormob extends Component {
           value={value}
           onClick={() => this.props.removeFakeCartItem(this.props.parentid)}
           >
-        
+        <span className="glyphicon glyphicon-trash"></span>
          </button>
       );
     });

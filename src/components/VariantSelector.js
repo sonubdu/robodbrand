@@ -379,6 +379,7 @@ class VariantSelector extends Component {
           value={value}
           onClick={() => this.props.removeFakeCartItem(this.props.parentid)}
           >
+          <span className="glyphicon glyphicon-trash"></span>
           <ReactTooltip className="datatooltip" place="bottom" type="light" effect="solid" />
          </button>
       );

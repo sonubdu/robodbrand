@@ -123,6 +123,7 @@ class Products extends Component {
           pcount={count}
           onToggle={this.state.spid}
           onDelete={this.onDelete}
+          status={this.state.fakecartstatus}
         />
       );
     });
