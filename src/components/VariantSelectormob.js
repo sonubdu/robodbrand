@@ -3,11 +3,12 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import AliceCarousel from "react-alice-carousel";
 class VariantSelectormob extends Component {
   responsive = {
-    0: { items: 5 },
-    600: { items: 12 },
-    800: { items: 15 },
-    1024: { items: 15 }
+    0: { items: 7 },
+    600: { items: 10 },
+    800: { items: 11 },
+    1024: { items: 12 }
   };
+
 
   onSlideChange(e) {
     console.log("Item`s position during a change: ", e.item);
