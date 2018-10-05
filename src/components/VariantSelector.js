@@ -7,7 +7,7 @@ class VariantSelector extends Component {
     0: { items: 8 },
     600: { items: 12 },
     800: { items: 15 },
-    1024: { items: 13 }
+    1024: { items: 12 }
   };
 
   onSlideChange(e) {

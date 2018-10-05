@@ -316,3 +316,7 @@ display:none;
     height: 102px;
     border-radius:3px;
 }
+.alice-carousel div {
+    width: 100%;
+    margin: 0 auto;
+}
