@@ -7,7 +7,7 @@ class VariantSelector extends Component {
     0: { items: 8 },
     600: { items: 12 },
     800: { items: 15 },
-    1024: { items: 15 }
+    1024: { items: 14 }
   };
 
   onSlideChange(e) {
@@ -392,98 +392,197 @@ class VariantSelector extends Component {
         display: "block"
       };
     }
-    return (
-      <div className={this.props.option.name}>
-        <div className="diffCol">
-          <div className="camodata">
-            <h6 className="title">camo</h6>
-            {camodata}
+    if(this.props.applecut==="Without Apple Cut"){
+      return (
+        <div className={this.props.option.name}>
+          <div className="diffCol">
+            <div className="camodata">
+              <h6 className="title">camo</h6>
+              {camodata}
+            </div>
+            <div className="carbondata">
+              <h6 className="title">carbon fiber</h6>
+              {carbondata}
+            </div>
+            <div className="dragondata">
+              <h6 className="title">dragon</h6>
+              {dragondata}
+            </div>
+  
+            <div className="camodata">
+              <h6 className="title">stone</h6>
+              {stonedata}
+            </div>
+            <div className="camodata">
+              <h6 className="title">matte</h6>
+              {mattedata}
+            </div>
+            <div className="camodata">
+              <h6 className="title">metal</h6>
+              {metaldata}
+            </div>
+            <div className="camodata">
+              <h6 className="title">leather</h6>
+              {leatherdata}
+            </div>
+            <div className="camodata">
+              <h6 className="title">true color</h6>
+              {truecolordata}
+            </div>
+            <div className="camodata">
+              <h6 className="title">wood</h6>
+              {wooddata}
+            </div>
+            <div className="camodata">
+              <h6 className="title">none</h6>
+              {nonedata}
+            </div>
           </div>
-          <div className="carbondata">
-            <h6 className="title">carbon fiber</h6>
-            {carbondata}
-          </div>
-          <div className="dragondata">
-            <h6 className="title">dragon</h6>
-            {dragondata}
-          </div>
-
-          <div className="camodata">
-            <h6 className="title">stone</h6>
-            {stonedata}
-          </div>
-          <div className="camodata">
-            <h6 className="title">matte</h6>
-            {mattedata}
-          </div>
-          <div className="camodata">
-            <h6 className="title">metal</h6>
-            {metaldata}
-          </div>
-          <div className="camodata">
-            <h6 className="title">leather</h6>
-            {leatherdata}
-          </div>
-          <div className="camodata">
-            <h6 className="title">true color</h6>
-            {truecolordata}
-          </div>
-          <div className="camodata">
-            <h6 className="title">wood</h6>
-            {wooddata}
-          </div>
-          <div className="camodata">
-            <h6 className="title">none</h6>
-            {nonedata}
+  
+          <div className="robodesign" style={robdesi}>
+            <a
+              className="right carousel-control"
+              onClick={() => this.Carousel._slidePrev()}
+              role="button"
+              data-slide="next"
+            >
+              {" "}
+              <span
+                className="glyphicon glyphicon-chevron-right"
+                aria-hidden="true"
+              />{" "}
+              <span className="sr-only">Next</span>{" "}
+            </a>
+            <a
+              className="left carousel-control"
+              onClick={() => this.Carousel._slideNext()}
+              role="button"
+              data-slide="prev"
+            >
+              {" "}
+              <span
+                className="glyphicon glyphicon-chevron-left"
+                aria-hidden="true"
+              />{" "}
+              <span className="sr-only">Previous</span>{" "}
+            </a>
+  
+            <AliceCarousel
+              items={items}
+              dotsDisabled={true}
+              buttonsDisabled={true}
+              ref={el => (this.Carousel = el)}
+              autoPlay={false}
+              fadeOutAnimation={false}
+              mouseDragEnabled={false}
+              playButtonEnabled={false}
+              responsive={this.responsive}
+              autoPlayActionDisabled={true}
+              onSlideChange={this.onSlideChange}
+              onSlideChanged={this.onSlideChanged}
+            />
           </div>
         </div>
+      );
+      }else{
 
-        <div className="robodesign" style={robdesi}>
-          <a
-            className="right carousel-control"
-            onClick={() => this.Carousel._slidePrev()}
-            role="button"
-            data-slide="next"
-          >
-            {" "}
-            <span
-              className="glyphicon glyphicon-chevron-right"
-              aria-hidden="true"
-            />{" "}
-            <span className="sr-only">Next</span>{" "}
-          </a>
-          <a
-            className="left carousel-control"
-            onClick={() => this.Carousel._slideNext()}
-            role="button"
-            data-slide="prev"
-          >
-            {" "}
-            <span
-              className="glyphicon glyphicon-chevron-left"
-              aria-hidden="true"
-            />{" "}
-            <span className="sr-only">Previous</span>{" "}
-          </a>
+        return (
+          <div className={this.props.option.name}>
+            <div className="diffCol">
+              <div className="camodata">
+                <h6 className="title">camo</h6>
+                {camodata}
+              </div>
+              <div className="carbondata">
+                <h6 className="title">carbon fiber</h6>
+                {carbondata}
+              </div>
+              <div className="dragondata">
+                <h6 className="title">dragon</h6>
+                {dragondata}
+              </div>
+    
+              <div className="camodata">
+                <h6 className="title">stone</h6>
+                {stonedata}
+              </div>
+              <div className="camodata">
+                <h6 className="title">matte</h6>
+                {mattedata}
+              </div>
+              <div className="camodata">
+                <h6 className="title">metal</h6>
+                {metaldata}
+              </div>
+              <div className="camodata">
+                <h6 className="title">leather</h6>
+                {leatherdata}
+              </div>
+              <div className="camodata">
+                <h6 className="title">true color</h6>
+                {truecolordata}
+              </div>
+              <div className="camodata">
+                <h6 className="title">wood</h6>
+                {wooddata}
+              </div>
+              <div className="camodata">
+                <h6 className="title">none</h6>
+                {nonedata}
+              </div>
+            </div>
+    
+            <div className="robodesign" style={robdesi}>
+              <a
+                className="right carousel-control"
+                onClick={() => this.Carousel._slidePrev()}
+                role="button"
+                data-slide="next"
+              >
+                {" "}
+                <span
+                  className="glyphicon glyphicon-chevron-right"
+                  aria-hidden="true"
+                />{" "}
+                <span className="sr-only">Next</span>{" "}
+              </a>
+              <a
+                className="left carousel-control"
+                onClick={() => this.Carousel._slideNext()}
+                role="button"
+                data-slide="prev"
+              >
+                {" "}
+                <span
+                  className="glyphicon glyphicon-chevron-left"
+                  aria-hidden="true"
+                />{" "}
+                <span className="sr-only">Previous</span>{" "}
+              </a>
+    
+              <AliceCarousel
+                items={items}
+                dotsDisabled={true}
+                buttonsDisabled={true}
+                ref={el => (this.Carousel = el)}
+                autoPlay={false}
+                fadeOutAnimation={false}
+                mouseDragEnabled={false}
+                playButtonEnabled={false}
+                responsive={this.responsive}
+                autoPlayActionDisabled={true}
+                onSlideChange={this.onSlideChange}
+                onSlideChanged={this.onSlideChanged}
+              />
+            </div>
+          </div>
+        );
 
-          <AliceCarousel
-            items={items}
-            dotsDisabled={true}
-            buttonsDisabled={true}
-            ref={el => (this.Carousel = el)}
-            autoPlay={false}
-            fadeOutAnimation={false}
-            mouseDragEnabled={false}
-            playButtonEnabled={false}
-            responsive={this.responsive}
-            autoPlayActionDisabled={true}
-            onSlideChange={this.onSlideChange}
-            onSlideChanged={this.onSlideChanged}
-          />
-        </div>
-      </div>
-    );
+
+      }
+    }
+    
   }
-}
+
 
 export default VariantSelector;

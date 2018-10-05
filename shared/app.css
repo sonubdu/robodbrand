@@ -57,13 +57,13 @@
 .productFeature button {
   height: 50px;
   width: 98%;
-  background: #000 !important;
+  background: #161616 !important;
   border: 0;
   color: #fff;
   font-size: 14px;
   font-weight: 600;
   padding: 0;
-  border-radius: 0px;
+  border-radius: 1px;
  
 }
 .navbar-header {
@@ -101,7 +101,7 @@
 .bgWrapper .productFeature:hover button {
   background: #ff0000 !important;
   color: #fff;
-  border-bottom: 1px solid #eee;
+  /*border-bottom: 1px solid #eee;*/
 }
 .productFeature {
   margin: 3px;
@@ -113,7 +113,7 @@
   background: #000;
   padding: 5px 0 5px 5px;
   margin-bottom: 15px;
-  border-radius: 4px;
+  border-radius: 2px;
   display: inline-block;
 }
 .paddingZero {
@@ -135,7 +135,7 @@
   width: auto;
   background: #161616;
   margin-right: 1%;
-  border-radius: 1px;
+  border-radius: 2px;
   padding: 5px;
   padding-bottom: 0;
   min-height: 144px;
@@ -809,7 +809,7 @@ h2 {
   font-size: 24px;
   font-weight: 600;
   color: #2a2a2a;
-  padding: 10px 0;
+  padding: 17px 0;
 }
 ul {
   list-style: none;
@@ -1087,11 +1087,12 @@ button.Cart__checkout.button {
 
 .Product__option1 {
   display: block;
-  height: 77px;
+  height: 110px;
   border: 0;
   margin: 0 0 2px;
-  border-radius: 5px;
+  border-radius: 4px;
   background: #000;
+  width: 119%;
 }
 
 .carousel-control {

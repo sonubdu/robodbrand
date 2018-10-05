@@ -113,6 +113,7 @@ class Product extends Component {
           option={option}
           removeFakeCartItem={this.removeFakeCartItem}
           parentid={this.props.product.id}
+          applecut={this.props.applecut}
         />
       );
     });
@@ -124,6 +125,7 @@ class Product extends Component {
           option={option}
           removeFakeCartItem={this.removeFakeCartItem}
           parentid={this.props.product.id}
+          applecut={this.props.applecut}
         />
       );
     });

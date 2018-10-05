@@ -26,7 +26,8 @@ class Products extends Component {
 
     localStorage.setItem("fakecart", "");
     this.state = {
-      fakedata: ""
+      fakedata: "",
+      withappletext: "Without Apple Cut"
     };
     this.state = {
       fakecartstatus: false
@@ -34,6 +35,7 @@ class Products extends Component {
   }
 
   componentWillMount() {
+    this.setState({ withappletext: "Without Apple Cut" });
     this.setState({ dccolor: "Gray" });
   }
 
@@ -75,6 +77,11 @@ class Products extends Component {
   //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/silver/full.jpg
   //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/gold/full.jpg
   withcutchange = val => {
+   if(this.state.withappletext==="With Apple Cut"){
+    this.setState({ withappletext: "Without Apple Cut" });
+   }else{
+    this.setState({ withappletext: "With Apple Cut" });
+   }
     this.setState({ withcut: val });
   };
   render() {
@@ -126,6 +133,7 @@ class Products extends Component {
           onToggle={this.state.spid}
           onDelete={this.onDelete}
           status={this.state.fakecartstatus}
+          applecut={this.state.withappletext}
         />
       );
     });
@@ -195,6 +203,7 @@ class Products extends Component {
       backgroundImage: "url(/products/" + this.state.dccolor + ".jpg)"
     };
     let style1 = "show ";
+    let style3 = "shownew ";
     let style2 = "hide ";
 /*
    
@@ -213,7 +222,7 @@ if(this.props.withcut){
                   </label>
                 </div>
               </div>
-              <div className="col-lg-5 paddingZero paddingZeronew">
+              <div className={this.isActive(1)?style3+" col-lg-5 paddingZero paddingZeronew":style2+" col-lg-5 paddingZero paddingZeronew"}>
                 <div className="devicecolor marginZero">
                   <label key="1">
                     <span className="label__inner">apple cutout</span>
@@ -224,13 +233,13 @@ if(this.props.withcut){
               {producttitle}
             
               </div>
-              <div className="productCon seaprate">
+              <div className={this.isActive(1)?style3+" productCon seaprate":style2+" productCon seaprate"}>
             
               <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 productFeature">
               <div className="applecut">
                <button onClick={this.withcutchange}>
-                <div className="applecutbtn"> </div>
-                 <span>{"With Apple Cut"}</span>
+                <div className={this.state.withappletext+" applecutbtn"}> </div>
+                 <span>{this.state.withappletext}</span>
                </button>
                
                </div>

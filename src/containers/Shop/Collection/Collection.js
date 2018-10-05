@@ -208,7 +208,7 @@ class Collection extends Component {
                     <ul className={this.state.hmactive+" nav navbar-nav pull-right"}>
                       <li>
                         <a href="">
-                          <i className="fa fa-user" aria-hidden="true" />
+                          <img alt="user" src="/texture/ic1.png"/>
                         </a>
                       </li>
                       <li>
@@ -216,10 +216,8 @@ class Collection extends Component {
                           className="App__view-cart"
                           onClick={() => this.setState({ isCartOpen: true })}
                         >
-                          <i
-                            className="fa fa-shopping-cart"
-                            aria-hidden="true"
-                          />
+                          
+                          <img alt="cart" src="/texture/ic2.png"/>
                         </a>
                       </li>
                     </ul>

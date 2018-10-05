@@ -268,9 +268,9 @@ display:none;
   }
   .seaprate{
 
-    width: 39%;
-    margin-left: 5%;
-    padding: 2px;
+    width: 44%;
+    margin-left: 4%;
+    padding: 3px;
   }
   .applecut{
 
@@ -279,9 +279,9 @@ display:none;
     height: 54px;
 
 }
-.applecut > button{
+.productFeature > .applecut > button{
 
-   background:none;
+    background:none !important;
    border:0px;
 }
 .productFeature .applecut:hover > button{
@@ -302,4 +302,13 @@ display:none;
     float: right;
     font-size: 20px;
     color: white;
+}
+
+.shownew{
+
+   display:inline-block; 
+}
+.applecut button >.Without{
+
+    background: red !important;
 }
