@@ -3,8 +3,8 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import AliceCarousel from "react-alice-carousel";
 class VariantSelectormob extends Component {
   responsive = {
-    0: { items: 7 },
-    600: { items: 10 },
+    0: { items: 4 },
+    600: { items: 7 },
     800: { items: 11 },
     1024: { items: 12 }
   };
