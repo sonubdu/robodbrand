@@ -231,7 +231,10 @@ display:none;
     display:none;  
  }
 @media (max-width:786px){
-
+    .carousel-control {
+       display: none;
+       
+      }
     .nav{
         display:none;
     
