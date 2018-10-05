@@ -1202,6 +1202,13 @@ button.Cart__checkout.button {
 }
 
 @media (max-width: 860px) {
+  .seaprate{
+    width:80%;
+  }
+
+  .seaprate > .productFeature{
+    width:83% !important;
+  }
   .productCon {
     display: block;
   }
