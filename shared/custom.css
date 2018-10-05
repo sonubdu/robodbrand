@@ -312,3 +312,7 @@ display:none;
 
     background: red !important;
 }
+.Product__option1 > img {
+    height: 102px;
+    border-radius:3px;
+}

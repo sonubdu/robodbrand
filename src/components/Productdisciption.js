@@ -1,9 +1,19 @@
 import React, { Component } from "react";
 class Productdiscription extends Component {
   state = {};
+
   render() {
+    let style={
+      width: "100%"
+  
+    }
     return (
       <section>
+    <div className="row">
+    <div className="col-sm-12"> 
+    <img style={style} alt="" src="/texture/img2.png" className="img-responsive brdr"/> 
+    </div>
+     </div>
         <div className="robobullGuaranteesOne">
           <div className="container text-left">
             <div className="col-lg-5">

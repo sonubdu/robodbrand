@@ -96,7 +96,7 @@
 .productFeature button.active {
   background: #e6e6e6 !important;
   color: #000;
-  border-bottom: 1px solid red;
+  border-bottom: 3px solid red;
 }
 .bgWrapper .productFeature:hover button {
   background: #ff0000 !important;
@@ -538,7 +538,7 @@ h2 {
   height: 52px;
   border: 0;
   float: left;
-  margin: 1px 3px 6px;
+  margin: 1px 4px 6px;
   border-radius: 0.25rem;
   box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, 0.1), 0 0 0 2px #000;
 }
@@ -1087,12 +1087,13 @@ button.Cart__checkout.button {
 
 .Product__option1 {
   display: block;
-  height: 110px;
+
   border: 0;
-  margin: 0 0 2px;
+  margin: 3px 0px 2px 0px;
   border-radius: 4px;
   background: #000;
-  width: 119%;
+  width: 105%;
+  
 }
 
 .carousel-control {
