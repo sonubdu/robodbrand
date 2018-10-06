@@ -18,7 +18,9 @@ class Collection extends Component {
       cid: "",
       hmactive:"",
       hcv:"",
-      withcut:false
+      withcut:false,
+      collectiontitle:"",
+      collectionimage:""
     };
 
     this.handleCartClose = this.handleCartClose.bind(this);
@@ -38,6 +40,13 @@ class Collection extends Component {
         withcut: true
       });
     }
+
+    this.setState({
+      collectiontitle: collection.title
+    });
+    this.setState({
+      collectionimage: collection.image.src
+    });
       this.setState({
         products: collection.products
       });
@@ -225,7 +234,7 @@ class Collection extends Component {
                   <div className="homeStripBottom" />
 
                   <h2 className="brandTittle text-center col-lg-12">
-                    Galaxy Note 9 Skins & Wraps
+                    {this.state.collectiontitle}
                   </h2>
                 </div>
               )}
@@ -248,7 +257,9 @@ class Collection extends Component {
           updateQuantityInCart={this.updateQuantityInCart}
           removeLineItemInCart={this.removeLineItemInCart}
         />
-        <Productdiscription />
+        <Productdiscription 
+         cimages={this.state.collectionimage}
+        />
         <Newletter />
         <Usb />
 

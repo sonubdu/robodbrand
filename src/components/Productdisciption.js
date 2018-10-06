@@ -10,15 +10,17 @@ class Productdiscription extends Component {
     return (
       <section>
     <div className="row">
+
     <div className="col-sm-12 dummydesign"> 
-    <img style={style} alt="" src="/texture/img2.png" className="img-responsive brdr"/> 
+    <img style={style} alt="" src={this.props.cimages} className="img-responsive brdr"/> 
+
     </div>
      </div>
         <div className="robobullGuaranteesOne">
           <div className="container text-left">
             <div className="col-lg-5">
               <img
-                src="https://dbrand.com/sites/default/files/images/device-features/quality.jpg"
+                src="/texture/quality.jpg"
                 alt=""
               />
             </div>
@@ -68,7 +70,7 @@ class Productdiscription extends Component {
             </div>
             <div className="col-lg-5">
               <img
-                src="https://dbrand.com/sites/default/files/images/device-features/precision.jpg"
+                src="/texture/precision.jpg"
                 alt=""
               />
             </div>
@@ -78,7 +80,7 @@ class Productdiscription extends Component {
           <div className="container text-left">
             <div className="col-lg-5">
               <img
-                src="https://dbrand.com/sites/default/files/images/device-features/variety.jpg"
+                src="/texture/variety.jpg"
                 alt=""
               />
             </div>

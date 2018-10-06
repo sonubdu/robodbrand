@@ -220,7 +220,25 @@ class Products extends Component {
 
     };
 /*
-   
+     <div className={this.isActive(1)?style3+" col-lg-5 paddingZero paddingZeronew":style2+" col-lg-5 paddingZero paddingZeronew"}>
+                <div className="devicecolor marginZero">
+                  <label key="1">
+                    <span className="label__inner">apple cutout</span>
+                  </label>
+                </div>
+              </div>
+              <div className={this.isActive(1)?style3+" productCon seaprate":style2+" productCon seaprate"}>
+            
+              <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 productFeature">
+              <div className="applecut">
+               <button onClick={this.withcutchange}>
+                <div className={this.state.withappletext+" applecutbtn"}> </div>
+                 <span>{this.state.withappletext}</span>
+               </button>
+               
+               </div>
+               </div>
+              </div>
 */
 
 
@@ -249,29 +267,13 @@ if(this.props.withcut){
                   </label>
                 </div>
               </div>
-              <div className={this.isActive(1)?style3+" col-lg-5 paddingZero paddingZeronew":style2+" col-lg-5 paddingZero paddingZeronew"}>
-                <div className="devicecolor marginZero">
-                  <label key="1">
-                    <span className="label__inner">apple cutout</span>
-                  </label>
-                </div>
-              </div>
+            
+            
               <div className="productCon">
               {producttitle}
             
               </div>
-              <div className={this.isActive(1)?style3+" productCon seaprate":style2+" productCon seaprate"}>
-            
-              <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 productFeature">
-              <div className="applecut">
-               <button onClick={this.withcutchange}>
-                <div className={this.state.withappletext+" applecutbtn"}> </div>
-                 <span>{this.state.withappletext}</span>
-               </button>
-               
-               </div>
-               </div>
-              </div>
+              
             </div>
             
             <div className="row">
