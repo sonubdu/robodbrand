@@ -10,7 +10,7 @@ class Productdiscription extends Component {
     return (
       <section>
     <div className="row">
-    <div className="col-sm-12"> 
+    <div className="col-sm-12 dummydesign"> 
     <img style={style} alt="" src="/texture/img2.png" className="img-responsive brdr"/> 
     </div>
      </div>

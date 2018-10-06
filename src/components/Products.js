@@ -4,6 +4,15 @@ import ProductImages from "./ProductImages";
 import ProductTitle from "./ProductTitle";
 import FakeCart from "./FakeCart";
 import DeviceColor from "./DeviceColor";
+import { css } from 'react-emotion';
+// First way to import
+import { FadeLoader } from 'react-spinners';
+const override = css`
+    display: block;
+    margin: 0 auto;
+    border-color: #DB0F28;
+`;
+
 class Products extends Component {
   constructor() {
     super();
@@ -205,12 +214,30 @@ class Products extends Component {
     let style1 = "show ";
     let style3 = "shownew ";
     let style2 = "hide ";
+    let style4 = {
+    background:"#222",
+    padding:"20px"
+
+    };
 /*
    
 */
+
+
+
 if(this.props.withcut){
     return (
       <div>
+        <div className={this.state.spid?style2:style1} style={style4}>
+        <FadeLoader
+          className={override}
+          sizeUnit={"px"}
+          size={150}
+          color={'#fff'}
+          loading={this.state.loading}
+        />
+      </div>   
+      <div className={this.state.spid?style1:style2}>
         <div className="bgWrapper">
           <div className="container">
             <div className="row">
@@ -280,11 +307,22 @@ if(this.props.withcut){
           </div>
         </div>
       </div>
+      </div>
     );
 }else{
 
   return (
     <div>
+    <div className={this.state.spid?style2:style1} style={style4}>
+    <FadeLoader
+      className={override}
+      sizeUnit={"px"}
+      size={150}
+      color={'#fff'}
+      loading={this.state.loading}
+    />
+  </div>  
+    <div className={this.state.spid?style1:style2}>
       <div className="bgWrapper">
         <div className="container">
           <div className="row">
@@ -330,6 +368,7 @@ if(this.props.withcut){
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 

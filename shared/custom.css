@@ -168,6 +168,11 @@
     display:block;
  }
 
+ .dummydesign{
+    border-bottom: 3px solid lightgray;
+    border-top: 3px solid lightgray;
+ }
+
   @media (max-width:1100px){
 
     .TOP,.FRONT,.BACK,.CAMERA{
