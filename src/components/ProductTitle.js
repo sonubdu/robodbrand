@@ -10,7 +10,6 @@ class ProductTitle extends Component {
   }
 
   componentDidMount(){
-console.log(this.props.pclas);
     if(this.props.pclass===1){
       this.handleClick(this,this.props.product.id);
 

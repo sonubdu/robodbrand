@@ -213,7 +213,7 @@ class Collection extends Component {
                         <a href="#">SHOP</a>
                       </li>
                       <li>
-                        <a href="#">HOW TO INSTALL</a>
+                        <a href="https://robobull.com/pages/installation-videos">HOW TO INSTALL</a>
                       </li>
                     </ul>
                     <ul className={this.state.hmactive+" nav navbar-nav pull-right"}>
