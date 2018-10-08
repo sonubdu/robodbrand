@@ -209,7 +209,7 @@ class Products extends Component {
     });
 
     let style = {
-      backgroundImage: "url(/products/" + this.state.dccolor + ".jpg)"
+      backgroundImage: "url(/products/"+this.props.ctitle+"-"+ this.state.dccolor + ".jpg)"
     };
     let style1 = "show ";
     //let style3 = "shownew ";

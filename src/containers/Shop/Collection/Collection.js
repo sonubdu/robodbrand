@@ -40,7 +40,9 @@ class Collection extends Component {
         withcut: true
       });
     }
-
+    this.setState({
+      collectionhandle: collection.handle
+    });
     this.setState({
       collectiontitle: collection.title
     });
@@ -249,6 +251,7 @@ class Collection extends Component {
           addMultipleVariantToCart={this.addMultipleVariantToCart}
           addMultipleVariantToBuy={this.addMultipleVariantToBuy}
           withcut={this.state.withcut}
+          ctitle={this.state.collectionhandle}
         />
         <Cart
           checkout={this.state.checkout}

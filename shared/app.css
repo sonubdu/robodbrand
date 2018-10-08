@@ -121,7 +121,7 @@
 }
 .diffCol {
   float: left;
-  width: 100%;
+  width: 112%;
 }
 .product.active {
   float: left;
@@ -138,7 +138,7 @@
   border-radius: 2px;
   padding: 5px;
   padding-bottom: 0;
-  min-height: 144px;
+  min-height: 151px;
   margin-top: 4px;
 }
 .col-lg-12.paddingZero {
@@ -159,6 +159,7 @@ body {
   padding: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 img {
@@ -1076,7 +1077,7 @@ button.Cart__checkout.button {
 }
 
 .title {
-  margin: 0em 0.3em 0.6em 0.1em;
+  margin: 0em 0.3em 0.3em 0.1em;
   font-size: 0.95em;
   font-weight: 400;
   text-align: center;
