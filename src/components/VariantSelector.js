@@ -9,7 +9,15 @@ class VariantSelector extends Component {
     800: { items: 15 },
     1024: { items: 12 }
   };
-
+ componentWillMount(){
+  this.state={
+    currentIndex: 0
+  };
+ }
+  slideTo = (i) => this.setState({ currentIndex: i });
+  slideNext = () => this.setState({ currentIndex: this.state.currentIndex + 1 });
+  slidePrev = () => this.setState({ currentIndex: this.state.currentIndex - 1 });
+    
   onSlideChange(e) {
     console.log("Item`s position during a change: ", e.item);
     console.log("Slide`s position during a change: ", e.slide);
@@ -442,7 +450,7 @@ class VariantSelector extends Component {
           <div className="robodesign" style={robdesi}>
             <a
               className="right carousel-control"
-              onClick={() => this.Carousel._slidePrev()}
+              onClick={() => this.slidePrev()}
               role="button"
               data-slide="next"
             >
@@ -455,7 +463,7 @@ class VariantSelector extends Component {
             </a>
             <a
               className="left carousel-control"
-              onClick={() => this.Carousel._slideNext()}
+              onClick={() => this.slideNext()}
               role="button"
               data-slide="prev"
             >
@@ -480,6 +488,7 @@ class VariantSelector extends Component {
               autoPlayActionDisabled={true}
               onSlideChange={this.onSlideChange}
               onSlideChanged={this.onSlideChanged}
+              startIndex={this.state.currentIndex}
             />
           </div>
         </div>
@@ -535,7 +544,7 @@ class VariantSelector extends Component {
             <div className="robodesign" style={robdesi}>
               <a
                 className="right carousel-control"
-                onClick={() => this.Carousel._slidePrev()}
+                onClick={() => this.slidePrev()}
                 role="button"
                 data-slide="next"
               >
@@ -548,7 +557,7 @@ class VariantSelector extends Component {
               </a>
               <a
                 className="left carousel-control"
-                onClick={() => this.Carousel._slideNext()}
+                onClick={() => this.slideNext()}
                 role="button"
                 data-slide="prev"
               >
@@ -573,6 +582,7 @@ class VariantSelector extends Component {
                 autoPlayActionDisabled={true}
                 onSlideChange={this.onSlideChange}
                 onSlideChanged={this.onSlideChanged}
+                startIndex={this.state.currentIndex}
               />
             </div>
           </div>
