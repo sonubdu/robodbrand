@@ -8,31 +8,31 @@ class Footer extends Component {
           <div className="container text-center">
             <ul className="robobullFooterUl">
               <li className="robobullFooterItem">
-                <a href="">About Us</a>
+                <a href="https://robobull.com/pages/about-robobull">About Us</a>
               </li>
 
               <li className="robobullFooterItem">
-                <a href="">Exclusive Outlets</a>
+                <a href="https://robobull.com/pages/find-our-outlets">Exclusive Outlets</a>
               </li>
 
               <li className="robobullFooterItem">
-                <a href="">Warranty Program</a>
+                <a href="https://robobull.com/pages/warranty-program">Warranty Program</a>
               </li>
 
               <li className="robobullFooterItem">
-                <a href="">Videos</a>
+                <a href="https://robobull.com/pages/installation-videos">Videos</a>
               </li>
 
               <li className="robobullFooterItem">
-                <a href="">FAQ's</a>
+                <a href="https://robobull.com/pages/faq">FAQ's</a>
               </li>
 
               <li className="robobullFooterItem">
-                <a href="">E-Waste</a>
+                <a href="https://robobull.com/pages/e-waste-management">E-Waste</a>
               </li>
 
               <li className="robobullFooterItem">
-                <a href="">Contact Us</a>
+                <a href="https://robobull.com/pages/get-in-touch">Contact Us</a>
               </li>
             </ul>
           </div>

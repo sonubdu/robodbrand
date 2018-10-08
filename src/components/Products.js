@@ -212,7 +212,7 @@ class Products extends Component {
       backgroundImage: "url(/products/" + this.state.dccolor + ".jpg)"
     };
     let style1 = "show ";
-    let style3 = "shownew ";
+    //let style3 = "shownew ";
     let style2 = "hide ";
     let style4 = {
     background:"#222",
