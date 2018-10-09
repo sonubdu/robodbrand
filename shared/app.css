@@ -1350,4 +1350,8 @@ button.Cart__checkout.button {
 .productFeature {
     width: 48% !important;
 }
+.diffCol {
+  float: left;
+  width: 100%;
+}
 }
