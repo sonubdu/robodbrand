@@ -169,10 +169,10 @@
  }
 
  .dummydesign{
-    border-bottom: 3px solid lightgray;
-    border-top: 3px solid lightgray;
+    border-bottom: 5px solid #b3b3b3;
+    border-top: 5px solid #b3b3b3;
  }
-
+.cartTittle { font-size:17px;}
   @media (max-width:1100px){
 
     .TOP,.FRONT,.BACK,.CAMERA{
@@ -207,8 +207,8 @@
   }
   .navbar-default .navbar-nav > li > a {
     color: #000 !important;
-    font-size: 16px;
-    font-weight: 800;
+    font-size: 18px;
+    font-weight: 700;
 }
 .productFeature button.active:hover {
     background: #e6e6e6 !important;
@@ -235,7 +235,59 @@ display:none;
 .hmactive{
     display:none;  
  }
-@media (max-width:786px){
+ @media (min-width:1200px) {
+	 .drow_right {padding: 15px 20px;}}
+
+ @media only screen and (min-width:768px) and (max-width:992px) {
+	 .drow_right li { line-height:17px;}
+	 .drow {
+    background: #e0e0e2;
+	 }
+	 }
+	@media only screen and (min-width:861px) and (max-width:1199px) {
+		 .robobullCopyright, .robobullTollFree {
+    position: relative;
+    right: auto;
+    top: 20px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+.robobullCopyright { top:50px;}
+.footer-bottom {
+    padding: 15px 0 40px;
+}}
+@media (max-width:767px){
+	.nav.navbar-nav.pull-right > li > a {
+    padding: 10px 0px;
+}
+	.logo {
+    left: 10px;
+   }
+	.drow_right li { line-height:normal;}
+	.productCon .col-xs-3 {
+    width: 25% !important;
+}
+#root .navbar {
+    border-radius: 0;
+    margin: 0;
+    padding: 0 15px;
+}
+.navbar-nav {
+    margin: 7.5px 0px !important;
+}
+.productCon {
+    overflow: hidden;
+    background: #000;
+    padding: 10px 2px 10px 4px;
+}
+	.nav.navbar-nav.pull-right {
+    height: auto;
+    float: none !important;
+    margin: 0;
+	    padding-left: 10px;
+  }
+	.fakeCart.col-lg-12 {padding-left: 15px; padding-right: 15px;}
     .carousel-control {
        display: none;
        
@@ -321,10 +373,13 @@ display:none;
     background: red !important;
 }
 .Product__option1 > img {
-    height: 102px;
+    height: auto;
     border-radius:3px;
+	border: 1px solid #e7a200;
 }
 .alice-carousel div {
     width: 100%;
     margin: 0 auto;
 }
+
+.__react_component_tooltip { padding:8px !important;}
