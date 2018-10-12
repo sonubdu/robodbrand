@@ -41,11 +41,15 @@ class Products extends Component {
     this.state = {
       fakecartstatus: false
     };
+    this.state = {
+      skinpikker: 'hide'
+    };
   }
 
   componentWillMount() {
     this.setState({ withappletext: "Without Apple Cut" });
     this.setState({ dccolor: "Gray" });
+    this.setState({ skinpikker: "hide" });
   }
 
   isActive = id => {
@@ -82,6 +86,20 @@ class Products extends Component {
   devicecahnge = val => {
     this.setState({ dccolor: val });
   };
+ 
+  skinpickerHide = val => {
+  
+      this.setState({ skinpicker: 'hide' });
+
+  };
+
+  skinpickershow = val => {
+   
+   
+      this.setState({ skinpicker: 'show' });
+  
+  };
+  
   //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/space-gray/full.jpg
   //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/silver/full.jpg
   //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/gold/full.jpg
@@ -322,7 +340,7 @@ if(this.props.withcut){
            
             <div className="productCon">{producttitle}</div>
           </div>
-		  <div className="row"><button type="button" className="pick_skin">pick a skin</button></div>
+		  <div className="row"><button type="button" onClick={this.skinpickershow} className="pick_skin">pick a skin</button></div>
           <div className="row desktop_product">
            
             <div className="col-lg-12 paddingZero">{products}</div>
@@ -352,7 +370,7 @@ if(this.props.withcut){
         </div>
       </div>
     </div>
-	<div className="row mobile_product">
+	<div className={this.state.skinpicker?this.state.skinpicker+" row mobile_product":" hide row mobile_product "}>
            
             <div className="col-lg-12 paddingZero">{products}</div>
           </div>
