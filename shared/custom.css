@@ -8861,7 +8861,8 @@ a:hover, a:focus {
 .mobile_product .var_head h3 {
 	color: #fff;
 	margin-top: 0px;
-	font-size: 20px
+    font-size: 20px;
+    display: inline-block;
 }
 .mobile_product .var_head .fa-times {
 	position: absolute;
