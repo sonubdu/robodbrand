@@ -389,7 +389,7 @@ class VariantSelectormob extends Component {
     }
     return (
       <div>
-	  <div className="var_head"><h3>pick a skin</h3> <i className="fa fa-times" aria-hidden="true"></i> </div>
+	  <div className="var_head"><h3>pick a skin</h3> <button type="button" onClick={this.props.hidepikker} className="hd_pkr"><i className="fa fa-times" aria-hidden="true"></i> </button></div>
 	  
         <div className="diffCol">
           <div className="camodata">

@@ -126,6 +126,7 @@ class Product extends Component {
           removeFakeCartItem={this.removeFakeCartItem}
           parentid={this.props.product.id}
           applecut={this.props.applecut}
+          hidepikker={this.props.hidepiker}
         />
       );
     });

@@ -98,7 +98,7 @@ class VariantSelector extends Component {
           data-tip={value}
           style={style}
           className={camoClassName}
-          onClick={this.props.handleOptionChange}
+          onClick={this.props.handleOptionChange} 
           name={this.props.option.name}
           value={value}
           key={`${this.props.option.name}-${value}`}

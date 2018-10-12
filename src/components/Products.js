@@ -161,6 +161,7 @@ class Products extends Component {
           onDelete={this.onDelete}
           status={this.state.fakecartstatus}
           applecut={this.state.withappletext}
+          hidepiker={this.skinpickerHide}
         />
       );
     });

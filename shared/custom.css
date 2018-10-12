@@ -8839,12 +8839,20 @@ a:hover, a:focus {
 }
 }
 @media (max-width:767px) {
-	.mobile_product .camodata, .mobile_product .carbondata, .mobile_product .dragondata, .mobile_product .camodata { width:100%; margin:0 !important;border-radius: 0px; min-height:auto;  background: #252424;}
-	.mobile_product .title {
-    font-size: 15px;
-	text-align:left;
-	margin:0.8em 0em
-	}
+    .hd_pkr { background: transparent; border: 0;}
+.mobile_product .camodata, .mobile_product .carbondata, .mobile_product .dragondata, .mobile_product .camodata {
+	width: 100%;
+	margin: 0 !important;
+	border-radius: 0px;
+	min-height: auto;
+	background: #252424;
+	padding-left: 10px;
+}
+.mobile_product .title {
+	font-size: 15px;
+	text-align: left;
+	margin: 0.8em 0em
+}
 .mobile_product .var_head {
 	background: #222222;
 	padding: 15px 10px;
@@ -8853,25 +8861,31 @@ a:hover, a:focus {
 .mobile_product .var_head h3 {
 	color: #fff;
 	margin-top: 0px;
-	font-size:20px
+	font-size: 20px
 }
 .mobile_product .var_head .fa-times {
 	position: absolute;
-    right: 11%;
-    color: #fff;
-    cursor: pointer;
-    top: 39%;
+	right: 11%;
+	color: #fff;
+	cursor: pointer;
+	top: 39%;
+	    z-index: 999999;
 }
-.mobile_product .robodesign { display:none !important;}
+.mobile_product .robodesign {
+	display: none !important;
+}
 .mobile_product .Product__option {
-    display: block;
-    width: 64px;
+	display: block;
+	width: 64px;
 	margin: 3px 8px 7px 0px;
 }
 .pick_skin {
 	display: block !important
 }
-.mobile_product .diffCol { padding:0 !important; background: #252424;}
+.mobile_product .diffCol {
+	padding: 0 !important;
+	background: #252424;
+}
 .mobile_product {
 	display: block !important;
 	position: fixed;
@@ -8879,10 +8893,10 @@ a:hover, a:focus {
 	top: 0;
 	width: 75%;
 	right: 0;
-	background: #161616;
-	    overflow: auto;
-		bottom:0;
-		height:100%;
+	background: #252424;
+	overflow: auto;
+	bottom: 0;
+	height: 100%;
 }
 .desktop_product {
 	display: none !important
