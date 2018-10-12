@@ -1,6 +1,7 @@
 /* INITIALIZERS + DEFAULTS
  * ============================== */
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Cabin:300,400,700");
 @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
 *,
@@ -128,7 +129,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Cabin', sans-serif;
   font-weight: 400;
 }
 
@@ -888,7 +889,7 @@ input {
   background: #ff0000;
   content: "";
   display: inherit;
-  margin-top: 11px;
+  margin-top: 7px;
 }
 .newLetterText {
   margin: 15px 0;
@@ -910,7 +911,7 @@ input {
   color: 000;
 }
 .robobullGuaranteesOne {
-  background: #e0e0e2;
+  background: #dfdfe1;
 }
 .robobullGuaranteesTwo {
   background: #eeeef0;
@@ -920,9 +921,9 @@ input {
 }
 .discriptionTittle {
   margin: 0 0 15px;
-  font-size: 24px;
+  font-size: 21px;
   color: #333;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 .discriptionText {
   font-size: 16px;
@@ -948,8 +949,8 @@ input {
 .discriptionTittle.red,
 .discriptionTittle.green,
 .discriptionTittle.blue {
-  height: 50px;
-  line-height: 50px;
+  height: 40px;
+  line-height: 40px;
   margin-right: 40px;
   padding-left: 23px;
 }

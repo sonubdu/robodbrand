@@ -389,6 +389,8 @@ class VariantSelectormob extends Component {
     }
     return (
       <div>
+	  <div className="var_head"><h3>pick a skin</h3> <i className="fa fa-times" aria-hidden="true"></i> </div>
+	  
         <div className="diffCol">
           <div className="camodata">
             <h6 className="title">camo</h6>

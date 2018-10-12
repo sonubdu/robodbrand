@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Cabin:300,400,700");
 @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
 *,
@@ -162,7 +163,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif !important;
+  font-family: 'Cabin', sans-serif !important;
   font-weight: 400;
   overflow-x: hidden;
 }
@@ -825,7 +826,7 @@ h2 {
   padding: 15px 0;
   text-transform: capitalize;
 }
-.productFeature button .ProductCom {font-size: 17px;}
+.productFeature button .ProductCom {font-size: 16px;}
 ul {
   list-style: none;
   padding: 0;
@@ -899,14 +900,15 @@ ul {
   padding: 50px 0;
 }
 .service ul li figure {
-  border: 1px solid #353535;
+  border: 2px solid #353535;
 }
+.service figcaption { color:#000;}
 .newLetterCon {
   display: inline-block;
-  width: 46%;
+  width: 44%;
   margin: 0 !important;
 }
-.maxi .form-control { border-radius:0px;}
+.maxi .form-control { border-radius:0px; background-color: #f8f8f8;}
 .formInput {
   float: left;
   width: 75%;
@@ -944,7 +946,7 @@ input {
 }
 .mainText {
   margin: 0;
-  font-size: 24px;
+  font-size: 22px;
   color: #000;
   letter-spacing: 2px;
 }
@@ -1099,7 +1101,7 @@ button.Cart__checkout.button {
 
 .title {
   margin:  0.3em 0em;
-  font-size: 0.95em;
+  font-size: 12px;
   font-weight: 400;
   text-align: center;
   cursor: default;

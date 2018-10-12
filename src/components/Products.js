@@ -260,13 +260,7 @@ if(this.props.withcut){
           <div className="container">
             <div className="row">
             
-              <div className="col-lg-6 paddingZero">
-                <div className="devicecolor marginZero">
-                  <label key="1">
-                    <span className="label__inner">Coverage</span>
-                  </label>
-                </div>
-              </div>
+             
             
             
               <div className="productCon">
@@ -277,11 +271,7 @@ if(this.props.withcut){
             </div>
             
             <div className="row">
-              <div className="devicecolor marginZero">
-                <label key="2">
-                  <span className="label__inner">Texture</span>
-                </label>
-              </div>
+              
               <div className="col-lg-12 paddingZero">{products}</div>
             </div>
           </div>
@@ -329,21 +319,12 @@ if(this.props.withcut){
         <div className="container">
           <div className="row">
           
-            <div className="col-lg-12 paddingZero">
-              <div className="devicecolor marginZero">
-                <label key="1">
-                  <span className="label__inner">Coverage</span>
-                </label>
-              </div>
-            </div>
+           
             <div className="productCon">{producttitle}</div>
           </div>
-          <div className="row">
-            <div className="devicecolor marginZero">
-              <label key="2">
-                <span className="label__inner">Texture</span>
-              </label>
-            </div>
+		  <div className="row"><button type="button" className="pick_skin">pick a skin</button></div>
+          <div className="row desktop_product">
+           
             <div className="col-lg-12 paddingZero">{products}</div>
           </div>
         </div>
@@ -371,6 +352,10 @@ if(this.props.withcut){
         </div>
       </div>
     </div>
+	<div className="row mobile_product">
+           
+            <div className="col-lg-12 paddingZero">{products}</div>
+          </div>
     </div>
   );
 

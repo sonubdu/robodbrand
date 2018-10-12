@@ -134,11 +134,15 @@ class Product extends Component {
    */
     return (
       <div className={pclass} id={this.props.product.id}>
+	  
+	  
       <div className="variantSelectors">
         {variantSelectors}
         </div>
         <div className="variantSelectorsmob">
         {variantSelectorsmob}
+		
+		
         </div>
        
         <label className="Product__option2">
