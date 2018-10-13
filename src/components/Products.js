@@ -99,7 +99,11 @@ class Products extends Component {
       this.setState({ skinpicker: 'show' });
   
   };
-  
+  onUpdateStatus = val => {
+    this.setState({
+      fakecartstatus: false
+    });
+  };
   //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/space-gray/full.jpg
   //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/silver/full.jpg
   //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/gold/full.jpg
@@ -184,6 +188,7 @@ class Products extends Component {
               status={this.state.fakecartstatus}
               onDelete={this.onDelete}
               buynow={this.props.buynow}
+              onStatus={this.onUpdateStatus}
             />
           );
         }

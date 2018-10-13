@@ -8,12 +8,16 @@ class FakeCart extends Component {
       dataaftereffect: ""
     };
     this.state = {
+      qtychanged: 1
+    };
+    this.state = {
       buynowtext: "BUY NOW"
     };
     this.decrementQuantity = this.decrementQuantity.bind(this);
     this.incrementQuantity = this.incrementQuantity.bind(this);
     this.removeFakeCartItem = this.removeFakeCartItem.bind(this);
     this.getFakeCartItem = this.getFakeCartItem.bind(this);
+    this.upqty = this.upqty.bind(this);
   }
 
   decrementQuantity(lineItemId) {
@@ -27,14 +31,15 @@ class FakeCart extends Component {
   }
 
   addToCart() {
-    let fakerdata = this.props.FakeCartdata;
+    let fakerdata = JSON.parse(localStorage.getItem("fakecart"));
     let data = [];
     let mdata = "";
 
     for (let key in fakerdata) {
       mdata = fakerdata[key];
-      data.push({ variantId: mdata.id, quantity: 1 });
+      data.push({ variantId: mdata.id, quantity: parseInt(mdata.qty, 10)});
     }
+  
     this.props.addMultipleVariantToCart(data);
     localStorage.clear();
     this.props.onDelete(false);
@@ -42,13 +47,13 @@ class FakeCart extends Component {
 
   buyNow() {
     this.setState({ buynowtext: "wait.." });
-    let fakerdata = this.props.FakeCartdata;
+    let fakerdata = JSON.parse(localStorage.getItem("fakecart"));
     let data = [];
     let mdata = "";
 
     for (let key in fakerdata) {
       mdata = fakerdata[key];
-      data.push({ variantId: mdata.id, quantity: 1 });
+      data.push({ variantId: mdata.id, quantity: parseInt(mdata.qty, 10)});
     }
     this.props.addMultipleVariantToBuy(data);
   }
@@ -70,31 +75,37 @@ class FakeCart extends Component {
       dataaftereffect: fakeCartData
     });
   }
-
+upqty(qty){
+  this.setState({
+    qtychanged: qty
+  });
+  this.props.onStatus(true);
+}
   render() {
  
     let fakerdata = this.props.status
       ? this.state.dataaftereffect
       : this.props.FakeCartdata;
-      console.log(fakerdata);
+    //  console.log(fakerdata);
     let fakecartlineItem = [];
     let data = "";
     let Total = 0;
     for (var key in fakerdata) {
       data = fakerdata[key];
-      Total = Number(Total) + Number(data.price);
+      Total = Number(Total) + Number(data.price * data.qty);
       fakecartlineItem.push(
         <FakeCartItem
           key={data.id}
           itemdata={data}
           removeFakeCartItem={this.removeFakeCartItem}
+          upqty={this.upqty}
         />
       );
     }
 
     if (Total === 0) {
       return (
-        <div className="col-lg-12">
+        <div className={"col-lg-12 "+this.state.qtychanged}>
           <div className="pui-kits-wrapper noKits form-wrapper">
             <h2 className="kits-header">
               Your{" "}
@@ -113,7 +124,7 @@ class FakeCart extends Component {
       );
     }
     return (
-      <div className="fakeCart col-lg-12">
+      <div className={"fakeCart col-lg-12 "+this.state.qtychanged}>
         <label className="cartTittle">Your Selection</label>
         <a className="pull-right">
           <i className="fa fa-pencil-square-o" aria-hidden="true" />
@@ -121,11 +132,11 @@ class FakeCart extends Component {
         <div className="Items">{fakecartlineItem}</div>
         <div className="total kitTotal">
           <strong className="pull-left">Kit Total-</strong>
-          Rs. {Total}
+          Rs. { Number(Total).toFixed(2) }
         </div>
         <div className="total totalAmount">
           <strong className="pull-left">Total-</strong>
-          Rs. {Total}
+          Rs. { Number(Total).toFixed(2) }
         </div>
 
         <button

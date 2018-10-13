@@ -19,13 +19,13 @@ class VariantSelector extends Component {
   slidePrev = () => this.setState({ currentIndex: this.state.currentIndex - 1 });
     
   onSlideChange(e) {
-    console.log("Item`s position during a change: ", e.item);
-    console.log("Slide`s position during a change: ", e.slide);
+    //console.log("Item`s position during a change: ", e.item);
+    //console.log("Slide`s position during a change: ", e.slide);
   }
 
   onSlideChanged(e) {
-    console.log("Item`s position after changes: ", e.item);
-    console.log("Slide`s position after changes: ", e.slide);
+   // console.log("Item`s position after changes: ", e.item);
+    //console.log("Slide`s position after changes: ", e.slide);
   }
 
   render() {

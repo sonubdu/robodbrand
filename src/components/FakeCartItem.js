@@ -5,17 +5,45 @@ class FakeCartItem extends Component {
     super(props);
     this.decrementQuantity = this.decrementQuantity.bind(this);
     this.incrementQuantity = this.incrementQuantity.bind(this);
+    this.state={qty:0};
+  }
+  componentWillMount(){
+    this.setState({qty:1});
+    
+  }
+  decrementQuantity(evt) {
+    if(this.state.qty > 1){
+    const updatedQuantity = this.state.qty - 1;
+     this.setState({qty:updatedQuantity});
+     let fakeCartData = localStorage.getItem("fakecart");
+     fakeCartData = JSON.parse(fakeCartData);
+     fakeCartData[evt.target.name]['qty']=updatedQuantity;
+     localStorage.setItem("fakecart", JSON.stringify(fakeCartData));
+     this.props.upqty(updatedQuantity);
+    }
   }
 
-  decrementQuantity(lineItemId) {
-    const updatedQuantity = this.props.line_item.quantity - 1;
-    this.props.updateQuantityInCart(lineItemId, updatedQuantity);
+  incrementQuantity(evt) {
+    if(this.state.qty < 10){
+     const updatedQuantity = this.state.qty + 1;
+     this.setState({qty:updatedQuantity});
+     let fakeCartData = localStorage.getItem("fakecart");
+     fakeCartData = JSON.parse(fakeCartData);
+     fakeCartData[evt.target.name]['qty']=updatedQuantity;
+     localStorage.setItem("fakecart", JSON.stringify(fakeCartData));
+     this.props.upqty(updatedQuantity);
+    }
   }
 
-  incrementQuantity(lineItemId) {
-    const updatedQuantity = this.props.line_item.quantity + 1;
-    this.props.updateQuantityInCart(lineItemId, updatedQuantity);
+  handleQuantityChange(evt) {
+    if(evt.target.value > 0){
+    let fakeCartData = localStorage.getItem("fakecart");
+    fakeCartData = JSON.parse(fakeCartData);
+    fakeCartData[evt.target.name]['qty']=evt.target.value;
+    localStorage.setItem("fakecart", JSON.stringify(fakeCartData));
+    }
   }
+  
 
   render() {
     let data = this.props.itemdata;
@@ -39,8 +67,25 @@ class FakeCartItem extends Component {
                 size="1"
                 min="1"
                 type="text"
-                defaultValue={1}
+                value={this.state.qty}
+                name={data.parentid}
                 onChange={this.handleQuantityChange}
+              />
+              <button
+              
+                type="button"
+                size="2"
+                value="-"
+                onClick={this.decrementQuantity}
+                name={data.parentid}
+              />
+                <button
+         
+                type="button"
+                size="2"
+                value="+"
+                onClick={this.incrementQuantity}
+                name={data.parentid}
               />
               <button
                 className="deleteBtn"
@@ -52,8 +97,9 @@ class FakeCartItem extends Component {
                 <i className="fa fa-trash-o" aria-hidden="true" />
               </button>
             </li>
+
             <li className="text-right">
-              <strong>Rs. {data.price}</strong>
+              <strong>Rs. {Number(data.price * this.state.qty).toFixed(2)}</strong>
             </li>
           </ul>
         </li>

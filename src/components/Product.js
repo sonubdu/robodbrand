@@ -41,6 +41,7 @@ class Product extends Component {
     );
     selectedVariant.parent = this.props.product.title;
     selectedVariant.parentid = this.props.product.id;
+    selectedVariant.qty = 1;
     this.setState({
       selectedVariant: selectedVariant,
       selectedVariantImage: selectedVariant.attrs.image
@@ -69,7 +70,7 @@ class Product extends Component {
     
     let fakeCartData = localStorage.getItem("fakecart");
     fakeCartData = JSON.parse(fakeCartData);
-    console.log(fakeCartData);
+  
     delete fakeCartData[key];
     localStorage.removeItem(key);
     localStorage.setItem("fakecart", JSON.stringify(fakeCartData));
