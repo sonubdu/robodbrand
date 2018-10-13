@@ -34,7 +34,7 @@ class Product extends Component {
     var key = this.props.product.id;
     let selectedOptions = this.state.selectedOptions;
     selectedOptions[target.name] = target.value;
-
+    this.props.hidepiker();
     const selectedVariant = this.props.client.product.helpers.variantForOptions(
       this.props.product,
       selectedOptions
