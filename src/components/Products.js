@@ -99,11 +99,11 @@ class Products extends Component {
       this.setState({ skinpicker: 'show' });
   
   };
-  onUpdateStatus = val => {
+onUpdateStatus = val => {
     this.setState({
       fakecartstatus: false
     });
-  };
+  };  
   //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/space-gray/full.jpg
   //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/silver/full.jpg
   //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/gold/full.jpg
@@ -188,7 +188,7 @@ class Products extends Component {
               status={this.state.fakecartstatus}
               onDelete={this.onDelete}
               buynow={this.props.buynow}
-              onStatus={this.onUpdateStatus}
+			  onStatus={this.onUpdateStatus}
             />
           );
         }
@@ -236,7 +236,7 @@ class Products extends Component {
       backgroundImage: "url(/products/"+this.props.ctitle+"-"+ this.state.dccolor + ".jpg)"
     };
     let style1 = "show ";
-    //let style3 = "shownew ";
+    let style3 = "shownew ";
     let style2 = "hide ";
     let style4 = {
     background:"#222",
@@ -244,25 +244,7 @@ class Products extends Component {
 
     };
 /*
-     <div className={this.isActive(1)?style3+" col-lg-5 paddingZero paddingZeronew":style2+" col-lg-5 paddingZero paddingZeronew"}>
-                <div className="devicecolor marginZero">
-                  <label key="1">
-                    <span className="label__inner">apple cutout</span>
-                  </label>
-                </div>
-              </div>
-              <div className={this.isActive(1)?style3+" productCon seaprate":style2+" productCon seaprate"}>
-            
-              <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 productFeature">
-              <div className="applecut">
-               <button onClick={this.withcutchange}>
-                <div className={this.state.withappletext+" applecutbtn"}> </div>
-                 <span>{this.state.withappletext}</span>
-               </button>
-               
-               </div>
-               </div>
-              </div>
+     
 */
 
 
@@ -291,13 +273,36 @@ if(this.props.withcut){
               {producttitle}
             
               </div>
-              
-            </div>
+            <div className= {this.isActive(1)?style3+" wth_app ":style2+" wth_app "}>
+              <div className={this.isActive(1)?style3+" productCon seaprate":style2+" productCon seaprate"}>
             
-            <div className="row">
+              <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 productFeature">
+              <div className="applecut">
+               <button onClick={this.withcutchange}>
+                <div className={this.state.withappletext+" applecutbtn"}> </div>
+                 <span>{this.state.withappletext}</span>
+               </button>
+               
+               </div>
+               </div>
+              </div>
+              </div>
               
-              <div className="col-lg-12 paddingZero">{products}</div>
+      
             </div>
+            <div className="row">
+      <div className="col-lg-12"><button type="button" onClick={this.skinpickershow} className="pick_skin">Pick a Skin</button>
+      </div>
+      </div>
+      <div className="row after_pick">
+      <div className="col-xs-3"><button className="Product__option texture_bg"></button></div>
+      <div className="col-xs-6"><button type="button" className="pick_skin">Red Carbon</button></div>
+      <div className="col-xs-3"><button className="Product__option des_btn"><span className="glyphicon glyphicon-trash"></span></button></div>
+      </div>
+            <div className="row desktop_product">
+           
+            <div className="col-lg-12 paddingZero">{products}</div>
+          </div>
           </div>
         </div>
         <div className="bgConFeature">
@@ -323,6 +328,13 @@ if(this.props.withcut){
           </div>
         </div>
       </div>
+      <div className={this.state.skinpicker?this.state.skinpicker+" row mobile_product":" hide row mobile_product "}>
+  <div className="mb_switch">
+           
+            <div className="col-lg-12 paddingZero">{products}</div>
+            </div>
+          </div>
+    
       </div>
     );
 }else{
@@ -346,7 +358,15 @@ if(this.props.withcut){
            
             <div className="productCon">{producttitle}</div>
           </div>
-		  <div className="row"><button type="button" onClick={this.skinpickershow} className="pick_skin">pick a skin</button></div>
+		  <div className="row">
+      <div className="col-lg-12"><button type="button" onClick={this.skinpickershow} className="pick_skin">Pick a Skin</button>
+      </div>
+      </div>
+      <div className="row after_pick">
+      <div className="col-xs-3"><button className="Product__option texture_bg"></button></div>
+      <div className="col-xs-6"><button type="button" className="pick_skin">Red Carbon</button></div>
+      <div className="col-xs-3"><button className="Product__option des_btn"><span className="glyphicon glyphicon-trash"></span></button></div>
+      </div>
           <div className="row desktop_product">
            
             <div className="col-lg-12 paddingZero">{products}</div>
@@ -377,8 +397,10 @@ if(this.props.withcut){
       </div>
     </div>
 	<div className={this.state.skinpicker?this.state.skinpicker+" row mobile_product":" hide row mobile_product "}>
+  <div className="mb_switch">
            
             <div className="col-lg-12 paddingZero">{products}</div>
+            </div>
           </div>
     </div>
   );

@@ -62,6 +62,7 @@ class FakeCartItem extends Component {
           <ul>
             <li>Rs. {data.price}</li>
             <li>
+              <div className="incrmnt_sec">
               <input
                 className="inputCartInput"
                 size="1"
@@ -72,21 +73,22 @@ class FakeCartItem extends Component {
                 onChange={this.handleQuantityChange}
               />
               <button
-              
+                className="decr"
                 type="button"
                 size="2"
                 value="-"
                 onClick={this.decrementQuantity}
-                name={data.parentid}
-              />
+                name={data.parentid}>
+               </button>
                 <button
-         
+                className="incr"
                 type="button"
                 size="2"
                 value="+"
                 onClick={this.incrementQuantity}
-                name={data.parentid}
-              />
+                name={data.parentid}>
+                </button>
+              </div>
               <button
                 className="deleteBtn"
                 type="button"

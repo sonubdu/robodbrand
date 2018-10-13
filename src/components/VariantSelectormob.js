@@ -389,7 +389,7 @@ class VariantSelectormob extends Component {
     }
     return (
       <div>
-	  <div className="var_head"><h3>pick a skin</h3> <button type="button" onClick={this.props.hidepikker} className="hd_pkr"><i className="fa fa-times" aria-hidden="true"></i> </button></div>
+	  <div className="var_head"><h3>Pick a Skin</h3> <button type="button" onClick={this.props.hidepikker} className="hd_pkr">x</button></div>
 	  
         <div className="diffCol">
           <div className="camodata">
@@ -435,48 +435,10 @@ class VariantSelectormob extends Component {
           </div>
         </div>
 
-        <div className="robodesign" style={robdesi}>
-          <a
-            className="right carousel-control"
-            onClick={() => this.Carousel._slidePrev()}
-            role="button"
-            data-slide="next"
-          >
-            {" "}
-            <span
-              className="glyphicon glyphicon-chevron-right"
-              aria-hidden="true"
-            />{" "}
-            <span className="sr-only">Next</span>{" "}
-          </a>
-          <a
-            className="left carousel-control"
-            onClick={() => this.Carousel._slideNext()}
-            role="button"
-            data-slide="prev"
-          >
-            {" "}
-            <span
-              className="glyphicon glyphicon-chevron-left"
-              aria-hidden="true"
-            />{" "}
-            <span className="sr-only">Previous</span>{" "}
-          </a>
-
-          <AliceCarousel
-            items={items}
-            dotsDisabled={true}
-            buttonsDisabled={true}
-            ref={el => (this.Carousel = el)}
-            autoPlay={false}
-            fadeOutAnimation={false}
-            mouseDragEnabled={false}
-            playButtonEnabled={false}
-            responsive={this.responsive}
-            autoPlayActionDisabled={true}
-            onSlideChange={this.onSlideChange}
-            onSlideChanged={this.onSlideChanged}
-          />
+        <div className="robodesign robo_itm" style={robdesi}>
+        <h6 className="title">Robobull Design</h6>
+        {items}
+         
         </div>
       </div>
     );

@@ -26,6 +26,10 @@
     padding-top: 5px;
 	font-size:18px;
 }
+.decr, .incr {opacity: 0;}
+
+.incrmnt_sec:hover .decr, .incrmnt_sec:hover .incr {opacity: 1 !important;}
+
 .inputCartInput {
   border: 0;
   text-align: center;
@@ -33,7 +37,7 @@
   border-radius: 4px;
   color: #fff;
   height: 32px;
-  width: 26px;
+  width: 32px;
 }
 .deleteBtn {
   height: 34px;
@@ -1293,7 +1297,7 @@ button.Cart__checkout.button {
     padding: 10px 10px;
   }
   .newLetterCon {
-    width: 98%;
+    width: 100%;
   }
   input#email {
     width: 70%;
@@ -1363,7 +1367,7 @@ button.Cart__checkout.button {
     position: relative;
     width: auto;
     left: auto;
-    top: auto;
+    top: 1px;
   }
   .service ul li { margin-bottom:10px;}
 	.robobullFooterBottom { padding-bottom:25px;}
