@@ -269,7 +269,7 @@ if(this.props.withcut){
              
             
             
-              <div className="productCon">
+              <div className="productCon iphn_cut">
               {producttitle}
             
               </div>
@@ -282,6 +282,7 @@ if(this.props.withcut){
                 <div className={this.state.withappletext+" applecutbtn"}> </div>
                  <span>{this.state.withappletext}</span>
                </button>
+               
                
                </div>
                </div>

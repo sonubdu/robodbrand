@@ -90,7 +90,7 @@ to {
 }
 .decr {    position: absolute;
     right: 3px;
-    top: 15%;
+    top: 22%;
     background: transparent;
 	border: 0;}
 	.incr {    position: absolute;
@@ -8853,6 +8853,7 @@ a:hover, a:focus {
 	padding: 15px 20px;
 }
 }
+
  @media only screen and (min-width:768px) and (max-width:992px) {
 .drow_right li {
 	line-height: 17px;
@@ -8880,6 +8881,33 @@ a:hover, a:focus {
 @media (max-width:368px) {
 	.mobile_product .mb_switch {max-width: 288px !important;}
 	.mobile_product .Product__option {width: 84px !important; margin: 0px 4px 11px !important; height: 62px !important;}
+}
+@media (min-width:768px) {
+	.iphn_cut{ width: 48%; float: left;}
+	.iphn_cut .col-lg-3 {
+	width: 50%;
+	}
+	.wth_app {
+	width: 48%;
+	float: right;}
+	.applecut {
+		padding: 0px 25px !important;
+		height: auto !important;
+	}
+	.wth_app .seaprate {
+		width: 100%;
+		margin-left: 0;
+		padding: 0;
+		height: 70px;
+	}
+	.wth_app .applecut button > span {
+		float: none;
+		font-size: 17px;
+		color: white;
+		line-height: 70px;
+	}
+	.applecut button > .applecutbtn {margin-top: 22px;}
+	.wth_app .productCon {    background: #161616;}
 }
 @media (max-width:767px) {
 	.after_pick {display: block !important;}
