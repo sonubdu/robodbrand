@@ -147,6 +147,7 @@ onUpdateStatus = val => {
           pclass={pcount}
           isActive={this.isActive(pcount)}
           setActiveTab={this.setActiveTab.bind(pcount)}
+          showpiker={this.skinpickershow}
         />
       );
     });
@@ -170,13 +171,14 @@ onUpdateStatus = val => {
       );
     });
     let fakecartCount = 0;
+    var data="";
     let fakecart = this.props.products.map(product => {
       if (fakecartCount === 0) {
         fakecartCount++;
         let fakeCartData = localStorage.getItem("fakecart");
 
         if (fakeCartData !== "") {
-          let data = JSON.parse(fakeCartData);
+           data = JSON.parse(fakeCartData);
           return (
             <FakeCart
               key={product.id.toString()}
@@ -273,7 +275,7 @@ if(this.props.withcut){
               {producttitle}
             
               </div>
-            <div className= {this.isActive(1)?style3+" wth_app ":style2+" wth_app "}>
+            <div className={this.isActive(1)?style3+" wth_app ":style2+" wth_app "}>
               <div className={this.isActive(1)?style3+" productCon seaprate":style2+" productCon seaprate"}>
             
               <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 productFeature">
@@ -291,7 +293,8 @@ if(this.props.withcut){
               
       
             </div>
-            <div className="row">
+      <div className="row">
+      {console.log(data)}
       <div className="col-lg-12"><button type="button" onClick={this.skinpickershow} className="pick_skin">Pick a Skin</button>
       </div>
       </div>

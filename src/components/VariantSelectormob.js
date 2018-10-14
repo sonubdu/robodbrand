@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import "react-alice-carousel/lib/alice-carousel.css";
-import AliceCarousel from "react-alice-carousel";
 class VariantSelectormob extends Component {
   responsive = {
     0: { items: 4 },
@@ -351,7 +349,7 @@ class VariantSelectormob extends Component {
       let bgv = "/texture/phone_img.png";
 
       return (
-        <div>
+        <div className={value}>
           <button
             title={value}
             className="Product__option1"

@@ -6,12 +6,21 @@ class ProductTitle extends Component {
     this.state = {
       spid: 1
     };
+    this.state = {
+      spidcount: 0
+    };
     
   }
 
   componentDidMount(){
+   
     if(this.props.pclass===1){
-      this.handleClick(this,this.props.product.id);
+      this.setState({ spidcount: 0});
+      this.handleClick(this,this.props.product.id,);
+      
+
+    }else{
+      this.setState({ spidcount: 1});
 
     }
   }
@@ -19,8 +28,12 @@ class ProductTitle extends Component {
   handleClick() {
     
     this.props.onToggle(this.props.product.id);
+    this.setState({ spidcount: this.state.spidcount+1});
     this.setState({ spid: this.props.product.id });
     this.props.setActiveTab(this.props.pclass);
+    if(this.state.spidcount > 0){
+    this.props.showpiker();
+    }
   }
 
   render() {
