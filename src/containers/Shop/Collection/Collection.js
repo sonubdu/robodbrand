@@ -216,7 +216,7 @@ class Collection extends Component {
                         <a href="https://robobull.com/pages/installation-videos">HOW TO INSTALL</a>
                       </li>
                     </ul>
-                    <ul className={this.state.hmactive+" nav navbar-nav pull-right"}>
+                    <ul className={this.state.hmactive+" nav navbar-nav cart_menu pull-right"}>
                       <li>
                         <a href="https://robobull.com/account/login">
                           <img alt="user" src="/texture/ic1.png"/>
