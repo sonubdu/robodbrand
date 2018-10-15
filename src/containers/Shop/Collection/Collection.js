@@ -208,7 +208,7 @@ class Collection extends Component {
                           </button>
                       </div>
                     </div>
-                    <ul className={this.state.hmactive+" nav navbar-nav"}>
+                    <ul className={this.state.hmactive+" nav main_menu navbar-nav"}>
                       <li className="">
                         <a href="#">SHOP</a>
                       </li>

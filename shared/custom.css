@@ -88,6 +88,8 @@
 		display: inline-block;
 		position: relative;
 	}
+	.main_menu {padding-left: 30px !important;}
+	
 	.decr {    position: absolute;
 		right: 3px;
 		top: 22%;
@@ -8794,7 +8796,7 @@
 	}
 	.navbar-default .navbar-nav > li > a {
 		color: #000 !important;
-		font-size: 17px;
+		font-size: 20px;
 		font-weight: 700;
 	}
 	.productFeature button.active:hover {
@@ -8888,6 +8890,11 @@
 		.mobile_product .Product__option {width: 84px !important; margin: 0px 4px 11px !important; height: 62px !important;}
 	}
 	@media (min-width:768px) {
+		.productCon .productFeature {padding: 0px 5px !important;}
+		.nav.main_menu > li > a {
+			padding: 10px 20px !important;
+			line-height: 56px;
+		}
 		.iphn_cut{ width: 48%; float: left;}
 		.iphn_cut .col-lg-3 {
 		width: 50%;
