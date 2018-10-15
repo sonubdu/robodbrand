@@ -265,6 +265,7 @@ onUpdateStatus = val => {
           product={product}
           passedvalue={pkey}
           onToggle={this.state.spid}
+           onStatus={this.onUpdateStatus}
         />
       );
     });
@@ -393,15 +394,9 @@ if(this.props.withcut){
            
             <div className="productCon">{producttitle}</div>
           </div>
-		  <div className="row">
-      <div className="col-lg-12"><button type="button" onClick={this.skinpickershow} className="pick_skin">Pick a Skin</button>
-      </div>
-      </div>
-      <div className="row after_pick">
-      <div className="col-xs-3"><button className="Product__option texture_bg"></button></div>
-      <div className="col-xs-6"><button type="button" className="pick_skin">Red Carbon</button></div>
-      <div className="col-xs-3"><button className="Product__option des_btn"><span className="glyphicon glyphicon-trash"></span></button></div>
-      </div>
+          <div className="row">
+            {pickupskin}
+          </div>
           <div className="row desktop_product">
            
             <div className="col-lg-12 paddingZero">{products}</div>
