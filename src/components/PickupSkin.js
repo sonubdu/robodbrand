@@ -36,7 +36,7 @@ class PickupSkin extends Component {
       dataaftereffect: fakeCartData
     });
   }
-  handleClick(parent) {
+  handleClick() {
     
     this.props.onStatus(true);
     

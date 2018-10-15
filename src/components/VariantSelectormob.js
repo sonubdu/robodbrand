@@ -349,7 +349,7 @@ class VariantSelectormob extends Component {
       let bgv = "/texture/phone_img.png";
 
       return (
-        <div className={value}>
+      
           <button
             title={value}
             className="Product__option1"
@@ -360,7 +360,7 @@ class VariantSelectormob extends Component {
           >
             <img src={bgv} alt={value} />
           </button>
-        </div>
+  
       );
     });
 
@@ -386,7 +386,7 @@ class VariantSelectormob extends Component {
       };
     }
     return (
-      <div>
+      <div className={"time"+Date.now()}>
 	  <div className="var_head"><h3>Pick a Skin</h3> <button type="button" onClick={this.props.hidepikker} className="hd_pkr">x</button></div>
 	  
         <div className="diffCol">

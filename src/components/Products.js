@@ -243,8 +243,9 @@ onUpdateStatus = val => {
           );
         }
         return (
-          <div className="col-lg-12"><button type="button" onClick={this.skinpickershow} className="pick_skin">Pick a Skin</button>
-      </div>
+          <div className={"col-lg-12 "}>
+          <button type="button" onClick={this.skinpickershow} className={"pick_skin "}>Pick a Skin</button>
+          </div>
         );
       }
       return "";
@@ -328,7 +329,7 @@ if(this.props.withcut){
       
             </div>
       <div className="row">
-      {console.log(data)}
+   
       {pickupskin}
      
       </div>
