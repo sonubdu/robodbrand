@@ -3,6 +3,7 @@ import Product from "./Product";
 import ProductImages from "./ProductImages";
 import ProductTitle from "./ProductTitle";
 import FakeCart from "./FakeCart";
+import Pickupskin from "./PickupSkin";
 import DeviceColor from "./DeviceColor";
 import { css } from 'react-emotion';
 // First way to import
@@ -190,7 +191,7 @@ onUpdateStatus = val => {
               status={this.state.fakecartstatus}
               onDelete={this.onDelete}
               buynow={this.props.buynow}
-			  onStatus={this.onUpdateStatus}
+			       onStatus={this.onUpdateStatus}
             />
           );
         }
@@ -211,6 +212,39 @@ onUpdateStatus = val => {
               </div>
             </div>
           </div>
+        );
+      }
+      return "";
+    });
+
+    let pickupskincount = 0;
+    let pickupskin = this.props.products.map(product => {
+      if (pickupskincount === 0) {
+         pickupskincount++;
+        let fakeCartData = localStorage.getItem("fakecart");
+
+        if (fakeCartData !== "") {
+           data = JSON.parse(fakeCartData);
+          return (
+            <Pickupskin
+              key={product.id.toString()}
+              FakeCartdata={data}
+              product={product}
+              addVariantToCart={this.props.addVariantToCart}
+              addMultipleVariantToCart={this.props.addMultipleVariantToCart}
+              addMultipleVariantToBuy={this.props.addMultipleVariantToBuy}
+              status={this.state.fakecartstatus}
+              onDelete={this.onDelete}
+              buynow={this.props.buynow}
+              onStatus={this.onUpdateStatus}
+              showpiker={this.skinpickershow}
+              onToggle={this.state.spid}
+            />
+          );
+        }
+        return (
+          <div className="col-lg-12"><button type="button" onClick={this.skinpickershow} className="pick_skin">Pick a Skin</button>
+      </div>
         );
       }
       return "";
@@ -295,14 +329,10 @@ if(this.props.withcut){
             </div>
       <div className="row">
       {console.log(data)}
-      <div className="col-lg-12"><button type="button" onClick={this.skinpickershow} className="pick_skin">Pick a Skin</button>
+      {pickupskin}
+     
       </div>
-      </div>
-      <div className="row after_pick">
-      <div className="col-xs-3"><button className="Product__option texture_bg"></button></div>
-      <div className="col-xs-6"><button type="button" className="pick_skin">Red Carbon</button></div>
-      <div className="col-xs-3"><button className="Product__option des_btn"><span className="glyphicon glyphicon-trash"></span></button></div>
-      </div>
+     
             <div className="row desktop_product">
            
             <div className="col-lg-12 paddingZero">{products}</div>
