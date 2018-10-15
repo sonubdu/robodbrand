@@ -8882,7 +8882,9 @@ a:hover, a:focus {
 	.mobile_product .mb_switch {max-width: 288px !important;}
 	.mobile_product .Product__option {width: 84px !important; margin: 0px 4px 11px !important; height: 62px !important;}
 }
+.mb_switch{display:none}
 @media (min-width:768px) {
+
 	.iphn_cut{ width: 48%; float: left;}
 	.iphn_cut .col-lg-3 {
 	width: 50%;
@@ -8910,6 +8912,7 @@ a:hover, a:focus {
 	.wth_app .productCon {    background: #161616;}
 }
 @media (max-width:767px) {
+	.mb_switch{display:block}
 	.after_pick {display: block !important;}
 	.after_pick .pick_skin {
 		background: #161616;
