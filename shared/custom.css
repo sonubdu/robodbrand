@@ -9153,7 +9153,7 @@
 		padding: 0;
 		background: none;}
 	.mobile_product {
-		width: 110%;
+		width: 104%;
 		background: rgba(0, 0, 0, 0.6);
 		position: fixed;
 		right: 0;
@@ -9165,7 +9165,7 @@
 	}
 	.mobile_product .mb_switch {
 		display: block !important;
-		position: fixed;
+		position: absolute;
 		z-index: 9999999;
 		top: 0;
 		width: 100%;
