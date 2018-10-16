@@ -25,19 +25,19 @@
 .inputCartInput {
   border: 0;
   text-align: center;
-  background: #ff0000;
-  border-radius: 4px;
+  background: #d71921;
+  border-radius: 3px;
   color: #fff;
-  height: 30px;
-  width: 26px;
+  height: 42px;
+  width: 45px;
 }
 .deleteBtn {
-  height: 30px;
-  width: 30px;
+  height: 42px;
+  width: 45px;
   border: 0;
   background: #ccc;
   border-radius: 4px;
-  margin-left: 5px;
+  margin-left: 20px;
 }
 .container-fluid {
   padding: 0 !important;

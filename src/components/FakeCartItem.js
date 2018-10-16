@@ -60,7 +60,7 @@ class FakeCartItem extends Component {
         </li>
         <li className="drow_right">
           <ul>
-            <li>Rs. {data.price}</li>
+            <li className="rupees">Rs. {data.price}</li>
             <li>
               <div className="incrmnt_sec">
               <input
@@ -96,11 +96,11 @@ class FakeCartItem extends Component {
                 value="X"
                 onClick={() => this.props.removeFakeCartItem(data.parentid)}
               >
-                <i className="fa fa-trash-o" aria-hidden="true" />
+                 <img className="trash_icn" src="/texture/dlt.png"/>
               </button>
             </li>
 
-            <li className="text-right">
+            <li className="text-right rupees">
               <strong>Rs. {Number(data.price * this.state.qty).toFixed(2)}</strong>
             </li>
           </ul>

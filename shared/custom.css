@@ -88,16 +88,19 @@
 		display: inline-block;
 		position: relative;
 	}
-	
+	.trash_icn {
+	display: inline-block;
+    max-width: 14px;
+	}
 	.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left {border-radius:1px;}
 	.decr {    position: absolute;
-		right: 3px;
+		right: 6px;
 		top: 22%;
 		background: transparent;
 		border: 0;}
 		.incr {    position: absolute;
-			right: 3px;
-			bottom: 39%;
+			right: 6px;
+			bottom: 40%;
 			background: transparent;
 			border: 0;}
 			.nav.pull-right > li > a > img {
@@ -110,7 +113,7 @@
 		height: 0;
 		border-style: solid;
 		border-width: 4px;
-		border-color: transparent transparent #222222;
+		border-color: transparent transparent#fff;
 		-webkit-transform: rotate(1turn);
 		position: absolute;
 		top: 50%;
@@ -122,7 +125,7 @@
 		height: 0;
 		border-style: solid;
 		border-width: 4px;
-		border-color:#222222 transparent transparent;
+		border-color:#fff transparent transparent;
 		-webkit-transform: rotate(1turn);
 		position: absolute;
 		top: 50%;
@@ -8774,7 +8777,7 @@
 		border-top: 5px solid #b3b3b3;
 	}
 	.cartTittle {
-		font-size: 17px;
+		font-size: 24px;
 	}
 	 @media (max-width:1100px) {
 	.TOP, .FRONT, .BACK, .CAMERA {
@@ -8856,16 +8859,50 @@
 		overflow: hidden;
 	}
 	.drow_right {
-		padding: 15px 20px;
+		padding: 11px 20px 9px;
 	}
 	}
+	@media only screen and (min-width:992px) {
+		.nav.main_menu > li > a {
+			padding: 10px 30px !important;
+			line-height: 56px;
+		}
+	}
+	@media only screen and (min-width:861px) {
+		.main_menu {padding-left: 58px !important;
+		}
+		.cart_menu li a {
+            padding-left: 50px !important;
+            padding-right: 0px !important;
+        }
+	}
+	@media only screen and (min-width:768px) and (max-width:860px) {
+		.main_menu {
+            padding-left: 15px !important;
+		}
+		.cart_menu li a {
+            padding-left: 29px !important;
+            padding-right: 0px !important;
+        }
+	}
+	@media only screen and (min-width:1280px) {.bgConFeature .container {
+		width:100%; 
+		max-width: 1262px;
+		padding: 0 32px;
+	}
+	.bgConFeature .col-lg-12.undefined, .bgConFeature .dummyCart .col-lg-12{ padding-right:0;}
 	
+}
 	 @media only screen and (min-width:768px) and (max-width:992px) {
 	.drow_right li {
 		line-height: 17px;
 	}
 	.drow {
 		background: #e0e0e2;
+	}
+	.nav.main_menu > li > a {
+		padding: 10px 15px !important;
+		line-height: 56px;
 	}
 	}
 	 @media only screen and (min-width:861px) and (max-width:1199px) {
@@ -8890,16 +8927,10 @@
 		.mobile_product .Product__option {width: 84px !important; margin: 0px 4px 11px !important; height: 62px !important;}
 	}
 	@media (min-width:768px) {
-        .cart_menu li a {
-            padding-left: 50px !important;
-            padding-right: 0px !important;
-        }
-        .main_menu {padding-left: 58px !important;}
+        
+        
 		.productCon .productFeature {padding: 0px 5px !important;}
-		.nav.main_menu > li > a {
-			padding: 10px 30px !important;
-			line-height: 56px;
-		}
+		
 		.iphn_cut{ width: 48%; float: left;}
 		.iphn_cut .col-lg-3 {
 		width: 50%;
@@ -8927,6 +8958,11 @@
 		.wth_app .productCon {    background: #161616;}
 	}
 	@media (max-width:767px) {
+		.logo img {
+			width: 245px;
+		}
+		.navbar-header {height:68px;}
+		.logo{position:absolute;}
 		.mb_switch {display: block;}
 		.after_pick {display: block !important;}
 		.after_pick .pick_skin {
@@ -9124,9 +9160,6 @@
 	}
 	.nav.navbar-nav.pull-right > li > a {
 		padding: 10px 0px;
-	}
-	.logo {
-		left: 10px;
 	}
 	.drow_right li {
 		line-height: normal;

@@ -22,9 +22,9 @@
 }
 .fakeCart .fa-pencil-square-o {
     color: #000;
-    padding-right: 20px;
-    padding-top: 5px;
-	font-size:18px;
+    padding-right: 15px;
+    padding-top: 8px;
+    font-size: 24px;
 }
 .decr, .incr {opacity: 0;}
 
@@ -36,16 +36,16 @@
   background: #d71921;
   border-radius: 4px;
   color: #fff;
-  height: 32px;
-  width: 32px;
+  height: 42px;
+  width: 45px;
 }
 .deleteBtn {
-  height: 34px;
-  width: 30px;
+  height: 42px;
+  width: 45px;
   border: 0;
   background: #ccc;
   border-radius: 4px;
-  margin-left: 5px;
+  margin-left: 20px;
 }
 .container-fluid {
   padding: 0 !important;
@@ -154,7 +154,7 @@
 }
 .bgWrapper {
   background: #222;
-  padding-top: 38px;
+  padding: 38px 0px 12px;
 }
 /*=====================================Durgesh end====================================*/
 
@@ -709,9 +709,8 @@ h2 {
 .dummyCart {
   width: 100%;
   padding-right: 0 !important;
-  padding-top: 35px;
+  padding-top: 55px;
 }
-
 .dummyCart .dcontainor {
   margin: auto;
 }
@@ -748,13 +747,15 @@ h2 {
   background: #e0e0e2;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+  display: inline-table;
 }
 .drow_right li {
   float: left;
   width: 33.33%;
-  line-height:33px;
+  line-height:40px;
   font-weight:500;
 }
+.drow_right li.rupees{ line-height:44px;}
 .drow li:nth-child(even), .drow_right li.text-right strong {
     font-weight: 500;
 }
@@ -954,19 +955,18 @@ input {
   font-size: 22px;
   color: #000;
   letter-spacing: 2px;
+  font-weight: 700;
 }
 .mainText:after {
-  width: 80px;
-  margin: 0 auto;
-  height: 5px;
-  background: #d85c4d;
+  border-bottom: solid 3px #d85c4d;
   content: "";
-  display: inherit;
-  margin-top: 11px;
+  display: block;
+  width: 70px;
+  margin: 6px auto;
 }
 .newLetterText {
-  margin: 15px 0;
-  font-size:17px;
+  margin: 18px 0;
+  font-size:18px;
 }
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
@@ -1046,17 +1046,17 @@ input {
 .total.totalAmount { padding-right:35px;}
 .Product__addtocart {
   background: #d71921;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -o-border-radius: 3px;
-  -webkit-border-radius: 3px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
 }
 .Product__buy {
   background: #ff8800 !important;
-  border-radius: 3px;
-  -moz-border-radius: 3px;
-  -o-border-radius: 3px;
-  -webkit-border-radius: 3px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
 }
 .App > .container-fluid {
   overflow: hidden;
