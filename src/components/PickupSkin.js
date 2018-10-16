@@ -58,13 +58,15 @@ class PickupSkin extends Component {
       break;
      }
 if(Total > 0){
-let bgv =
-"/texture/" +
-data.title
+  let bgv =
+  "/texture/" +
+  data.title
   .toString()
+  .replace("With logo", "")
   .replace(" ", "-")
+  .replace(" ", "")
   .toLowerCase() +
-".png";
+  ".png";
 bstyle = {
 backgroundImage: "url(" + bgv + ")"
 };

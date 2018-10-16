@@ -168,6 +168,7 @@ onUpdateStatus = val => {
           status={this.state.fakecartstatus}
           applecut={this.state.withappletext}
           hidepiker={this.skinpickerHide}
+          tabid={this.state.selectedTabId}
         />
       );
     });
@@ -289,7 +290,7 @@ onUpdateStatus = val => {
 
 if(this.props.withcut){
     return (
-      <div>
+      <div className={this.state.withappletext.toString().replace(" ",'_').replace(" ","_").toLowerCase()+this.state.selectedTabId}> 
         <div className={this.state.spid?style2:style1} style={style4}>
         <FadeLoader
           className={override}

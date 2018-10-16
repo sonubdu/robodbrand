@@ -19,6 +19,7 @@ class VariantSelectormob extends Component {
   }
 
   render() {
+
     let carbon = [];
     let camo = [];
     let dragon = [];
@@ -30,40 +31,114 @@ class VariantSelectormob extends Component {
     let wood = [];
     let none = ["none"];
     let robo = [];
+    // withoutlogodata
+    let vcarbon = [];
+    let vcamo = [];
+    let vdragon = [];
+    let vstone = [];
+    let vmatte = [];
+    let vmetal = [];
+    let vleather = [];
+    let vtruecolor = [];
+    let vwood = [];
+    let vrobo = [];
 
     this.props.option.values.map(value => {
       if (value.toString().search("Camo") === 0) {
-        camo.push(value);
+        if(value.toString().includes('With logo')){
+          vcamo.push(value);
+        }else{
+          camo.push(value);
+        }
       }
       if (value.toString().search("Carbon") === 0) {
-        carbon.push(value);
+         if(value.toString().includes('With logo')){
+          vcarbon.push(value);
+        }else{
+          carbon.push(value);
+        }
       }
       if (value.toString().search("Dragon") === 0) {
-        dragon.push(value);
+   
+        if(value.toString().includes('With logo')){
+          vdragon.push(value);
+        }else{
+          dragon.push(value);
+        }
       }
       if (value.toString().search("Marble") === 0) {
-        stone.push(value);
+        
+        if(value.toString().includes('With logo')){
+          vstone.push(value);
+        }else{
+          stone.push(value);
+        }
       }
       if (value.toString().search("Matte") === 0) {
-        matte.push(value);
+        
+        if(value.toString().includes('With logo')){
+          vmatte.push(value);
+        }else{
+          matte.push(value);
+        }
       }
       if (value.toString().search("Metal") === 0) {
-        metal.push(value);
+       
+        if(value.toString().includes('With logo')){
+          vmetal.push(value);
+        }else{
+          metal.push(value);
+        }
       }
       if (value.toString().search("Leather") === 0) {
-        leather.push(value);
+       
+        if(value.toString().includes('With logo')){
+          vleather.push(value);
+        }else{
+          leather.push(value);
+        }
       }
       if (value.toString().search("Tc") === 0) {
-        truecolor.push(value);
+     
+        if(value.toString().includes('With logo')){
+          vtruecolor.push(value);
+        }else{
+          truecolor.push(value);
+        }
       }
       if (value.toString().search("Wood") === 0) {
-        wood.push(value);
+
+        if(value.toString().includes('With logo')){
+          vwood.push(value);
+        }else{
+          wood.push(value);
+        }
       }
       if (value.toString().search("Robo") === 0) {
-        robo.push(value);
+        
+        if(value.toString().includes('With logo')){
+          vrobo.push(value);
+        }else{
+          robo.push(value);
+        }
       }
       return true;
     });
+
+    if(this.props.tabid===1){
+      if(this.props.applecut==="With Apple Cut"){
+       camo =vcamo;
+       carbon=vcarbon;
+       dragon = vdragon;
+       stone = vstone;
+       matte = vmatte;
+       metal = vmetal;
+       leather = vleather;
+       truecolor = vtruecolor;
+       wood = vwood;
+       robo = vrobo;
+      }
+     }
    
     let camoCount=-1;
     let camodata = camo.map(value => {
@@ -71,9 +146,11 @@ class VariantSelectormob extends Component {
       let bgv =
         "/texture/" +
         value
-          .toString()
-          .replace(" ", "-")
-          .toLowerCase() +
+        .toString()
+        .replace("With logo", "")
+        .replace(" ", "-")
+        .replace(" ", "")
+        .toLowerCase() +
         ".png";
       let style = {
         backgroundImage: "url(" + bgv + ")"
@@ -102,12 +179,14 @@ class VariantSelectormob extends Component {
     let carbondata = carbon.map(value => {
       carbonCount++;
       let bgv =
-        "/texture/" +
-        value
-          .toString()
-          .replace(" ", "-")
-          .toLowerCase() +
-        ".png";
+      "/texture/" +
+      value
+      .toString()
+      .replace("With logo", "")
+      .replace(" ", "-")
+      .replace(" ", "")
+      .toLowerCase() +
+      ".png";
       let style = {
         backgroundImage: "url(" + bgv + ")"
       };
@@ -135,9 +214,11 @@ class VariantSelectormob extends Component {
       let bgv =
         "/texture/" +
         value
-          .toString()
-          .replace(" ", "-")
-          .toLowerCase() +
+        .toString()
+        .replace("With logo", "")
+        .replace(" ", "-")
+        .replace(" ", "")
+        .toLowerCase() +
         ".png";
       let style = {
         backgroundImage: "url(" + bgv + ")"
@@ -166,9 +247,11 @@ class VariantSelectormob extends Component {
       let bgv =
         "/texture/" +
         value
-          .toString()
-          .replace(" ", "-")
-          .toLowerCase() +
+        .toString()
+        .replace("With logo", "")
+        .replace(" ", "-")
+        .replace(" ", "")
+        .toLowerCase() +
         ".png";
       let style = {
         backgroundImage: "url(" + bgv + ")"
@@ -196,12 +279,14 @@ class VariantSelectormob extends Component {
     let mattedata = matte.map(value => {
       mattecount++;
       let bgv =
-        "/texture/" +
-        value
-          .toString()
-          .replace(" ", "-")
-          .toLowerCase() +
-        ".png";
+      "/texture/" +
+      value
+      .toString()
+      .replace("With logo", "")
+      .replace(" ", "-")
+      .replace(" ", "")
+      .toLowerCase() +
+      ".png";
       let style = {
         backgroundImage: "url(" + bgv + ")"
       };
@@ -227,9 +312,11 @@ class VariantSelectormob extends Component {
       let bgv =
         "/texture/" +
         value
-          .toString()
-          .replace(" ", "-")
-          .toLowerCase() +
+        .toString()
+        .replace("With logo", "")
+        .replace(" ", "-")
+        .replace(" ", "")
+        .toLowerCase() +
         ".png";
       let style = {
         backgroundImage: "url(" + bgv + ")"
@@ -258,9 +345,11 @@ class VariantSelectormob extends Component {
       let bgv =
         "/texture/" +
         value
-          .toString()
-          .replace(" ", "-")
-          .toLowerCase() +
+        .toString()
+        .replace("With logo", "")
+        .replace(" ", "-")
+        .replace(" ", "")
+        .toLowerCase() +
         ".png";
       let style = {
         backgroundImage: "url(" + bgv + ")"
@@ -289,9 +378,11 @@ class VariantSelectormob extends Component {
       let bgv =
         "/texture/" +
         value
-          .toString()
-          .replace(" ", "-")
-          .toLowerCase() +
+        .toString()
+        .replace("With logo", "")
+        .replace(" ", "-")
+        .replace(" ", "")
+        .toLowerCase() +
         ".png";
       let style = {
         backgroundImage: "url(" + bgv + ")"
@@ -320,9 +411,11 @@ class VariantSelectormob extends Component {
       let bgv =
         "/texture/" +
         value
-          .toString()
-          .replace(" ", "-")
-          .toLowerCase() +
+        .toString()
+        .replace("With logo", "")
+        .replace(" ", "-")
+        .replace(" ", "")
+        .toLowerCase() +
         ".png";
       let style = {
         backgroundImage: "url(" + bgv + ")"
