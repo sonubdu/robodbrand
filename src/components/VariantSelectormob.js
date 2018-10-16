@@ -467,7 +467,7 @@ class VariantSelectormob extends Component {
           value={value}
           onClick={() => this.props.removeFakeCartItem(this.props.parentid)}
           >
-        <img class="trash_icn" src="/texture/dlt.png" />
+        <img className="trash_icn" src="/texture/dlt.png" />
          </button>
       );
     });

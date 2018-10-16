@@ -88,6 +88,18 @@
 		display: inline-block;
 		position: relative;
 	}
+	.glyphicon-chevron-left:before {
+		content: url("/texture/left.png") !important;
+		top: 4px;
+		position: absolute;
+		left: 43%;
+	}
+	.glyphicon-chevron-right:before {
+		content: url("/texture/right.png") !important;
+		top: 4px;
+		position: absolute;
+		left: 43%;
+	}
 	.none {background:#333333;}
 	.none img{
 		max-width: 17px;
@@ -8915,6 +8927,13 @@
 		line-height: 56px;
 	}
 	}
+	@media only screen and (min-width:768px) and (max-width:1280px) {
+		.drow_left, .drow_right {
+			width:100% !important;
+			padding: 15px 10px 12px;
+		}
+		.cntr {text-align:center;}
+	}
 	 @media only screen and (min-width:861px) and (max-width:1199px) {
 	.robobullCopyright, .robobullTollFree {
 		position: relative;
@@ -8973,6 +8992,7 @@
 		.wth_app .productCon {    background: #161616;}
 	}
 	@media (max-width:767px) {
+		.cntr {text-align:center;}
 		.nav > li > a {padding-left:0px !important;}
 		.deleteBtn{margin-left:5px;}
 		.navbar-header {

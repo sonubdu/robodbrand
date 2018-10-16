@@ -131,11 +131,11 @@ upqty(qty){
         </a>
         <div className="Items">{fakecartlineItem}</div>
         <div className="total kitTotal">
-          <strong className="pull-left">Kit Total-</strong>
+          <strong className="pull-left">Kit Total -</strong>
           Rs. { Number(Total).toFixed(2) }
         </div>
         <div className="total totalAmount">
-          <strong className="pull-left">Total-</strong>
+          <strong className="pull-left">Total -</strong>
           Rs. { Number(Total).toFixed(2) }
         </div>
 

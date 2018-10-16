@@ -61,7 +61,7 @@ class FakeCartItem extends Component {
         <li className="drow_right">
           <ul>
             <li className="rupees">Rs. {data.price}</li>
-            <li>
+            <li className="cntr">
               <div className="incrmnt_sec">
               <input
                 className="inputCartInput"
