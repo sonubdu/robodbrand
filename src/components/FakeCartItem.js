@@ -96,7 +96,7 @@ class FakeCartItem extends Component {
                 value="X"
                 onClick={() => this.props.removeFakeCartItem(data.parentid)}
               >
-                 <img className="trash_icn" src="/texture/dlt.png"/>
+                 <img className="trash_icn"  alt="dlt"  src="/texture/dlt.png"/>
               </button>
             </li>
 

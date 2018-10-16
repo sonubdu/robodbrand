@@ -161,7 +161,7 @@ class VariantSelectormob extends Component {
       }
       return (
         <button
-          data-tip={value}
+          data-tip={value.toString().replace("With logo",'')}
           style={style}
           className={camoClassName}
           onClick={this.props.handleOptionChange}
@@ -196,7 +196,7 @@ class VariantSelectormob extends Component {
       }
       return (
         <button
-          data-tip={value}
+          data-tip={value.toString().replace("With logo",'')}
           style={style}
           className={carbonClassName}
           onClick={this.props.handleOptionChange}
@@ -229,7 +229,7 @@ class VariantSelectormob extends Component {
       }
       return (
         <button
-          data-tip={value}
+          data-tip={value.toString().replace("With logo",'')}
           style={style}
           className={dragonClassName}
           onClick={this.props.handleOptionChange}
@@ -262,7 +262,7 @@ class VariantSelectormob extends Component {
       }
       return (
         <button
-          data-tip={value}
+          data-tip={value.toString().replace("With logo",'')}
           style={style}
           className={stoneClassName}
           onClick={this.props.handleOptionChange}
@@ -296,7 +296,7 @@ class VariantSelectormob extends Component {
       }
       return (
         <button
-          data-tip={value}
+          data-tip={value.toString().replace("With logo",'')}
           style={style}
           className={matteClassName}
           onClick={this.props.handleOptionChange}
@@ -327,7 +327,7 @@ class VariantSelectormob extends Component {
       }
       return (
         <button
-          data-tip={value}
+          data-tip={value.toString().replace("With logo",'')}
           style={style}
           className={metalClassName}
           onClick={this.props.handleOptionChange}
@@ -360,7 +360,7 @@ class VariantSelectormob extends Component {
       }
       return (
         <button
-          data-tip={value}
+          data-tip={value.toString().replace("With logo",'')}
           style={style}
           className={leatherClassName}
           onClick={this.props.handleOptionChange}
@@ -393,7 +393,7 @@ class VariantSelectormob extends Component {
       }
       return (
         <button
-          data-tip={value}
+          data-tip={value.toString().replace("With logo",'')}
           style={style}
           className={truecolorClassName}
           onClick={this.props.handleOptionChange}
@@ -426,7 +426,7 @@ class VariantSelectormob extends Component {
       }
       return (
         <button
-          data-tip={value}
+          data-tip={value.toString().replace("With logo",'')}
           style={style}
           className={woodClassName}
           onClick={this.props.handleOptionChange}
@@ -460,14 +460,14 @@ class VariantSelectormob extends Component {
     let nonedata = none.map(value => {
       return (
         <button
-          data-tip={value}
+          data-tip={value.toString().replace("With logo",'')}
           className="Product__option none"
           name={this.props.option.name}
           key={`${this.props.option.name}-${value}`}
           value={value}
           onClick={() => this.props.removeFakeCartItem(this.props.parentid)}
           >
-        <img className="trash_icn" src="/texture/dlt.png" />
+        <img className="trash_icn" alt="dlt" src="/texture/dlt.png" />
          </button>
       );
     });
