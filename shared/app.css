@@ -20,6 +20,8 @@
 .fa-pencil-square-o {
   color: #000;
 }
+
+.service figcaption p {font-size:12px;}
 .fakeCart .fa-pencil-square-o {
     color: #000;
     padding-right: 15px;
@@ -29,7 +31,7 @@
 .decr, .incr {opacity: 0;}
 
 .incrmnt_sec:hover .decr, .incrmnt_sec:hover .incr {opacity: 1 !important;}
-
+.service .container {max-width:1100px;}
 .inputCartInput {
   border: 0;
   text-align: center;
@@ -84,9 +86,9 @@
   height: 76px;
 }
 #email {
-  width: 75%;
-  border: 0;
+  width: 78%;
   height: 40px;
+  border-right:0 !important;
 }
 .bgConFeature:after {
   display: inline-block;
@@ -840,24 +842,26 @@ ul {
 }
 .service .img-responsive {
   display: inline-block;
+  max-width: 80px;
+  max-height: 80px;
 }
 
-.robobullTimeToll { font-size:12px;}
+.robobullTimeToll { font-size:12.5px;}
 .robobullFooterItem {
-      display: inline-block;
-    margin: 0 17px;
-    font-size: 17px;
-    font-weight: normal;
+  display: inline-block;
+  margin: 0 25px;
+  font-size: 18px;
+  font-weight: normal;
 }
 .robobullTollFree {
   position: absolute;
-  right: 30px;
-  top: 20px;
-  font-size: 14px;
+  right: 2%;
+  top: 35%;
+  font-size: 16px;
   color: #fff;
 }
 .robobullTollFree a {
-  font-size: 15px;
+  font-size: 16px;
   color: #fff;
   text-decoration: none;
 }
@@ -870,7 +874,7 @@ ul {
 }
 .robobullCopyright {
   position: absolute;
-  left: 30px;
+  left: 2%;
   top: 5px;
   font-size: 12px;
   color: #fff;
@@ -885,7 +889,7 @@ ul {
 }
 .robobullFooterUpper {
   background: #4d4d4c;
-  padding: 30px 0;
+  padding: 40px 0;
 }
 .robobullFooterUl {
   margin: 0;
@@ -907,11 +911,12 @@ ul {
 }
 .service ul li figure {
   border: 2px solid #353535;
+  padding: 10px 20px 15px 20px !important;
 }
 .service figcaption { color:#000;}
 .newLetterCon {
   display: inline-block;
-  width: 44%;
+  width: 46%;
   margin: 0 !important;
 }
 .maxi .form-control { border-radius:0px; background-color: #f8f8f8;}
@@ -924,7 +929,7 @@ ul {
   padding: 0 0 0 15px;
 }
 .newLetterBtn {
-      width: 25%;
+      width: 22%;
     height: 40px;
     line-height: 31px;
     border: 0;
@@ -933,9 +938,9 @@ ul {
     float: right;
     color: #fff;
     transition: all 1s;
-    font-size: 17px;
+    font-size: 16px;
 }
-figure figcaption strong { font-size:16px;}
+figure figcaption strong { font-size:14px; line-height:25px;}
 .newLetterBtn:hover {
   background: #ff0000;
 }
@@ -948,7 +953,7 @@ input {
 }
 .newLetter {
   background: #f8f8f8;
-  padding: 50px 0;
+  padding: 40px 0;
 }
 .mainText {
   margin: 0;
@@ -967,6 +972,7 @@ input {
 .newLetterText {
   margin: 18px 0;
   font-size:18px;
+  color: #000;
 }
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
@@ -1255,7 +1261,7 @@ button.Cart__checkout.button {
     display: none;
   }
   .productFeature button {
-    width: 97%;
+    width: 100%;
   }
   .container.OverFlow:after {
     display: none;
@@ -1360,18 +1366,8 @@ button.Cart__checkout.button {
     margin-right: 2%;
     margin-bottom: 2%;
   }
-  .navbar-header {
-    float: none;
-    position: relative;
-    width: auto;
-    height: auto;
-  }
-  .logo {
-    position: relative;
-    width: auto;
-    left: auto;
-    top: 1px;
-  }
+ 
+  
   .service ul li { margin-bottom:10px;}
 	.robobullFooterBottom { padding-bottom:25px;}
 	.robobullCopyright { position:absolute; bottom:0;}

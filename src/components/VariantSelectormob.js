@@ -136,7 +136,7 @@ class VariantSelectormob extends Component {
        leather = vleather;
        truecolor = vtruecolor;
        wood = vwood;
-       robo = vrobo;
+       //robo = vrobo;
       }
      }
    
@@ -461,13 +461,13 @@ class VariantSelectormob extends Component {
       return (
         <button
           data-tip={value}
-          className="Product__option"
+          className="Product__option none"
           name={this.props.option.name}
           key={`${this.props.option.name}-${value}`}
           value={value}
           onClick={() => this.props.removeFakeCartItem(this.props.parentid)}
           >
-        <span className="glyphicon glyphicon-trash"></span>
+        <img class="trash_icn" src="/texture/dlt.png" />
          </button>
       );
     });

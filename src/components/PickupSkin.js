@@ -81,7 +81,7 @@ backgroundImage: "url(" + bgv + ")"
       <div className="row after_pick">
       <div className="col-xs-3"><button onClick={() => this.handleClick(data.parentid)}  className="Product__option texture_bg" style={bstyle}></button></div>
       <div className="col-xs-6"><button onClick={() => this.handleClick(data.parentid)}  type="button" className="pick_skin">{data.title}</button></div>
-      <div className="col-xs-3"><button className="Product__option des_btn"  onClick={() => this.removeFakeCartItem(data.parentid)}><span className="glyphicon glyphicon-trash"></span></button></div>
+      <div className="col-xs-3"><button className="Product__option des_btn none"  onClick={() => this.removeFakeCartItem(data.parentid)}><img class="trash_icn" src="/texture/dlt.png" /></button></div>
       </div>
     );
   }

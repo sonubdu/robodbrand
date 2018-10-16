@@ -88,6 +88,10 @@
 		display: inline-block;
 		position: relative;
 	}
+	.none {background:#333333;}
+	.none img{
+		max-width: 17px;
+		display: inline-block;}
 	.trash_icn {
 	display: inline-block;
     max-width: 14px;
@@ -100,7 +104,7 @@
 		border: 0;}
 		.incr {    position: absolute;
 			right: 6px;
-			bottom: 40%;
+			bottom: 44%;
 			background: transparent;
 			border: 0;}
 			.nav.pull-right > li > a > img {
@@ -8849,8 +8853,8 @@
 	 @media (min-width:1200px) {
 	.robobullFooterBottom .robobullFooterItem {
 		display: inline-block;
-		margin: 0 9px;
-		font-size: 16px;
+		margin: 0 15px;
+		font-size: 18px;
 		font-weight: normal;
 	}
 	.diffCol {
@@ -8877,6 +8881,12 @@
         }
 	}
 	@media only screen and (min-width:768px) and (max-width:860px) {
+		.logo {
+			position: absolute;
+			width: 266px;
+			left: 0;
+			top: 7px;
+		  }
 		.main_menu {
             padding-left: 15px !important;
 		}
@@ -8925,10 +8935,15 @@
 	@media (max-width:368px) {
 		.mobile_product .mb_switch {max-width: 288px !important;}
 		.mobile_product .Product__option {width: 84px !important; margin: 0px 4px 11px !important; height: 62px !important;}
+		.deleteBtn, .inputCartInput {width:40px; height:38px;}
+		.drow_right li {line-height:37px;}
 	}
 	@media (min-width:768px) {
         
-        
+        .service .col-lg-4 {
+			padding-left: 10px;
+			padding-right: 10px;
+		  }
 		.productCon .productFeature {padding: 0px 5px !important;}
 		
 		.iphn_cut{ width: 48%; float: left;}
@@ -8946,7 +8961,7 @@
 			width: 100%;
 			margin-left: 0;
 			padding: 0;
-			height: 70px;
+			height: 64px;
 		}
 		.wth_app .applecut button > span {
 			float: none;
@@ -8958,11 +8973,19 @@
 		.wth_app .productCon {    background: #161616;}
 	}
 	@media (max-width:767px) {
+		.nav > li > a {padding-left:0px !important;}
+		.deleteBtn{margin-left:5px;}
+		.navbar-header {
+			float: none;
+			position: relative;
+			width: auto;
+			height: auto;
+		  }
 		.logo img {
 			width: 245px;
 		}
 		.navbar-header {height:68px;}
-		.logo{position:absolute;}
+		.logo{position:absolute; top:2px;}
 		.mb_switch {display: block;}
 		.after_pick {display: block !important;}
 		.after_pick .pick_skin {
@@ -9161,9 +9184,7 @@
 	.nav.navbar-nav.pull-right > li > a {
 		padding: 10px 0px;
 	}
-	.drow_right li {
-		line-height: normal;
-	}
+	
 	.productCon .col-xs-3 {
 		width: 50% !important;
 		padding: 0px !important;
@@ -9212,7 +9233,7 @@
 		height: auto;
 		float: none !important;
 		margin: 0;
-		padding-left: 10px;
+		padding-left: 0px;
 	}
 	.fakeCart.col-lg-12 {
 		padding-left: 15px;
@@ -9276,7 +9297,7 @@
 		color: white;
 	}
 	.shownew {
-		display: inline-block;
+		display: block;
 	}
 	.applecut button >.Without {
 		background: red !important;
