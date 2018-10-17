@@ -9358,8 +9358,8 @@
 	.applecut button > .applecutbtn {
 		width: 25px;
 		height: 25px;
-		border: 5px solid white;
-		background: green !important;
+		border: 5px solid #000;
+		background: #fb0 !important;
 		float: left;
 	}
 	.applecut button > span {
@@ -9371,7 +9371,7 @@
 		display: block;
 	}
 	.applecut button >.Without {
-		background: red !important;
+		background: #691a0d !important;
 	}
 	.Product__option1 > img {
 		height: auto;
