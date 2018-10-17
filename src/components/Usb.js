@@ -6,7 +6,7 @@ class Usb extends Component {
       <section className="service">
         <div className="container text-center">
           <ul>
-            <li className="col-lg-4">
+            <li className="col-lg-4 col-sm-4">
               <figure>
                 <img
                   className="img-responsive"
@@ -19,7 +19,7 @@ class Usb extends Component {
                 </figcaption>
               </figure>
             </li>
-            <li className="col-lg-4">
+            <li className="col-lg-4 col-sm-4">
               <figure>
                 <img
                   className="img-responsive"
@@ -32,7 +32,7 @@ class Usb extends Component {
                 </figcaption>
               </figure>
             </li>
-            <li className="col-lg-4">
+            <li className="col-lg-4 col-sm-4">
               <figure>
                 <img
                   className="img-responsive"

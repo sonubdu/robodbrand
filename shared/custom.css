@@ -106,7 +106,7 @@
 		display: inline-block;}
 	.trash_icn {
 	display: inline-block;
-    max-width: 14px;
+    max-width: 13px;
 	}
 	.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left {border-radius:1px;}
 	.decr {    position: absolute;
@@ -8863,6 +8863,7 @@
 	}
 	.after_pick {display: none;}
 	 @media (min-width:1200px) {
+		 .robodesign .alice-carousel .Product__option1 > img {height: 96px;}
 	.robobullFooterBottom .robobullFooterItem {
 		display: inline-block;
 		margin: 0 15px;
@@ -8907,6 +8908,13 @@
             padding-right: 0px !important;
         }
 	}
+
+	@media only screen and (min-width:1201px) and (max-width:1290px) {
+		.robobullFooterItem {
+		display: inline-block;
+		margin: 0 15px;
+	}
+}
 	@media only screen and (min-width:1280px) {.bgConFeature .container {
 		width:100%; 
 		max-width: 1262px;
@@ -8915,7 +8923,48 @@
 	.bgConFeature .col-lg-12.undefined, .bgConFeature .dummyCart .col-lg-12{ padding-right:0;}
 	
 }
-	 @media only screen and (min-width:768px) and (max-width:992px) {
+	 @media only screen and (min-width:768px) and (max-width:991px) {
+		figure figcaption strong {
+			font-size: 13px;
+			line-height: 23px;
+		}
+		.service ul li figure {
+			border: 2px solid #353535;
+			padding: 10px 10px 15px 10px !important;
+		}
+		.service figcaption p {
+			font-size: 10px;
+		}
+		.deleteBtn {
+			margin-left: 5px;
+		}
+		.robobullFooterItem {
+			display: inline-block;
+			margin: 0 12px;
+			font-size: 13px;
+			font-weight: normal;
+		}
+		.robobullTollFree {font-size: 12px;}
+		.robobullTollFree a {
+			font-size: 12px;
+		}
+		.robobullTimeToll {
+			font-size: 11px;
+		}
+		.robobullCopyright {
+			position: absolute;
+			bottom: -10px;
+			left: 0;
+			right: 0;
+			text-align: center;
+		}
+		.robobullTollFree {
+			position: relative;
+			right: auto;
+			top: 12px;
+			padding-left: 0;
+			text-align: center;
+		}
 	.drow_right li {
 		line-height: 17px;
 	}
@@ -8934,6 +8983,7 @@
 		}
 		.cntr {text-align:center;}
 	}
+
 	 @media only screen and (min-width:861px) and (max-width:1199px) {
 	.robobullCopyright, .robobullTollFree {
 		position: relative;
@@ -8952,6 +9002,7 @@
 	}
 	.mb_switch {display: none;}
 	@media (max-width:368px) {
+		.robo_itm .Product__option1 {width: 84px !important; margin: 0px 4px 11px !important; height: 62px !important;}
 		.mobile_product .mb_switch {max-width: 288px !important;}
 		.mobile_product .Product__option {width: 84px !important; margin: 0px 4px 11px !important; height: 62px !important;}
 		.deleteBtn, .inputCartInput {width:40px; height:38px;}
@@ -9153,7 +9204,7 @@
 		padding: 0;
 		background: none;}
 	.mobile_product {
-		width: 104%;
+		width: 105%;
 		background: rgba(0, 0, 0, 0.6);
 		position: fixed;
 		right: 0;
