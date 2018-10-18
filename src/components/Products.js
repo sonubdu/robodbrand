@@ -4,6 +4,7 @@ import ProductImages from "./ProductImages";
 import ProductTitle from "./ProductTitle";
 import FakeCart from "./FakeCart";
 import Pickupskin from "./PickupSkin";
+import WithOption from "./WithOption";
 import DeviceColor from "./DeviceColor";
 import { css } from 'react-emotion';
 // First way to import
@@ -18,8 +19,8 @@ class Products extends Component {
   constructor() {
     super();
 
-    localStorage.clear();
-
+   // localStorage.clear();
+    localStorage.removeItem('fakecart');
     this.state = {
       selectedTabId: 1
     };
@@ -110,11 +111,15 @@ onUpdateStatus = val => {
   //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/gold/full.jpg
   withcutchange = val => {
    if(this.state.withappletext==="With Apple Cut"){
+   
     this.setState({ withappletext: "Without Apple Cut" });
-   }else{
+   
+  }else{
+    
     this.setState({ withappletext: "With Apple Cut" });
    }
     this.setState({ withcut: val });
+    
   };
   render() {
     let devicecolors = [];
@@ -244,9 +249,52 @@ onUpdateStatus = val => {
           );
         }
         return (
-          <div className={"col-lg-12 "}>
-          <button type="button" onClick={this.skinpickershow} className={"pick_skin "}>Pick a Skin</button>
+          <div className={"col-lg-12 "} key={product.title.toString()}>
+      <button type="button" key={product.title.toString()} onClick={this.skinpickershow} className={"pick_skin "}>Pick a Skin</button>
+       
           </div>
+        );
+      }
+      return "";
+    });
+    let withoptioncount = 0;
+    let withoption = this.props.products.map(product => {
+      if (withoptioncount === 0) {
+        withoptioncount++;
+        let fakeCartData = localStorage.getItem("fakecart");
+
+        if (fakeCartData !== "") {
+           data = JSON.parse(fakeCartData);
+          return (
+            <WithOption
+              key={product.id.toString()}
+              FakeCartdata={data}
+              product={product}
+              addVariantToCart={this.props.addVariantToCart}
+              addMultipleVariantToCart={this.props.addMultipleVariantToCart}
+              addMultipleVariantToBuy={this.props.addMultipleVariantToBuy}
+              status={this.state.fakecartstatus}
+              onDelete={this.onDelete}
+              buynow={this.props.buynow}
+              onStatus={this.onUpdateStatus}
+              showpiker={this.skinpickershow}
+              onToggle={this.state.spid}
+              applecut={this.state.withappletext}
+              client={this.props.client}
+              onUpdate={this.onUpdate}
+              withcutchange={this.withcutchange}
+            />
+          );
+        }
+        return (
+          <div className={"col-lg-12 col-md-12 col-sm-12 col-xs-12 productFeature "+product.id.toString()} key={product.title.toString()}>
+          <div className={"applecut "+product.id.toString()}>
+           <button key={product.id.toString() +" bt"} onClick={this.withcutchange}>
+            <div className={this.state.withappletext+" applecutbtn"}> </div>
+             <span>{this.state.withappletext}</span>
+           </button>
+           </div>
+           </div>
         );
       }
       return "";
@@ -314,17 +362,8 @@ if(this.props.withcut){
               </div>
             <div className={this.isActive(1)?style3+" wth_app ":style2+" wth_app "}>
               <div className={this.isActive(1)?style3+" productCon seaprate":style2+" productCon seaprate"}>
-            
-              <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 productFeature">
-              <div className="applecut">
-               <button onClick={this.withcutchange}>
-                <div className={this.state.withappletext+" applecutbtn"}> </div>
-                 <span>{this.state.withappletext}</span>
-               </button>
-               
-               
-               </div>
-               </div>
+              {withoption}
+              
               </div>
               </div>
               

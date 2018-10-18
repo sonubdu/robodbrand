@@ -34,7 +34,7 @@ class Collection extends Component {
   }
 
   setProducts(id) {
-    this.props.client.collection.fetchWithProducts(id).then(collection => {
+    this.props.client.collection.fetchByHandle(id).then(collection => {
     if(collection.description==="withcut"){
       this.setState({
         withcut: true
@@ -61,30 +61,12 @@ class Collection extends Component {
         checkout: res
       });
     });
-    this.setProducts(this.state.cid);
+   
     if (this.props.shopid !== "undefined") {
-      this.props.client.collection.fetchAllWithProducts().then(collections => {
-        // Do something with the collections
-        let ccoun = 0;
-        for (var key in collections) {
-          if (collections[key].handle === this.props.shopid) {
-            ccoun++;
-            this.setProducts(collections[key].id);
-          }
-        }
-        if (ccoun === 0) {
-          this.setProducts(this.state.cid);
-        }
-      });
+         this.setProducts(this.props.shopid);
     }
 
-    /*
-    this.props.client.product.fetchAll().then((res) => {
-      this.setState({
-        products: res,
-      });
-    });
-*/
+
     this.props.client.shop.fetchInfo().then(res => {
       this.setState({
         shop: res

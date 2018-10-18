@@ -42,6 +42,7 @@ class PickupSkin extends Component {
     
     this.props.showpiker();
     
+    
   }
   render() {
  
