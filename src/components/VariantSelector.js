@@ -13,7 +13,10 @@ class VariantSelector extends Component {
   this.state={
     currentIndex: 0
   };
+  
  }
+
+ 
   slideTo = (i) => this.setState({ currentIndex: i });
   slideNext = () => this.setState({ currentIndex: this.state.currentIndex + 1 });
   slidePrev = () => this.setState({ currentIndex: this.state.currentIndex - 1 });
@@ -146,7 +149,7 @@ class VariantSelector extends Component {
        leather = vleather;
        truecolor = vtruecolor;
        wood = vwood;
-       //robo = vrobo;
+     
       }
      }
     let camoCount=-1;
