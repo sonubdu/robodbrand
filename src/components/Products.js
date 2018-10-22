@@ -48,7 +48,7 @@ class Products extends Component {
     };
   }
 
-  componentWillMount() {
+componentWillReceiveProps() {
     if(this.props.withcut===true){
     this.setState({ withappletext: "With Apple Cut" });
     }else{
