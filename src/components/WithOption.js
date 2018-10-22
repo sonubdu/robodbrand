@@ -80,7 +80,7 @@ class WithOption extends Component {
               <div className="applecut">
                <button name="Color" value={this.props.applecut==="With Apple Cut"?data.title.toString().replace("With logo","").trim():data.title.toString()+" With logo"} onClick={this.handleOptionChange}>
                <div className={this.props.applecut+" applecutbtn"}> </div>
-              
+              <span className="wth_cut"></span>
                </button>
                </div>
                </div>
