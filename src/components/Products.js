@@ -49,7 +49,11 @@ class Products extends Component {
   }
 
   componentWillMount() {
+    if(this.props.withcut===true){
+    this.setState({ withappletext: "With Apple Cut" });
+    }else{
     this.setState({ withappletext: "Without Apple Cut" });
+    }
     this.setState({ dccolor: "Gray" });
     this.setState({ skinpikker: "hide" });
   }
