@@ -19,7 +19,7 @@ class Products extends Component {
   constructor() {
     super();
 
-   // localStorage.clear();
+    localStorage.clear();
     localStorage.removeItem('fakecart');
     this.state = {
       selectedTabId: 1

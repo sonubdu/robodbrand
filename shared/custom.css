@@ -9389,15 +9389,15 @@
 	}
 	.wth_cut {
 		background-image: url("/texture/with_apple.png") !important;
-		background-position: center !important;  
+		background-position-x: center !important;  
+		background-position-y: bottom !important;  
 		background-repeat: no-repeat !important;
-		padding: 57px;
-		background-size: 100%;
+        background-size: 21%;
 	}
 	.without_cut {
 		background-image: url("/texture/without_apple.png") !important;
-		background-position: center !important;  
+		background-position-x: center !important;  
+		background-position-y: bottom !important;  
 		background-repeat: no-repeat !important;
-		padding: 57px;
-		background-size: 100%;
+        background-size: 27%;
 	}
