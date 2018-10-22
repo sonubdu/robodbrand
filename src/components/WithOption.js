@@ -58,8 +58,11 @@ class WithOption extends Component {
     let data = "";
     let Total = 0;
    
-      data = fakerdata[ this.props.product.id];
-      Total = Number(Total) + Number(data.price * data.qty);
+      data = fakerdata[this.props.product.id];
+      if(data){
+        Total = Number(Total) + Number(data.price * data.qty);
+      }
+     
   
    
     if (Total === 0) {

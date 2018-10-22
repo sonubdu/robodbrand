@@ -9009,7 +9009,22 @@
 		.drow_right li {line-height:37px;}
 	}
 	@media (min-width:768px) {
-        
+        .wth_cut {
+			background-image: url(/texture/with_apple.png) !important;
+			background-position-x: center !important;
+			background-position-y: center !important;
+			background-repeat: no-repeat !important;
+			background-size: 125px;
+			height: 63px !important;
+		}
+		.without_cut {
+			background-image: url("/texture/without_apple.png") !important;
+			background-position-x: center !important;  
+			background-position-y: center !important;  
+			background-repeat: no-repeat !important;
+			background-size: 150px;
+			height: 63px !important;
+		}
         .service .col-lg-4 {
 			padding-left: 10px;
 			padding-right: 10px;
@@ -9025,7 +9040,7 @@
 		float: right;}
 		.applecut {
 			padding: 0px 25px !important;
-			height: auto !important;
+			
 		}
 		.wth_app .seaprate {
 			width: 100%;
@@ -9039,10 +9054,26 @@
 			color: white;
 			line-height: 70px;
 		}
-		.applecut button > .applecutbtn {margin-top: 22px;}
+		.applecut button > .applecutbtn {margin-top: 18px;}
 		.wth_app .productCon {    background: #161616;}
 	}
 	@media (max-width:767px) {
+		.wth_cut {
+			background-image: url(/texture/with_apple.png) !important;
+			background-position-x: center !important;
+			background-position-y: center !important;
+			background-repeat: no-repeat !important;
+			background-size: 125px;
+			height: 45px !important;
+		}
+		.without_cut {
+			background-image: url("/texture/without_apple.png") !important;
+			background-position-x: center !important;  
+			background-position-y: center !important;  
+			background-repeat: no-repeat !important;
+			background-size: 150px;
+			height: 49px !important;
+		}
 		.cntr {text-align:center;}
 		.nav > li > a {padding-left:0px !important;}
 		.deleteBtn{margin-left:5px;}
@@ -9387,17 +9418,4 @@
 	.mobile_product, .pick_skin {
 		display: none
 	}
-	.wth_cut {
-		background-image: url("/texture/with_apple.png") !important;
-		background-position-x: center !important;  
-		background-position-y: bottom !important;  
-		background-repeat: no-repeat !important;
-        background-size: 21%;
-	}
-	.without_cut {
-		background-image: url("/texture/without_apple.png") !important;
-		background-position-x: center !important;  
-		background-position-y: bottom !important;  
-		background-repeat: no-repeat !important;
-        background-size: 27%;
-	}
+	
