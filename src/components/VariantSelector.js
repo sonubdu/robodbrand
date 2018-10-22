@@ -352,7 +352,7 @@ class VariantSelector extends Component {
           key={`${this.props.option.name}-${value}`}>
           <ReactTooltip className="datatooltip" place="bottom" type="light" effect="solid" />
           </button>
-        
+       
       );
     });
      let leathercount=-1;
