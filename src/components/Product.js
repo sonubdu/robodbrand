@@ -137,7 +137,7 @@ class Product extends Component {
     
    */
     return (
-      <div className={pclass} id={this.props.product.id}>
+      <div className={pclass+" "+this.props.product.title.toString().toLowerCase()} id={this.props.product.id}>
 	  
 	  
       <div className="variantSelectors">
