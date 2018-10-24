@@ -9106,24 +9106,28 @@
 			position: absolute;
 			right: -18px;
 			top: 0;
-			background: #cccccc;
 			border: 0;
 			height: 50%;
 			width: 19px;
 			border-top-right-radius: 4px;
-			font-size: 25px;
+		
 			border-bottom: 1px solid #b1b1b1;
+			background: url(/texture/minus.png) no-repeat #cccccc;
+			background-size: 9px 8px;
+			background-position: center;
 		}
 		.incr {
 			position: absolute;
 			right: -18px;
 			bottom: 0;
-			background: #cccccc;
+			background: url(/texture/add.png) no-repeat #cccccc;
+			background-size: 11px 11px;
+			background-position: center;
 			border: 0;
 			height: 50%;
 			width: 19px;
 			border-bottom-right-radius: 4px;
-			font-size: 25px;
+			
 		}
 		.inputCartInput {
 			border: 0;
