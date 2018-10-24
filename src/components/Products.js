@@ -365,7 +365,7 @@ if(this.props.withcut){
             
               </div>
             <div className={this.isActive(1)?style3+" wth_app ":style3+" wth_app "}>
-              <div className={this.isActive(1)?style3+" productCon seaprate":style3yar+" productCon seaprate"}>
+              <div className={this.isActive(1)?style3+" productCon seaprate":style3+" productCon seaprate"}>
               {withoption}
               
               </div>
