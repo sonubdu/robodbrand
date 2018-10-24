@@ -8980,6 +8980,7 @@
 		.drow_right li {line-height:37px;}
 	}
 	@media (min-width:768px) {
+		.decr span, .incr span { display:none;}
 		.decr {    position: absolute;
 			right: 6px;
 			top: 22%;
@@ -9081,6 +9082,26 @@
 		.decr, .incr { right: -17px !important;}
 	}
 	@media (max-width:767px) {
+		.total.totalAmount {
+			padding-right: 10px;
+		}
+		.decr span
+		{
+			position: relative;
+			z-index: 99;
+			top: -13px;
+			line-height: 10px;
+			font-size: 20px;		
+		}
+		 .incr span 
+		{
+			position: relative;
+			z-index: 99;
+			line-height: 10px;
+			font-size: 19px;
+			top:-15px;		
+		}
+		
 		.decr {
 			position: absolute;
 			right: -18px;
@@ -9090,6 +9111,8 @@
 			height: 50%;
 			width: 19px;
 			border-top-right-radius: 4px;
+			font-size: 25px;
+			border-bottom: 1px solid #b1b1b1;
 		}
 		.incr {
 			position: absolute;
@@ -9100,6 +9123,7 @@
 			height: 50%;
 			width: 19px;
 			border-bottom-right-radius: 4px;
+			font-size: 25px;
 		}
 		.inputCartInput {
 			border: 0;
@@ -9110,24 +9134,10 @@
     height: 42px;
     width: 35px;
 		}
-		.decr:before {
-			content: "-";
-			position: absolute;
-			top: -10px;
-			left: 2px;
-			color: #292929;
-			font-size: 36px;
-		}
-		.incr:before {
-			content: "+";
-			position: absolute;
-			top: -13px;
-			left: 2px;
-			color: #292929;
-			font-size: 32px;
-		}
+		
 		.decr, .incr {
 			opacity: 1;
+		
 		}
 		.total.kitTotal {
 			padding-right: 10px;

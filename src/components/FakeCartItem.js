@@ -72,7 +72,7 @@ class FakeCartItem extends Component {
                 name={data.parentid}
                 onChange={this.handleQuantityChange}
               />
-              <span>
+              
               <button
                 className="decr"
                 type="button"
@@ -80,7 +80,9 @@ class FakeCartItem extends Component {
                 value="-"
                 onClick={this.decrementQuantity}
                 name={data.parentid}>
+                <span>-</span>
                </button>
+
                 <button
                 className="incr"
                 type="button"
@@ -88,8 +90,9 @@ class FakeCartItem extends Component {
                 value="+"
                 onClick={this.incrementQuantity}
                 name={data.parentid}>
+                <span>+</span>
                 </button>
-                </span>
+                
               </div>
               <button
                 className="deleteBtn"
