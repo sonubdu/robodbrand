@@ -109,44 +109,12 @@
     max-width: 13px;
 	}
 	.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left {border-radius:1px;}
-	.decr {    position: absolute;
-		right: 6px;
-		top: 22%;
-		background: transparent;
-		border: 0;}
-		.incr {    position: absolute;
-			right: 6px;
-			bottom: 44%;
-			background: transparent;
-			border: 0;}
+	
 			.nav.pull-right > li > a > img {
 				max-width: 22px;
 			}
 			.nav.pull-right > li > a.App__view-cart > img { max-width:32px;}
-	.decr:before  {
-		content: "";
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: 4px;
-		border-color: transparent transparent#fff;
-		-webkit-transform: rotate(1turn);
-		position: absolute;
-		top: 50%;
-		left: 50%;
-	}
-	.incr:before  {
-		content: "";
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: 4px;
-		border-color:#fff transparent transparent;
-		-webkit-transform: rotate(1turn);
-		position: absolute;
-		top: 50%;
-		left: 50%;
-	}
+	
 	.ppv-wrapper {
 		position: relative
 	}
@@ -8982,6 +8950,9 @@
 			padding: 15px 10px 12px;
 		}
 		.cntr {text-align:center;}
+		.total.kitTotal {
+			padding-right: 10px;
+		}
 	}
 
 	 @media only screen and (min-width:861px) and (max-width:1199px) {
@@ -9005,10 +8976,44 @@
 		.robo_itm .Product__option1 {width: 84px !important; margin: 0px 4px 11px !important; height: 62px !important;}
 		.mobile_product .mb_switch {max-width: 288px !important;}
 		.mobile_product .Product__option {width: 84px !important; margin: 0px 4px 11px !important; height: 62px !important;}
-		.deleteBtn, .inputCartInput {width:40px; height:38px;}
+		.deleteBtn, .inputCartInput {width:40px; }
 		.drow_right li {line-height:37px;}
 	}
 	@media (min-width:768px) {
+		.decr {    position: absolute;
+			right: 6px;
+			top: 22%;
+			background: transparent;
+			border: 0;}
+			.incr {    position: absolute;
+				right: 6px;
+				bottom: 44%;
+				background: transparent;
+				border: 0;}
+		.decr:before  {
+			content: "";
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 4px;
+			border-color: transparent transparent#fff;
+			-webkit-transform: rotate(1turn);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
+		.incr:before  {
+			content: "";
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 4px;
+			border-color:#fff transparent transparent;
+			-webkit-transform: rotate(1turn);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
         .wth_cut {
 			background-image: url(/texture/with_apple.png) !important;
 			background-position-x: center !important;
@@ -9057,7 +9062,76 @@
 		.applecut button > .applecutbtn {margin-top: 18px;}
 		.wth_app .productCon {    background: #161616;}
 	}
+	@media (max-width:380px) {
+
+		.inputCartInput {
+			border: 0;
+			text-align: center;
+			background: #fff;
+			border-radius: 4px;
+			color: #000;
+			height: 42px;
+			width: 28px !important;
+		}
+		.deleteBtn, .inputCartInput {
+			width: 35px;
+			
+		}
+		.deleteBtn {margin-left: 20px !important;}
+		.decr, .incr { right: -17px !important;}
+	}
 	@media (max-width:767px) {
+		.decr {
+			position: absolute;
+			right: -18px;
+			top: 0;
+			background: #cccccc;
+			border: 0;
+			height: 50%;
+			width: 19px;
+			border-top-right-radius: 4px;
+		}
+		.incr {
+			position: absolute;
+			right: -18px;
+			bottom: 0;
+			background: #cccccc;
+			border: 0;
+			height: 50%;
+			width: 19px;
+			border-bottom-right-radius: 4px;
+		}
+		.inputCartInput {
+			border: 0;
+    text-align: center;
+    background: #d71921;
+    border-radius: 4px;
+    color: #fff;
+    height: 42px;
+    width: 35px;
+		}
+		.decr:before {
+			content: "-";
+			position: absolute;
+			top: -10px;
+			left: 2px;
+			color: #292929;
+			font-size: 36px;
+		}
+		.incr:before {
+			content: "+";
+			position: absolute;
+			top: -13px;
+			left: 2px;
+			color: #292929;
+			font-size: 32px;
+		}
+		.decr, .incr {
+			opacity: 1;
+		}
+		.total.kitTotal {
+			padding-right: 10px;
+		}
 		.wth_cut {
 			background-image: url(/texture/with_apple.png) !important;
 			background-position-x: center !important;
@@ -9076,7 +9150,7 @@
 		}
 		.cntr {text-align:center;}
 		.nav > li > a {padding-left:0px !important;}
-		.deleteBtn{margin-left:5px;}
+		.deleteBtn{margin-left:30px;}
 		.navbar-header {
 			float: none;
 			position: relative;
