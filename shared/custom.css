@@ -9070,15 +9070,12 @@
 			width: 35px !important;
 			
 		}
-		.deleteBtn {margin-left: 20px !important;}
+		.deleteBtn {margin-left: 5px !important;}
 		.decr, .incr { right: -17px !important;}
 	}
 	@media (max-width:767px) {
-		.Items .drow li.rupees, .Items .drow li.text-right.rupees {
-			width: 25% !important;
-		}
-		.Items .drow li.cntr { width: 50% !important;}
-		.applecut button > .applecutbtn { top:10px !important;}
+		
+		.applecut button > .applecutbtn { top:0px !important; position: relative !important;}
 		.total.totalAmount {
 			padding-right: 10px;
 		}
@@ -9161,7 +9158,7 @@
 		}
 		.cntr {text-align:center;}
 		.nav > li > a {padding-left:0px !important;}
-		.deleteBtn{margin-left:30px;}
+		
 		.navbar-header {
 			float: none;
 			position: relative;
