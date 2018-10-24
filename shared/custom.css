@@ -9065,15 +9065,7 @@
 	}
 	@media (max-width:380px) {
 
-		.inputCartInput {
-			border: 0;
-			text-align: center;
-			background: #fff;
-			border-radius: 4px;
-			color: #000;
-			height: 42px;
-			width: 28px !important;
-		}
+		
 		.deleteBtn, .inputCartInput {
 			width: 35px;
 			
