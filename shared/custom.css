@@ -8980,6 +8980,7 @@
 		.drow_right li {line-height:37px;}
 	}
 	@media (min-width:768px) {
+
 		.decr span, .incr span { display:none;}
 		.decr {    position: absolute;
 			right: 6px;
@@ -9063,13 +9064,24 @@
 		
 		.wth_app .productCon {    background: #161616;}
 	}
-	
-	@media (max-width:767px) {
+	@media (max-width:380px) {
+
 		
+		.deleteBtn, .inputCartInput {
+			width: 35px !important;
+			
+		}
+		.deleteBtn { margin-left: 25px !important;}
+		
+	}
+	@media (max-width:767px) {
+		.Items .drow li.rupees, .Items .drow li.text-right.rupees { width: 31% !important;}
+		.Items .drow li.cntr { width: 38% !important;}
 		.applecut button > .applecutbtn { top:0px !important; position: relative !important;}
 		.total.totalAmount {
 			padding-right: 10px;
 		}
+
 		.decr span
 		{
 			position: relative;
