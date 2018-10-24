@@ -9060,7 +9060,7 @@
 			color: white;
 			line-height: 70px;
 		}
-		.applecut button > .applecutbtn {margin-top: 18px;}
+		
 		.wth_app .productCon {    background: #161616;}
 	}
 	@media (max-width:380px) {
@@ -9082,6 +9082,7 @@
 		.decr, .incr { right: -17px !important;}
 	}
 	@media (max-width:767px) {
+		.applecut button > .applecutbtn { top:10px}
 		.total.totalAmount {
 			padding-right: 10px;
 		}
@@ -9480,6 +9481,7 @@
 		border: 5px solid #000;
 		background: #fb0 !important;
 		float: left;
+		position: absolute;
 	}
 	.applecut button > span {
 		float: right;
