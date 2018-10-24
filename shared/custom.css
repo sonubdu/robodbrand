@@ -9063,16 +9063,7 @@
 		
 		.wth_app .productCon {    background: #161616;}
 	}
-	@media (max-width:380px) {
-
-		
-		.deleteBtn, .inputCartInput {
-			width: 35px !important;
-			
-		}
-		
-		.decr, .incr { right: -17px !important;}
-	}
+	
 	@media (max-width:767px) {
 		
 		.applecut button > .applecutbtn { top:0px !important; position: relative !important;}
