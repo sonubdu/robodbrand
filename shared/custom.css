@@ -9125,12 +9125,13 @@
 		}
 		.inputCartInput {
 			border: 0;
-    text-align: center;
-    background: #d71921;
-    border-radius: 4px;
-    color: #fff;
-    height: 42px;
-    width: 35px;
+			text-align: center;
+			background: #d71921;
+			border-radius: 4px;
+			color: #fff;
+			height: 42px;
+			width: auto !important;
+			padding: 0 6px;
 		}
 		
 		.decr, .incr {
