@@ -9020,16 +9020,16 @@
 			background-position-x: center !important;
 			background-position-y: center !important;
 			background-repeat: no-repeat !important;
-			background-size: 125px;
-			height: 63px !important;
+			background-size: 114px;
+			height: 70px !important;
 		}
 		.without_cut {
 			background-image: url("/texture/without_apple.png") !important;
 			background-position-x: center !important;  
 			background-position-y: center !important;  
 			background-repeat: no-repeat !important;
-			background-size: 150px;
-			height: 63px !important;
+			background-size: 140px;
+			height: 70px !important;
 		}
         .service .col-lg-4 {
 			padding-left: 10px;
@@ -9151,16 +9151,16 @@
 			background-position-x: center !important;
 			background-position-y: center !important;
 			background-repeat: no-repeat !important;
-			background-size: 125px;
-			height: 45px !important;
+			background-size: 135px;
+			height: 46px !important;
 		}
 		.without_cut {
 			background-image: url("/texture/without_apple.png") !important;
 			background-position-x: center !important;  
 			background-position-y: center !important;  
 			background-repeat: no-repeat !important;
-			background-size: 150px;
-			height: 49px !important;
+			background-size: 168px;
+			height: 45px !important;
 		}
 		.cntr {text-align:center;}
 		.nav > li > a {padding-left:0px !important;}

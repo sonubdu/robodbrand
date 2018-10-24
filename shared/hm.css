@@ -700,6 +700,5 @@
 
       .camera .robodesign{
         pointer-events : none;
-        z-index: 9999999;
         opacity: .3;
       }
