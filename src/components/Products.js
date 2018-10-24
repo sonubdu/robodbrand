@@ -238,6 +238,7 @@ onUpdateStatus = val => {
           return (
             <Pickupskin
               key={product.id.toString()}
+              mkey={this.state.spid}
               FakeCartdata={data}
               product={product}
               addVariantToCart={this.props.addVariantToCart}

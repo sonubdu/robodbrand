@@ -53,11 +53,13 @@ class PickupSkin extends Component {
 
     let data = "";
     let Total = 0;
-    for (var key in fakerdata) {
-      data = fakerdata[key];
+   
+     if(fakerdata){
+      data = fakerdata[this.props.mkey];
+      if(data){
       Total = Number(Total) + Number(data.price * data.qty);
-      break;
-     }
+      }
+    }
 if(Total > 0){
   let bgv =
   "/texture/" +
