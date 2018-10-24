@@ -364,8 +364,8 @@ if(this.props.withcut){
               {producttitle}
             
               </div>
-            <div className={this.isActive(1)?style3+" wth_app ":style2+" wth_app "}>
-              <div className={this.isActive(1)?style3+" productCon seaprate":style2+" productCon seaprate"}>
+            <div className={this.isActive(1)?style3+" wth_app ":style3+" wth_app "}>
+              <div className={this.isActive(1)?style3+" productCon seaprate":style3yar+" productCon seaprate"}>
               {withoption}
               
               </div>

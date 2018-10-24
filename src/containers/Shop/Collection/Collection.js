@@ -192,7 +192,7 @@ class Collection extends Component {
                     </div>
                     <ul className={this.state.hmactive+" nav main_menu navbar-nav"}>
                       <li className="">
-                        <a href="#">SHOP</a>
+                        <a href="https://robop.myshopify.com/pages/shop">SHOP</a>
                       </li>
                       <li>
                         <a href="https://robobull.com/pages/installation-videos">HOW TO INSTALL</a>
