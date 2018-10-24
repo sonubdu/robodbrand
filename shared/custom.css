@@ -9082,7 +9082,7 @@
 		.decr, .incr { right: -17px !important;}
 	}
 	@media (max-width:767px) {
-		.applecut button > .applecutbtn { top:10px}
+		.applecut button > .applecutbtn { top:10px !important;}
 		.total.totalAmount {
 			padding-right: 10px;
 		}
@@ -9482,6 +9482,7 @@
 		background: #fb0 !important;
 		float: left;
 		position: absolute;
+		top:18px;
 	}
 	.applecut button > span {
 		float: right;
