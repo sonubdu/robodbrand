@@ -47,10 +47,9 @@ class PickupSkin extends Component {
   render() {
  
     let fakerdata = this.props.status
-      ? this.state.dataaftereffect
+      ? this.props.FakeCartdata
       : this.props.FakeCartdata;
-      let bstyle ={};
-
+    let bstyle ={};
     let data = "";
     let Total = 0;
    
