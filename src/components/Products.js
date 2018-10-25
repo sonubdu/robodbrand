@@ -158,6 +158,7 @@ onUpdateStatus = val => {
           isActive={this.isActive(pcount)}
           setActiveTab={this.setActiveTab.bind(pcount)}
           showpiker={this.skinpickershow}
+          ktitle={this.props.ktitle}
         />
       );
     });

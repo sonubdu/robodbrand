@@ -46,7 +46,7 @@ class ProductTitle extends Component {
           onClick={this.handleClick.bind(this, this.props.product.id)}
         >
           {" "}
-          <span className="ProductCom">{this.props.product.title}</span>
+          <span className="ProductCom">{this.props.product.title.toString().replace(this.props.ktitle,"")}</span>
         </button>
       </div>
     );
