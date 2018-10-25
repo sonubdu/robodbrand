@@ -9069,12 +9069,19 @@
 			width: 35px !important;
 			
 		}
-		.deleteBtn { margin-left: 25px !important;}
+		
 		
 	}
 	@media (max-width:767px) {
-		.Items .drow li.rupees, .Items .drow li.text-right.rupees { width: 100% !important; text-align: center !important;}
-		.Items .drow li.cntr { width: 100% !important;}
+		.deleteBtn {
+			margin-left: 0px;
+			float: right;
+		}
+		.incrmnt_sec {
+			float: left;
+		}
+		.Items .drow li.rupees, .Items .drow li.text-right.rupees { width: 31% !important;}
+		.Items .drow li.cntr { width: 38% !important;}
 		.applecut button > .applecutbtn { top:0px !important; position: relative !important;}
 		.total.totalAmount {
 			padding-right: 10px;
