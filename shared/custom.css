@@ -9064,14 +9064,7 @@
 		
 		.wth_app .productCon {    background: #161616;}
 	}
-	@media (max-width:380px) {		
-		.deleteBtn, .inputCartInput {
-			width: 35px !important;
-			
-		}
-		
-		
-	}
+	
 	@media (max-width:767px) {
 		.deleteBtn {
 			margin-left: 0px;
