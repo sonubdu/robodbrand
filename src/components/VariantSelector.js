@@ -247,7 +247,7 @@ class VariantSelector extends Component {
         <button
           data-tip={value.toString().replace("With logo",'')}
           style={style}
-          className={dragonClassName}
+          className={dragonClassName+ " " + value.toString().replace("With logo",'with_logo').toLowerCase()}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
@@ -280,7 +280,7 @@ class VariantSelector extends Component {
         <button
           data-tip={value.toString().replace("With logo",'')}
           style={style}
-          className={stoneClassName}
+          className={stoneClassName+ " " + value.toString().replace("With logo",'with_logo').toLowerCase()}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
@@ -314,7 +314,7 @@ class VariantSelector extends Component {
         <button
           data-tip={value.toString().replace("With logo",'')}
           style={style}
-          className={matteClassName}
+          className={matteClassName+ " " + value.toString().replace("With logo",'with_logo').toLowerCase()}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
@@ -345,7 +345,7 @@ class VariantSelector extends Component {
         <button
           data-tip={value.toString().replace("With logo",'')}
           style={style}
-          className={metalClassName}
+          className={metalClassName+ " " + value.toString().replace("With logo",'with_logo').toLowerCase()}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
@@ -378,7 +378,7 @@ class VariantSelector extends Component {
         <button
           data-tip={value.toString().replace("With logo",'')}
           style={style}
-          className={leatherClassName}
+          className={leatherClassName+ " " + value.toString().replace("With logo",'with_logo').toLowerCase()}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
@@ -411,7 +411,7 @@ class VariantSelector extends Component {
         <button
           data-tip={value.toString().replace("With logo",'')}
           style={style}
-          className={truecolorClassName}
+          className={truecolorClassName+ " " + value.toString().replace("With logo",'with_logo').toLowerCase()}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}
@@ -444,7 +444,7 @@ class VariantSelector extends Component {
         <button
           data-tip={value.toString().replace("With logo",'')}
           style={style}
-          className={woodClassName}
+          className={woodClassName+ " " + value.toString().replace("With logo",'with_logo').toLowerCase()}
           onClick={this.props.handleOptionChange}
           name={this.props.option.name}
           value={value}

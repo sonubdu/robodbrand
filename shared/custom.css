@@ -84,6 +84,55 @@
 		transform: rotate(1turn) scale(1)
 	}
 	}
+	.diffCol button.Product__option.black {
+		 background-color: #000;
+		}
+	.diffCol button.Product__option.blue {
+		background-color: #0000ff;
+	}
+	.diffCol button.Product__option.orange {
+		background-color: #fd782c;
+	}
+	.diffCol button.Product__option.green {
+		background-color: #1cde19;
+	}
+	.diffCol button.Product__option.purple {
+		background-color: #763a83;
+	}
+	.diffCol button.Product__option.gray {
+		background-color: #3a3a3a;
+	}
+	.diffCol button.Product__option.red {
+		background-color: #db1620;
+	}
+	.diffCol button.Product__option.white {
+		background-color: #fff;
+	}
+	.diffCol button.Product__option.yellow {
+		background-color: #fec040;
+	}
+	.diffCol button.Product__option.metal {
+		background-color: #422f27;
+	}
+	.diffCol button.Product__option.leather {
+		background-color: #202020;
+	}
+	.diffCol button.Product__option.wood {
+		background-color: #7b3b20;
+	}
+	.diffCol button.Product__option.wood.bamboo {
+		background-color: #dbb27d;
+	}
+	.diffCol button.Product__option.wood.zebra {
+		background-color: #5e341d;
+	}
+	.diffCol button.Product__option.metal.hyperblack {
+		background-color: #020202;
+	}
+	.diffCol button.Product__option.metal.gold {
+		background-color: #654b1f;
+	}
+	
 	.incrmnt_sec {
 		display: inline-block;
 		position: relative;
@@ -9063,6 +9112,9 @@
 		}
 		
 		.wth_app .productCon {    background: #161616;}
+	}
+	@media (max-width:335px) {
+		.drow { font-size: 14px;}
 	}
 	
 	@media (max-width:767px) {
