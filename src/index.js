@@ -8,8 +8,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import "../shared/hm.css";
 
 const client = Client.buildClient({
-  storefrontAccessToken: "5b599bfacd46adb8818f5aa98ce09697",
-  domain: "robop.myshopify.com"
+  storefrontAccessToken: "d3fe5ae31ced5fc395e03ee4325ead4c",
+  domain: "flaunnt.com"
 });
 
 ReactDOM.render(<App client={client} />, document.getElementById("root"));

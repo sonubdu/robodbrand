@@ -43,22 +43,23 @@ class VariantSelectormob extends Component {
     let vwood = [];
     let vrobo = [];
 
+  
     this.props.option.values.map(value => {
-      if (value.toString().search("Camo") === 0) {
+      if (value.toString().includes("Camo")) {
         if(value.toString().includes('With logo')){
           vcamo.push(value);
         }else{
           camo.push(value);
         }
       }
-      if (value.toString().search("Carbon") === 0) {
+      if (value.toString().includes("Carbon")) {
          if(value.toString().includes('With logo')){
           vcarbon.push(value);
         }else{
           carbon.push(value);
         }
       }
-      if (value.toString().search("Dragon") === 0) {
+      if (value.toString().includes("Dragon")) {
    
         if(value.toString().includes('With logo')){
           vdragon.push(value);
@@ -66,7 +67,7 @@ class VariantSelectormob extends Component {
           dragon.push(value);
         }
       }
-      if (value.toString().search("Marble") === 0) {
+      if (value.toString().includes("Brush")) {
         
         if(value.toString().includes('With logo')){
           vstone.push(value);
@@ -74,7 +75,7 @@ class VariantSelectormob extends Component {
           stone.push(value);
         }
       }
-      if (value.toString().search("Matte") === 0) {
+      if (value.toString().includes("Woven")) {
         
         if(value.toString().includes('With logo')){
           vmatte.push(value);
@@ -82,7 +83,7 @@ class VariantSelectormob extends Component {
           matte.push(value);
         }
       }
-      if (value.toString().search("Metal") === 0) {
+      if (value.toString().includes("Metal")) {
        
         if(value.toString().includes('With logo')){
           vmetal.push(value);
@@ -90,7 +91,7 @@ class VariantSelectormob extends Component {
           metal.push(value);
         }
       }
-      if (value.toString().search("Leather") === 0) {
+      if (value.toString().includes("Leather")) {
        
         if(value.toString().includes('With logo')){
           vleather.push(value);
@@ -98,7 +99,7 @@ class VariantSelectormob extends Component {
           leather.push(value);
         }
       }
-      if (value.toString().search("Tc") === 0) {
+      if (value.toString().includes("Solid")) {
      
         if(value.toString().includes('With logo')){
           vtruecolor.push(value);
@@ -106,7 +107,7 @@ class VariantSelectormob extends Component {
           truecolor.push(value);
         }
       }
-      if (value.toString().search("Wood") === 0) {
+      if (value.toString().includes("Wood")) {
 
         if(value.toString().includes('With logo')){
           vwood.push(value);
@@ -114,7 +115,7 @@ class VariantSelectormob extends Component {
           wood.push(value);
         }
       }
-      if (value.toString().search("Robo") === 0) {
+      if (value.toString().includes("Robo")) {
         
         if(value.toString().includes('With logo')){
           vrobo.push(value);
