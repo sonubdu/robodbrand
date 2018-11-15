@@ -8850,7 +8850,7 @@
 	.hamburgermenu {
 		float: right;
 		right: 0;
-		top: 17px;
+		top: 15px;
 		position: absolute;
 		display: none;
 	}
@@ -8879,6 +8879,11 @@
 	 font-size:12px;
 	}
 	.after_pick {display: none;}
+	.Cart__line-items .Line-item__img { display: none;}
+	.Cart__line-items .Line-item__content {
+		width: 100%;
+		padding-left: 0px;
+	}
 	 @media (min-width:1200px) {
 		 .robodesign .alice-carousel .Product__option1 > img {height: 96px;}
 	.robobullFooterBottom .robobullFooterItem {
@@ -8899,7 +8904,7 @@
 	@media only screen and (min-width:992px) {
 		.nav.main_menu > li > a {
 			padding: 10px 30px !important;
-			line-height: 56px;
+			line-height: 51px;
 		}
 	}
 	@media only screen and (min-width:861px) {
@@ -9220,9 +9225,9 @@
 			height: auto;
 		  }
 		.logo img {
-			width: 245px;
+			width: 150px;
 		}
-		.navbar-header {height:68px;}
+		.navbar-header {height:auto;}
 		.logo{position:absolute; top:2px;}
 		.mb_switch {display: block;}
 		.after_pick {display: block !important;}

@@ -53,7 +53,7 @@
   padding: 0 !important;
 }
 .nav.navbar-nav.pull-right {
-  height: 76px;
+  height: 69px;
 }
 
 .productFeature button.class1 {
@@ -83,7 +83,7 @@
   float: left;
   position: relative;
   width: 255px;
-  height: 76px;
+  height: 68px;
 }
 #email {
   width: 78%;
@@ -104,7 +104,7 @@
   position: absolute;
   width: 266px;
   left: 0;
-  top: 7px;
+  top: 2px;
 }
 .productFeature button.active {
   background: #e6e6e6 !important;
@@ -1069,11 +1069,12 @@ input {
 }
 .navbar-nav > li > a {
   padding-top: 24px !important;
-  padding-bottom: 24px !important;
+  padding-bottom: 20px !important;
 }
 .logo img {
-  width: 255px;
+  width: 100%;
   margin-right: 25px;
+  max-width: 205px;
 }
 .Cart__header h2 {
   font-size: 24px;

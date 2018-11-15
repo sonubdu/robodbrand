@@ -8,31 +8,20 @@ class Footer extends Component {
           <div className="container text-center">
             <ul className="robobullFooterUl">
               <li className="robobullFooterItem">
-                <a href="https://robobull.com/pages/about-robobull">About Us</a>
+              <a href="https://flaunnt.com/pages/about-robobull">About Us</a>
+              </li>
+
+
+              <li className="robobullFooterItem">
+              <a href="https://flaunnt.com/pages/installation-videos">Videos</a>
               </li>
 
               <li className="robobullFooterItem">
-                <a href="https://robobull.com/pages/find-our-outlets">Exclusive Outlets</a>
+              <a href="https://flaunnt.com/pages/faq">FAQ's</a>
               </li>
 
               <li className="robobullFooterItem">
-                <a href="https://robobull.com/pages/warranty-program">Warranty Program</a>
-              </li>
-
-              <li className="robobullFooterItem">
-                <a href="https://robobull.com/pages/installation-videos">Videos</a>
-              </li>
-
-              <li className="robobullFooterItem">
-                <a href="https://robobull.com/pages/faq">FAQ's</a>
-              </li>
-
-              <li className="robobullFooterItem">
-                <a href="https://robobull.com/pages/e-waste-management">E-Waste</a>
-              </li>
-
-              <li className="robobullFooterItem">
-                <a href="https://robobull.com/pages/get-in-touch">Contact Us</a>
+              <a href="https://flaunnt.com/pages/get-in-touch">Contact Us</a>
               </li>
             </ul>
           </div>
@@ -55,24 +44,18 @@ class Footer extends Component {
             <div className="container text-center">
               <ul className="robobullFooterUl">
                 <li className="robobullFooterItem">
-                  <a href="https://robobull.com/pages/returns-refunds-replacement">Payment, Shipping &amp; Returns</a>
+                <a href="https://flaunnt.com/pages/returns-and-replacement">Payment, Shipping &amp; Returns</a>
                 </li>
 
                 <li className="robobullFooterItem">
-                  <a href="https://robobull.com/pages/terms-of-use">Terms Of Use</a>
+                <a href="https://flaunnt.com/pages/terms-of-use">Terms Of Use</a>
                 </li>
 
                 <li className="robobullFooterItem">
-                  <a href="https://robobull.com/pages/privacy-policy">Privacy &amp; Policy</a>
+                <a href="https://flaunnt.com/pages/privacy-policy">Privacy &amp; Policy</a>
                 </li>
 
-                <li className="robobullFooterItem">
-                  <a href="https://robobull.com/pages/careers">Careers</a>
-                </li>
-
-                <li className="robobullFooterItem">
-                  <a href="https://robobull.com/blogs/news">Blog</a>
-                </li>
+                
               </ul>
             </div>
           </div>

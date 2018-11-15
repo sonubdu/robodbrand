@@ -192,15 +192,15 @@ class Collection extends Component {
                     </div>
                     <ul className={this.state.hmactive+" nav main_menu navbar-nav"}>
                       <li className="">
-                        <a href="https://robobull.com/pages/shop">SHOP</a>
+                        <a href="https://flaunnt.com/pages/shop">SHOP</a>
                       </li>
                       <li>
-                        <a href="https://robobull.com/pages/installation-videos">HOW TO INSTALL</a>
+                        <a href="https://flaunnt.com/pages/installation-videos">HOW TO INSTALL</a>
                       </li>
                     </ul>
                     <ul className={this.state.hmactive+" nav navbar-nav cart_menu pull-right"}>
                       <li>
-                        <a href="https://robobull.com/account/login">
+                        <a href="https://flaunnt.com/account/login">
                           <img alt="user" src="/texture/ic1.png"/>
                         </a>
                       </li>
