@@ -8812,6 +8812,14 @@
 	.cartTittle {
 		font-size: 24px;
 	}
+	.shp_cart li { display: inline-block;
+	    height: 22px !important;
+    width: 22px !important;
+	margin-right: 10px;
+	}
+	.mob_shop {
+		display: none;
+	}
 	 @media (max-width:1100px) {
 	.TOP, .FRONT, .BACK, .CAMERA {
 		width: 94%;
@@ -8826,6 +8834,9 @@
 	.TOP, .FRONT, .BACK, .CAMERA {
 		width: 90%;
 	}
+	}
+	.hmactive.homeStripBottom {
+		display: none;
 	}
 	.navbar-default {
 		background: #fff !important;
@@ -8853,6 +8864,7 @@
 		top: 15px;
 		position: absolute;
 		display: none;
+		z-index: 99;
 	}
 	.hmactive {
 		display: none;
@@ -8903,7 +8915,7 @@
 	}
 	@media only screen and (min-width:992px) {
 		.nav.main_menu > li > a {
-			padding: 10px 30px !important;
+			padding: 11px 30px 9px !important;
 			line-height: 51px;
 		}
 	}
@@ -9121,8 +9133,31 @@
 	@media (max-width:335px) {
 		.drow { font-size: 14px;}
 	}
-	
+	.navbar {
+		border: 0 !important;
+	}
 	@media (max-width:767px) {
+		.hamburgermenu {
+			top: 13px;
+		}
+		.App__header {
+			border-top: 22.5px solid #ff0000 !important;
+		}
+		.nav.main_menu {    padding: 7px 0px 15px;}
+		.navbar {
+			border: 0 !important;
+		    min-height: 47px !important;}
+		.mob_shop {
+			display: inline-block !important;
+		}
+		.logo {width: auto !important;}
+		.navbar-nav.mob_shop {
+			margin-right: 48px !important;
+			margin-top: 15px !important;
+		}
+		.desk_shop {
+			display: none !important;
+		}
 		.deleteBtn {
 			margin-left: 0px;
 			float: right;
@@ -9439,7 +9474,7 @@
 		padding: 0 15px;
 	}
 	.navbar-nav {
-		margin: 7.5px 0px !important;
+		margin: 5.5px 0px !important;
 	}
 	.bgWrapper {
 		background: #222;

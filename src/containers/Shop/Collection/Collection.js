@@ -182,6 +182,22 @@ class Collection extends Component {
                       <a className="logo">
                         <img alt="logo" src="/texture/logo.png"/>
                       </a>
+                      <ul className="shp_cart navbar-nav cart_menu pull-right mob_shop">
+                      <li>
+                        <a href="https://flaunnt.com/account/login">
+                          <img alt="user" src="/texture/ic1.png"/>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className="App__view-cart"
+                          onClick={() => this.setState({ isCartOpen: true })}
+                        >
+                          
+                          <img alt="cart" src="/texture/ic2.png"/>
+                        </a>
+                      </li>
+                    </ul>
                       <div className="hamburgermenu">
                        <button  onClick={this.changemenu} className={this.state.hcv+" hamburger"} type="button">
                             <span className="hamburger-box">
@@ -198,7 +214,7 @@ class Collection extends Component {
                         <a href="https://flaunnt.com/pages/installation-videos">HOW TO INSTALL</a>
                       </li>
                     </ul>
-                    <ul className={this.state.hmactive+" nav navbar-nav cart_menu pull-right"}>
+                    <ul className={this.state.hmactive+" nav navbar-nav cart_menu pull-right desk_shop"}>
                       <li>
                         <a href="https://flaunnt.com/account/login">
                           <img alt="user" src="/texture/ic1.png"/>
@@ -215,7 +231,7 @@ class Collection extends Component {
                       </li>
                     </ul>
                   </nav>
-                  <div className="homeStripBottom" />
+                  <div className={this.state.hmactive+" homeStripBottom"}/>
 
                   <h2 className="brandTittle text-center col-lg-12">
                     {this.state.collectiontitle}

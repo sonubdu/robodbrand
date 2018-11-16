@@ -104,7 +104,7 @@
   position: absolute;
   width: 266px;
   left: 0;
-  top: 2px;
+  top: 3px;
 }
 .productFeature button.active {
   background: #e6e6e6 !important;
@@ -818,7 +818,7 @@ h2 {
 #root .navbar {
   border-radius: 0;
   margin: 0;
-  padding: 0 40px;
+  padding: 0 41px;
 }
 
 .homeStripBottom {
@@ -1068,7 +1068,7 @@ input {
   overflow: hidden;
 }
 .navbar-nav > li > a {
-  padding-top: 24px !important;
+  padding-top: 25px !important;
   padding-bottom: 20px !important;
 }
 .logo img {
