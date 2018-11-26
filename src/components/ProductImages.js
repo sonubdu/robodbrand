@@ -11,7 +11,7 @@ class ProductImages extends Component {
     
       <div className="Productimage">
      
-          <div style={style} className={this.props.product.title}></div>
+          <div style={style} className={this.props.product.title.toString().replace("/", "_")}></div>
           
        </div>
  

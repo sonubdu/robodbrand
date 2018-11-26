@@ -8777,6 +8777,18 @@
 		-ms-transition: all 1s ease;
 		-o-transition: all 1s ease;
 	}
+	.Upper_Lower {
+		position: absolute;
+		width: 95%;
+		background-size: contain;
+		background-position: center;
+		height: 450px;
+		transition: all 500ms ease-in-out;
+		-webkit-transition: all 1s ease;
+		-moz-transition: all 1s ease;
+		-ms-transition: all 1s ease;
+		-o-transition: all 1s ease;
+	}
 	.FRONT {
 		position: absolute;
 		width: 95%;
