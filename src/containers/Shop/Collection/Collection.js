@@ -35,7 +35,7 @@ class Collection extends Component {
 
   setProducts(id) {
     this.props.client.collection.fetchByHandle(id).then(collection => {
-    if(collection.description==="withcut"){
+    if(collection.description.toString().includes("withcut")){
       this.setState({
         withcut: true
       });
