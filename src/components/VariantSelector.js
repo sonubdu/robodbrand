@@ -199,6 +199,7 @@ class VariantSelector extends Component {
           .toString()
           .replace("With logo", "")
           .replace(" ", "-")
+          .replace(" ", "-")
           .replace(" ", "")
           .toLowerCase() +
         ".png";
