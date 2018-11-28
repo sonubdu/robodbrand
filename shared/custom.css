@@ -9117,9 +9117,12 @@
 		.productCon .productFeature {padding: 0px 5px !important;}
 		
 		.iphn_cut{ width: 48%; float: left;}
-		.iphn_cut .col-lg-3 {
-		width: 50%;
+		.section_1 .iphn_cut .col-lg-3 {
+		width: 100%;
 		}
+		.section_2 .iphn_cut .col-lg-3 {
+			width: 50%;
+			}
 		.wth_app {
 		width: 48%;
 		float: right;}
@@ -9475,7 +9478,12 @@
 		padding: 10px 0px;
 	}
 	
-	.productCon .col-xs-3 {
+	.section_1 .productCon .col-xs-3 {
+		width: 100% !important;
+		padding: 0px !important;
+		background: #232323
+	}
+	.section_2 .productCon .col-xs-3 {
 		width: 50% !important;
 		padding: 0px !important;
 		background: #232323

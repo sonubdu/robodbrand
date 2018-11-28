@@ -20,7 +20,8 @@ class Collection extends Component {
       hcv:"",
       withcut:false,
       collectiontitle:"",
-      collectionimage:""
+      collectionimage:"",
+      cpcount:""
     };
 
     this.handleCartClose = this.handleCartClose.bind(this);
@@ -35,6 +36,7 @@ class Collection extends Component {
 
   setProducts(id) {
     this.props.client.collection.fetchByHandle(id).then(collection => {
+
     if(collection.description.toString().includes("withcut")){
       this.setState({
         withcut: true
@@ -51,6 +53,9 @@ class Collection extends Component {
     });
       this.setState({
         products: collection.products
+      });
+      this.setState({
+        cpcount: collection.products.length
       });
     });
   }
@@ -170,7 +175,7 @@ class Collection extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className={ "section_"+ this.state.cpcount +" App"}>
         <div className="container-fluid">
           <div className="row">
             <header className="App__header">
