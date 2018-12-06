@@ -38,7 +38,7 @@ class Products extends Component {
     localStorage.setItem("fakecart", "");
     this.state = {
       fakedata: "",
-      withappletext: "Without Apple Cut"
+      withappletext: "Without Logo Cut"
     };
     this.state = {
       fakecartstatus: false
@@ -50,9 +50,9 @@ class Products extends Component {
 
 componentWillReceiveProps() {
     if(this.props.withcut===true){
-    this.setState({ withappletext: "With Apple Cut" });
+    this.setState({ withappletext: "With Logo Cut" });
     }else{
-    this.setState({ withappletext: "Without Apple Cut" });
+    this.setState({ withappletext: "Without Logo Cut" });
     }
     this.setState({ dccolor: "Gray" });
     this.setState({ skinpikker: "hide" });
@@ -114,13 +114,13 @@ onUpdateStatus = val => {
   //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/silver/full.jpg
   //https://dbrand.com/sites/all/themes/dbrand_v3/img/product-preview/iphone-xs/gold/full.jpg
   withcutchange = val => {
-   if(this.state.withappletext==="With Apple Cut"){
+   if(this.state.withappletext==="With Logo Cut"){
    
-    this.setState({ withappletext: "Without Apple Cut" });
+    this.setState({ withappletext: "Without Logo Cut" });
    
   }else{
     
-    this.setState({ withappletext: "With Apple Cut" });
+    this.setState({ withappletext: "With Logo Cut" });
    }
     this.setState({ withcut: val });
     

@@ -127,7 +127,7 @@ class VariantSelectormob extends Component {
     });
 
     if(this.props.tabid===1){
-      if(this.props.applecut==="With Apple Cut"){
+      if(this.props.applecut==="With Logo Cut"){
        camo =vcamo;
        carbon=vcarbon;
        dragon = vdragon;

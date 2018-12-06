@@ -139,7 +139,7 @@ class VariantSelector extends Component {
       return true;
     });
     if(this.props.tabid===1){
-      if(this.props.applecut==="With Apple Cut"){
+      if(this.props.applecut==="With Logo Cut"){
        camo =vcamo;
        carbon=vcarbon;
        dragon = vdragon;
@@ -496,7 +496,7 @@ class VariantSelector extends Component {
         display: "block"
       };
     }
-    if(this.props.applecut==="Without Apple Cut"){
+    if(this.props.applecut==="Without Logo Cut"){
       return (
         <div className={this.props.option.name}>
           <div className="diffCol">

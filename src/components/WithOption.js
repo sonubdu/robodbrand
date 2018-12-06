@@ -83,8 +83,8 @@ class WithOption extends Component {
     }
     return (
       <div className={this.props.product.id.toString()+ " col-lg-12 col-md-12 col-sm-12 col-xs-12 productFeature"}>
-              <div className={this.props.applecut==="With Apple Cut"?"wth_cut applecut":"without_cut applecut"}>
-               <button  name="Color" value={this.props.applecut==="With Apple Cut"?data.title.toString().replace("With logo","").trim():data.title.toString()+" With logo"} onClick={this.handleOptionChange}>
+              <div className={this.props.applecut==="With Logo Cut"?"wth_cut applecut":"without_cut applecut"}>
+               <button  name="Color" value={this.props.applecut==="With Logo Cut"?data.title.toString().replace("With logo","").trim():data.title.toString()+" With logo"} onClick={this.handleOptionChange}>
                <div className={this.props.applecut+" applecutbtn"}> </div>
                </button>
                </div>
